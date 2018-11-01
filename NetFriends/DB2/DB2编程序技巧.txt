@@ -1,0 +1,747 @@
+change isolation TO  cs --默认隔离级别
+change isolation TO  ur --锁表不影响查询
+
+list command options --显示命令选项
+
+update command options using c OFF --设数据库不自动提交
+
+
+1 DB2编程 
+1.1 建存储过程时CREATE 后一定不要用TAB键 3 
+1.2 使用临时表 3 
+1.3 从数据表中取指定前几条记录 3 
+1.4 游标的使用 4 
+注意commit和rollback 4 
+游标的两种定义方式 4 
+修改游标的当前记录的方法 5 
+1.5 类似DECODE的转码操作 5 
+1.6 类似CHARINDEX查找字符在字串中的位置 5 
+1.7 类似DATEDIF计算两个日期的相差天数 5 
+1.8 写UDF的例子 5 
+1.9 创建含IDENTITY值(即自动生成的ID)的表 6 
+1.10 预防字段空值的处理 6 
+1.11 取得处理的记录数 6 
+1.12 从存储过程返回结果集(游标)的用法 6 
+1.13 类型转换函数 8 
+1.14 存储过程的互相调用 8 
+1.15 C存储过程参数注意 8 
+1.16 存储过程FENCE及UNFENCE 8 
+1.17 SP错误处理用法 9 
+1.18 IMPORT用法 9 
+1.19 VALUES的使用 9 
+1.20 给SELECT 语句指定隔离级别 10 
+1.21 ATOMIC及NOT ATOMIC区别 10 
+2 DB2编程性能注意 10 
+2.1 大数据的导表 10 
+2.2 SQL语句尽量写复杂SQL 10 
+2.3 SQL  SP及C SP的选择 10 
+2.4 查询的优化(HASH及RR_TO_RS) 11 
+2.5 避免使用COUNT(*) 及EXISTS的方法 11 
+3 DB2表及SP管理 12 
+3.1 看存储过程文本 12 
+3.2 看表结构 12 
+3.3 查看各表对SP的影响(被哪些SP使用) 12 
+3.4 查看SP使用了哪些表 12 
+3.5 查看FUNCTION被哪些SP使用 12 
+3.6 修改表结构 12 
+4 DB2系统管理 13 
+4.1 DB2安装 13 
+4.2 创建DATABASE 14 
+4.3 手工做数据库远程(别名)配置 14 
+4.4 停止启动数据库实例 14 
+4.5 连接数据库及看当前连接数据库 14 
+4.6 停止启动数据库HEAD 15 
+4.7 查看及停止数据库当前的应用程序 15 
+4.8 查看本INSTANCE下有哪些DATABASE 15 
+4.9 查看及更改数据库HEAD的配置 16 
+4.9.1 改排序堆的大小 16 
+4.9.2 改事物日志的大小 16 
+4.9.3 出现程序堆内存不足时修改程序堆内存大小 16 
+4.10 查看及更改数据库实例的配置 16 
+4.10.1 打开对锁定情况的监控。 16 
+4.10.2 更改诊断错误捕捉级别 17 
+4.11 DB2环境变量 17 
+4.12 DB2命令环境设置 17 
+4.13 改变隔离级别 17 
+4.14 管理DB\INSTANCE的参数 18 
+4.15 升级后消除版本问题 18 
+4.16 查看数据库表的死锁 18 
+
+1 DB2编程 
+1.1 建存储过程时Create 后一定不要用TAB键 
+create procedure 
+的create后只能用空格,而不可用tab健，否则编译会通不过。 
+切记，切记。 
+
+1.2 使用临时表 
+
+  要注意，临时表只能建在user tempory tables space 上，如果database只有system tempory table space是不能建临时表的。 
+  另外，DB2的临时表和sybase及oracle的临时表不太一样，DB2的临时表是在一个session内有效的。所以，如果程序有多线程，最好不要用临时表，很难控制。 
+   建临时表时最好加上  with  replace选项，这样就可以不显示的drop 临时表，建临时表时如果不加该选项而该临时表在该session内已创建且没有drop,这时会发生错误。 
+1.3 从数据表中取指定前几条记录 
+select  *  from tb_market_code fetch first 1 rows only 
+
+但下面这种方式不允许 
+select market_code into v_market_code  
+        from tb_market_code fetch first 1 rows only;      
+     
+选第一条记录的字段到一个变量以以下方式代替 
+    declare v_market_code char(1); 
+    declare cursor1 cursor for select market_code from tb_market_code  
+fetch first 1 rows only for update; 
+    open cursor1; 
+    fetch cursor1 into v_market_code; 
+    close cursor1; 
+
+1.4 游标的使用 
+注意commit和rollback 
+使用游标时要特别注意如果没有加with hold 选项,在Commit和Rollback时,该游标将被关闭。Commit 和Rollback有很多东西要注意。特别小心 
+
+游标的两种定义方式 
+一种为 
+declare continue handler for not found 
+   begin 
+     set v_notfound = 1; 
+   end; 
+
+declare cursor1 cursor with hold for select market_code from tb_market_code  for update; 
+open cursor1; 
+set v_notfound=0; 
+fetch cursor1 into v_market_code; 
+while v_notfound=0 Do 
+--work 
+set v_notfound=0; 
+fetch cursor1 into v_market_code; 
+end while; 
+close cursor1; 
+这种方式使用起来比较复杂，但也比较灵活。特别是可以使用with hold 选项。如果循环内有commit或rollback 而要保持该cursor不被关闭，只能使用这种方式。
+另一种为 
+      pcursor1: for loopcs1 as  cousor1  cursor  as 
+select  market_code  as market_code 
+           from tb_market_code 
+           for update 
+        do 
+        end for; 
+       这种方式的优点是比较简单，不用（也不允许）使用open,fetch,close。 
+  但不能使用with  hold 选项。如果在游标循环内要使用commit,rollback则不能使用这种方式。如果没有commit或rollback的要求，推荐使用这种方式(看来For这种方式有问题)。 
+
+修改游标的当前记录的方法 
+update tb_market_code set market_code='0' where current of cursor1; 
+不过要注意将cursor1定义为可修改的游标 
+  declare cursor1 cursor for select market_code from tb_market_code  
+for update; 
+
+for update 不能和GROUP BY、 DISTINCT、 ORDER BY、 FOR READ ONLY及UNION, EXCEPT, or INTERSECT但 UNION ALL除外）一起使用。 
+
+
+
+1.5 类似decode的转码操作 
+oracle中有一个函数  select decode(a1,'1','n1','2','n2','n3') aa1 from 
+db2没有该函数，但可以用变通的方法 
+select case a1  
+when '1' then 'n1'  
+when '2' then 'n2'  
+else 'n3' 
+    end as aa1 from 
+
+1.6 类似charindex查找字符在字串中的位置 
+Locate(‘y’,’dfdasfay’) 
+查找’y’ 在’dfdasfay’中的位置。 
+
+1.7 类似datedif计算两个日期的相差天数 
+days(date(‘2001-06-05’)) – days(date(‘2001-04-01’)) 
+days 返回的是从  0001-01-01 开始计算的天数 
+1.8 写UDF的例子 
+C写见sqllib\samples\cli\udfsrv.c 
+
+1.9 创建含identity值(即自动生成的ID)的表 
+建这样的表的写法 
+CREATE TABLE test 
+     (t1 SMALLINT NOT NULL 
+        GENERATED ALWAYS AS IDENTITY 
+        (START WITH 500, INCREMENT BY 1), 
+      t2 CHAR(1)); 
+在一个表中只允许有一个identity的column.
+1.10 预防字段空值的处理 
+SELECT DEPTNO ,DEPTNAME ,COALESCE(MGRNO ,'ABSENT'),ADMRDEPT 
+FROM DEPARTMENT 
+   COALESCE函数返回()中表达式列表中第一个不为空的表达式，可以带多个表达式。 
+   和oracle的isnull类似，但isnull好象只能两个表达式。 
+      
+
+1.11 取得处理的记录数 
+declare v_count int; 
+update tb_test set t1=’0’ 
+where t2=’2’; 
+--检查修改的行数,判断指定的记录是否存在 
+get diagnostics v_ count=ROW_COUNT;      
+只对update,insert,delete起作用. 
+不对select into 有效 
+
+
+1.12 从存储过程返回结果集(游标)的用法 
+1、建一sp返回结果集 
+CREATE PROCEDURE DB2INST1.Proc1 (  ) 
+    LANGUAGE SQL 
+    result sets 2(返回两个结果集) 
+------------------------------------------------------------------------ 
+-- SQL 存储过程  
+------------------------------------------------------------------------ 
+P1: BEGIN 
+        declare c1 cursor  with return to caller for  
+            select  market_code 
+            from    tb_market_code; 
+        --指定该结果集用于返回给调用者 
+        declare c2 cursor  with return to caller for  
+            select  market_code 
+            from    tb_market_code; 
+         open c1; 
+         open c2; 
+END P1                                        
+
+
+2、建一SP调该sp且使用它的结果集 
+
+CREATE PROCEDURE DB2INST1.Proc2 ( 
+out out_market_code char(1)) 
+    LANGUAGE SQL 
+------------------------------------------------------------------------ 
+-- SQL 存储过程  
+------------------------------------------------------------------------ 
+P1: BEGIN 
+
+ declare loc1,loc2 result_set_locator varying;  
+--建立一个结果集数组 
+call proc1; 
+--调用该SP返回结果集。 
+associate result set locator(loc1,loc2) with procedure proc1; 
+--将返回结果集和结果集数组关联 
+ allocate cursor1 cursor for result set loc1; 
+ allocate cursor2 cursor for result set loc2; 
+--将结果集数组分配给cursor 
+fetch  cursor1 into out_market_code; 
+--直接从结果集中赋值 
+close cursor1;          
+
+END P1 
+
+3、动态SQL写法 
+     DECLARE CURSOR C1 FOR STMT1;  
+     PREPARE STMT1 FROM 
+        'ALLOCATE C2 CURSOR FOR RESULT SET ?'; 
+4、注意： 
+一、 如果一个sp调用好几次，只能取到最近一次调用的结果集。 
+二、 allocate的cursor不能再次open，但可以close，是close sp中的对应cursor。 
+
+1.13 类型转换函数 
+select cast ( current time as char(8)) from tb_market_code 
+
+1.14 存储过程的互相调用 
+目前,c sp可以互相调用。 
+Sql sp 可以互相调用， 
+Sql sp 可以调用C sp， 
+但C sp 不可以调用Sql sp(最新的说法是可以) 
+
+1.15 C存储过程参数注意 
+create procedure pr_clear_task_ctrl( 
+IN IN_BRANCH_CODE char(4), 
+              IN IN_TRADEDATE   char(8), 
+           IN IN_TASK_ID     char(2), 
+       IN IN_SUB_TASK_ID char(4), 
+       OUT OUT_SUCCESS_FLAG INTEGER ) 
+  
+DYNAMIC RESULT SETS 0 
+LANGUAGE C  
+PARAMETER STYLE GENERAL WITH NULLS(如果不是这样，sql 的sp将不能调用该用c写的存储过程，产生保护性错误) 
+NO DBINFO 
+FENCED 
+MODIFIES SQL DATA 
+EXTERNAL NAME 'pr_clear_task_ctrl!pr_clear_task_ctrl'@
+1.16 存储过程fence及unfence 
+fence的存储过程单独启用一个新的地址空间,而unfence的存储过程和调用它的进程使用同一个地址空间。 
+一般而言，fence的存储过程比较安全。 
+但有时一些特殊的要求，如要取调用者的pid，则fence的存储过程会取不到，而只有unfence的能取到。 
+
+1.17 SP错误处理用法 
+如果在SP中调用其它的有返回值的，包括结果集、临时表和输出参数类型的SP， 
+DB2会自动发出一个SQLWarning。而在我们原来的处理中对于SQLWarning都 
+会插入到日志，这样子最后会出现多条SQLCODE=0的警告信息。 
+处理办法： 
+定义一个标志变量，比如DECLARE V_STATUS INTEGER DEFAULT 0, 
+在CALL SPNAME之后, SET V_STATUS = 1, 
+DECLARE CONTINUE HANDLER FOR SQLWARNING 
+BEGIN 
+IF V_STATUS <> 1 THEN 
+--警告处理，插入日志 
+SET V_STATUS = 0; 
+END IF; 
+END; 
+1.18 import用法 
+db2 import  from  gh1.out   of  DEL messages err.txt insert into  db2inst1.tb_dbf_match_ha 
+
+注意要加schma 
+
+1.19 values的使用 
+如果有多个 set  语句给变量付值，最好使用values语句，改写为一句。这样可以提高效率。 
+  
+但要注意，values不能将null值付给一个变量。 
+values(null) into out_return_code; 
+这个语句会报错的。 
+
+
+1.20 给select 语句指定隔离级别 
+select * from tb_head_stock_balance with ur 
+  
+1.21 atomic及not atomic区别 
+atomic是将该部分程序块指定为一个整体,其中任何一个语句失败,则整个程序块都相当于没做,包括包含在atomic块内的已经执行成功的语句也相当于没做，有点类似于transaction。 
+
+
+2  DB2编程性能注意 
+2.1 大数据的导表 
+应该是export后再load性能更好，因为load不写日志。 
+比select into 要好。 
+
+.2 SQL语句尽量写复杂SQL 
+   尽量使用大的复杂的SQL语句,将多而简单的语句组合成大的SQL语句对性能会有所改善。 
+   DB2的SQL Engieer对复杂语句的优化能力比较强，基本上不用当心语句的性能问题。 
+Oracle 则相反，推荐将复杂的语句简单化，SQL Engieer的优化能力不是特别好。 
+这是因为每一个SQL语句都会有reset SQLCODE和SQLSTATE等各种操作，会对数据库性能有所消耗。 
+一个总的思想就是尽量减少SQL语句的个数。 
+2.3 SQL  SP及C SP的选择 
+首先，C的sp的性能比sql 的sp 的要高。 
+一般而言，SQL语句比较复杂，而逻辑比较简单，sql sp 与 c sp 的性能差异会比较小，这样从工作量考虑，用SQL写比较好。 
+而如果逻辑比较复杂，SQL比较简单，用c写比较好。 
+
+2.4 查询的优化(HASH及RR_TO_RS) 
+db2set  DB2_HASH_JOIN=Y (HASH排序优化) 
+   指定排序时使用HASH排序，这样db2在表join时，先对各表做hash排序，再join，这样可以大大提高性能。 
+   剧沈刚说做实验，7个一千万条记录表的做join取10000条记录，再没有索引的情况下  72秒。 
+
+db2set  DB2_RR_TO_RS=Y        
+ 该设置后，不能定义RR隔离级别，如果定义RR，db2也会自动降为RS. 
+这样，db2不用管理Next key，可以少管理一些东西，这样可以提高性能。      
+
+
+2.5 避免使用count(*) 及exists的方法 
+1、首先要避免使用count(*)操作，因为count(*)基本上要对表做全部扫描一遍，如果使用很多会导致很慢。 
+2、exists比count(*)要快，但总的来说也会对表做扫描，它只是碰到第一条符合的记录就停下来。 
+
+如果做这两中操作的目的是为 
+       select into 服务的话，就可以省略掉这两步。 
+直接使用select into 选择记录中的字段。 
+
+如果是没有记录选择到的话，db2 会将  sqlcode=100 和 sqlstate=’20000’ 
+如果是有多条记录的话，db2会产生一个错误。 
+
+程序可以创建  continue handler for  exception  
+              continue handler for  not found 
+来检测。 
+这是最快速的方法。 
+
+3、如果是判断是不是一条,可以使用游标来计算，用一个计数器，累加，达到预定值后就离开。这个速度也比count(*) 要快，因为它只要扫描到预定值就不再扫描了，不用做全表的scan，不过它写起来比较麻烦。 
+
+
+3 DB2表及sp管理 
+3.1 看存储过程文本 
+select text from syscat.procedures where procname='PROC1'; 
+3.2 看表结构 
+describe table syscat.procedures 
+describe select * from syscat.procedures 
+
+3.3 查看各表对sp的影响(被哪些sp使用) 
+select PROCNAME from SYSCAT.PROCEDURES where SPECIFICNAME in(select dname from sysibm.sysdependencies where bname in ( select PKGNAME  from syscat.packagedep where bname='TB_BRANCH')) 
+
+3.4 查看sp使用了哪些表 
+select bname from syscat.packagedep where btype='T' and pkgname in(select bname from sysibm.sysdependencies where dname in (select specificname from syscat.procedures where procname='PR_CLEAR_MATCH_DIVIDE_SHA')) 
+3.5 查看function被哪些sp使用 
+select PROCNAME from SYSCAT.PROCEDURES where SPECIFICNAME in(select dname from sysibm.sysdependencies where bname in ( select PKGNAME  from syscat.packagedep where bname   in  (select SPECIFICNAME from SYSCAT.functions where funcname='GET_CURRENT_DATE'))) 
+
+
+使用function时要注意，如果想drop 掉该function必须要先将调用该function的其它存储过程全部drop掉。 
+必须先创建function，调用该function的sp才可以创建成功。 
+3.6 修改表结构 
+一次给一个表增加多个字段 
+db2 "alter table tb_test add column t1 char(1) add column t2 char(2) add column t3 int" 
+
+
+4 DB2系统管理 
+4.1 DB2安装 
+  在Windows 98 下安装db2 7.1 或其他版本，如果有Jdbc错误或者是Windwos 98不能启动，则将autoexec.bat 中的内容用如下内容替换： 
+
+
+C:\PROGRA~1\TRENDP~1\PCSCAN.EXE C:\ C:\WINDOWS\COMMAND\ /NS /WIN95  
+rem C:\WINDOWS\COMMAND.COM /E:32768 
+REM [Header] 
+
+REM [CD-ROM Drive] 
+
+REM [Miscellaneous] 
+
+REM [Display] 
+
+set PATH=%PATH%;C:\MSSQL\BINN;C:\PROGRA~1\SQLLIB\BIN;C:\PROGRA~1\SQLLIB\FUNCTION;C:\PROGRA~1\SQLLIB\SAMPLES\REPL;C:\PROGRA~1\SQLLIB\HELP 
+IF EXIST C:\PROGRA~1\IBM\IMNNQ\IMQENV.BAT CALL C:\PROGRA~1\IBM\IMNNQ\IMQENV.BAT 
+IF EXIST C:\PROGRA~1\IBM\IMNNQ\IMNENV.BAT CALL C:\PROGRA~1\IBM\IMNNQ\IMNENV.BAT 
+set DB2INSTANCE=DB2 
+set CLASSPATH=.;C:\PROGRA~1\SQLLIB\java\db2java.zip;C:\PROGRA~1\SQLLIB\java\runtime.zip;C:\PROGRA~1\SQLLIB\java\sqlj.zip;C:\PROGRA~1\SQLLIB\bin 
+set MDIS_PROFILE=C:\PROGRA~1\SQLLIB\METADATA\PROFILES 
+set LC_ALL=ZH_CN 
+set INCLUDE=C:\PROGRA~1\SQLLIB\INCLUDE;C:\PROGRA~1\SQLLIB\LIB;C:\PROGRA~1\SQLLIB\TEMPLATES\INCLUDE 
+set LIB=C:\PROGRA~1\SQLLIB\LIB 
+set DB2PATH=C:\PROGRA~1\SQLLIB 
+set DB2TEMPDIR=C:\PROGRA~1\SQLLIB 
+set VWS_TEMPLATES=C:\PROGRA~1\SQLLIB\TEMPLATES 
+set VWS_LOGGING=C:\PROGRA~1\SQLLIB\LOGGING 
+set VWSPATH=C:\PROGRA~1\SQLLIB 
+set VWS_FOLDER=IBM DB2 
+set ICM_FOLDER=信息目录管理器 
+
+win 
+
+4.2 创建Database 
+create database head using codeset IBM-eucCN territory CN; 
+这样可以支持中文。 
+
+
+4.3 手工做数据库远程(别名)配置 
+db2  catalog tcpip  node   node1  remote   172.28.200.200 server  50000 
+db2  catalog db    head   as     test1 at  node   node1 
+
+然后既可使用： 
+   db2 connect to test1  user …  using … 
+连上head库了 
+
+4.4 停止启动数据库实例 
+db2start 
+db2stop (force) 
+
+
+4.5 连接数据库及看当前连接数据库 
+连接数据库 
+db2  connect to head user db2inst1  using db2inst1 
+
+当前连接数据库 
+db2  connect 
+4.6 停止启动数据库head 
+db2  activate  db  head 
+db2  deactivate db  head 
+要注意的是，如果有连接，使用deactivate db 不起作用。 
+如果是用activate db启动的数据库，一定要用deactivate db才会停止该数据库。（当然如果是db2stop也会停止）。 
+使用activate db，这样可以减少第一次连接时的等待时间。 
+Database如果不是使用activate db启动而是通过连接数据库而启动的话，当所有的连接都退出后，db也就自动停止。 
+
+4.7 查看及停止数据库当前的应用程序 
+查看应用程序： 
+db2   list   applications  show  detail  
+
+授权标识 | 应用程序名 | 应用程序句柄 |  应用程序标识 | 序号#  | 代理程序 |  协调程序 | 状态 |  状态更改时间 |  DB 名 | DB 路径|                                                      |    节点号 |   pid／线程 
+
+其中：1、应用程序标识的第一部分是应用程序的IP地址，不过是已16进制表示的。 
+2、pid/线程即是在unix下看到的线程号。 
+
+停止应用程序： 
+db2 "force application(236)" 
+db2 “force application all” 
+
+其中:该236是查看中的应用程序句柄。 
+
+4.8 查看本instance下有哪些database 
+db2 LIST DATABASE DIRECTORY  [ on /home/db2inst1 ] 
+4.9 查看及更改数据库head的配置 
+请注意，在大多数情况下，更改了数据的配置后，只有在所有的连接全部断掉后才会生效。 
+
+查看数据库head的配制 
+db2 get db cfg for head 
+
+
+更改数据库head的某个设置的值 
+4.9.1 改排序堆的大小 
+db2 update db cfg for head using SORTHEAP 2048 
+将排序堆的大小改为2048个页面，查询比较多的应用最好将该值设置比较大一些。 
+4.9.2 改事物日志的大小 
+db2 update db cfg for head using  logfilsiz  40000 
+该项内容的大小要和数据库的事物处理相适应，如果事物比较大，应该要将该值改大一点。否则很容易处理日志文件满的错误。 
+
+4.9.3 出现程序堆内存不足时修改程序堆内存大小 
+db2 update db cfg for head using  applheapsz  40000 
+该值不能太小,否则会没有足够的内存来运行应用程序。 
+
+4.10 查看及更改数据库实例的配置 
+查看数据库实例配置 
+db2  get dbm cfg  
+更改数据库实例配制 
+
+4.10.1 打开对锁定情况的监控。 
+db2 update dbm cfg using dft_mon_lock  on 
+4.10.2 更改诊断错误捕捉级别 
+db2 update dbm cfg using diaglevel 3 
+0 为不记录信息 
+1 为仅记录错误 
+2 记录服务和非服务错误 
+缺省是3，记录db2的错误和警告 
+4 是记录全部信息，包括成功执行的信息 
+一般情况下，请不要用4，会造成db2的运行速度非常慢。 
+
+4.11 db2环境变量 
+db2 重装后用如下方式设置db2的环境变量,以保证sp可编译 
+将set_cpl 放到AIX上, chmod +x set_cpl, 再运行之 
+
+set_cpl的内容 
+db2set DB2_SQLROUTINE_COMPILE_COMMAND="xlc_r  -g \ 
+-I$HOME/sqllib/include SQLROUTINE_FILENAME.c \ 
+-bE:SQLROUTINE_FILENAME.exp -e SQLROUTINE_ENTRY \ 
+-o SQLROUTINE_FILENAME -L$HOME/sqllib/lib -lc -ldb2" 
+
+db2set DB2_SQLROUTINE_KEEP_FILES=1 
+4.12 db2命令环境设置 
+db2=>list command options 
+db2=>update command options using C off--或on，只是临时改变 
+db2=>db2set db2options=+c --或-c，永久改变 
+
+4.13 改变隔离级别 
+DB2SET DB2_SQLROUTINE_PREPOPTS=CS|RR|RS|UR 
+
+交互环境更改session的隔离级别， 
+       db2 change isolation  to UR 
+请注意只有没有连接数据库时可以这样来改变隔离级别。 
+
+4.14 管理db\instance的参数 
+get db cfg for head(db) 
+get dbm cfg(instance) 
+
+4.15 升级后消除版本问题 
+db2   bind  @db2ubind.lst 
+db2   bind   @db2cli.lst 
+
+4.16 查看数据库表的死锁 
+再用命令中心查询数据时要注意,如果用了交互式查询数据,命令中心将会给所查的记录加了s锁.这时如果要update记录,由于update要使用x锁,排它锁,将会处于锁等待. 
+
+首先,将监视开关打开 
+db2 update dbm cfg using dft_mon_lock  on 
+快照 
+  db2 get snapshot for  Locks  on  cleardb   >snap.log 
+                    tables  
+bufferpools 
+tablespaces 
+database 
+   然后再看snap.log中的内容即可。 
+对Lock可根据Application handle（应用程序句柄）看每个应用程序的锁的情况。 
+ 监视完毕后，不要忘了将监视器关闭 
+     db2 update dbm cfg using dft_mon_lock  off
+
+
+
+[原]：sql培训内容（精简） 
+http://www.chinaunix.net 作者:vlife  发表于：2003-06-26 14:27:24 
+
+SQL定义：SQL是一种面向数据库的通用数据处理语言规范，能完成以下几类功能：提取查询数据，插入修改删除数据，生成修改和删除数据库对象，数据库安全控制，数据库完整性及数据保护控制。 
+
+SQL分类： 
+DDL—数据定义语言（CREATE，ALTER，DROP，DECLARE） 
+DML—数据操纵语言（SELECT，DELETE，UPDATE，INSERT） 
+DCL—数据控制语言（GRANT，REVOKE，COMMIT，ROLLBACK） 
+
+db2数据类型 
+CHAR()：定长字符串  最大长度为 254    
+VARCHAR()：变长字符  最大长度为 4000   
+SMALLINT：短整型数字  长度为 2 字节  
+INTEGER：整型数字  长度为 4 字节  
+REAL：单精度浮点  32 位近似值  
+DOUBLE：双精度浮点  64 位近似值 
+DECIMAL(m,n)：数字  精度为m小数位为n 
+DATE：日期时间 
+TIME：日期时间 
+TIMESTAMP：日期时间 
+
+DDL—数据库定义语言：直接提交的。 
+   CREATE：用于创建数据库对象。 
+   DECLARE：除了是创建只在过程中使用的临时表外，DECLARE语句和CREATE语句非常相似。唯一可以被声明的对象是表。并且必须放入用户临时表空间。   
+   DROP：可以删除任何用CREATE（数据库对象）和DECLARE（表）创建的对象。 
+   ALTER：允许修改某些数据库对象的信息。不能修改索引。 
+下面主要基于对象介绍基本的语法： 
+1、数据库： 
+  创建数据库：CREATE DATABASE database-name [USING CODESET codeset TERRITORY territory]  
+  [color=blue:b36c9124a3]注：代码页的问题。[/color:b36c9124a3] 
+  删除数据库：drop database dbname 
+2、表： 
+  创建新表： 
+   create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..) 
+  根据已有的表创建新表： 
+   A：create table tab_new like tab_old 
+   B：create table tab_new as select col1,col2… from tab_old definition only 
+修改表： 
+增加一个列: 
+Alter table tabname add column col type 
+[color=blue:b36c9124a3]注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。[/color:b36c9124a3]添加主键： 
+Alter table tabname add primary key(col) 
+删除主键： 
+Alter table tabname drop primary key(col) 
+ 删除表：drop table tabname  
+3、表空间： 
+  创建表空间：create tablespace tbsname pagesize 4k managed by database using (file ‘file’ size) 
+  表空间加入容器：alter tablespace tablespace_name add(file 'filename' size) 
+  [color=blue:b36c9124a3]注：该操作是不可逆的，加入容器后将不能将其删除，因此在加入的时候注意。[/color:b36c9124a3] 
+  删除表空间：drop tablespace tbsname 
+4、索引： 
+  创建索引：create [unique] index idxname on tabname(col….)  
+  删除索引：drop index idxname 
+  [color=blue:b36c9124a3]注：索引是不可更改的，想更改必须删除重新建。[/color:b36c9124a3] 
+5、视图： 
+  创建视图：create view viewname as select statement 
+  删除视图：drop view viewname 
+    [color=blue:b36c9124a3]注：视图唯一能修改的是引用类型列，改变列的范围。其他定义好了都不能修改。当视图基于的基表drop后，视图变为无效。[/color:b36c9124a3] 
+
+DML—数据库操纵语言，它不隐式地提交当前事务 ，是否提交视环境设定而定。 
+
+ SELECT：从表中查询符合数据 
+  [color=blue:b36c9124a3]注：条件中连接的问题，避免出现笛卡儿乘积 
+ [/color:b36c9124a3] 
+ DELETE：删除已有表的数据 
+ UPDATE：更新已有表的数据 
+ INSERT：向已有表中插入数据 
+ [color=blue:b36c9124a3]注：DELETE，UPDATE和INSERT是否直接提交取决与执行语句所在的环境。 
+ 在执行时注意事务日志满的情况。[/color:b36c9124a3] 
+1、select时，注意索引谓词和非索引谓词，尽量在有索引的列上使用索引谓词。 
+谓词类型 可索引 注        释 
+Col∝con Y ∝代表>,>=,=,<=,<,但是<>不是可索引的。 
+Col between con1 and con2 Y 在匹配系列中必须是最后的。 
+Col in list Y 仅对一个匹配列 
+Col is null Y 
+Col like ‘xyz%’ Y 模糊匹配%在后面。 
+Col like ‘%xyz’ N 模糊匹配%在前面。 
+Col1∝Col2 N Col1和col2来自同一个表 
+Col∝Expression N 例如：c1（c1+1）/2 
+Pred1 and Pred2 Y Pred1和Pred2都是可索引的，指相同索引的列 
+Pred1 or Pred2 N 除了（c1=a or c1=b）外，他可以被认为是c1 in（a，b） 
+Not Pred1 N 或者任何的等价形式：Not between,Not in,Not like等等。 
+使用索引的例子介绍： 
+<1>、单个表上索引查询的介绍 ：  
+A：select *  from t1 where c1 = 10； 
+  在c1列上无索引，如何检索 
+  在c1列上有索引，如何检索 
+B：select *  from t1 where c1 =10 and c2 between 5 and 10 and c3 like ‘A%’ 
+ 仅在c1列上有索引 
+  在c1,c2和c3列上有单独的索引 
+  在c1，c2和c3列上有联合索引 
+此处可以填加索引匹配规则和高级规则，比较难理解！！ 
+<2>、两个或多个表上索引查询的介绍： 
+(1)、使用循环嵌套法执行查询 
+A：select t1.c1,t1.c2,t2.c3,t2.c4 from t1,t2 where t1.c1=10 and t1.c2 =t2.c3 
+介绍查询的方法，看看哪列上最需要索引。 
+B：select t1.c1,t1.c2,t2.c3,t2.c4 from t1,t2 where t1.c1=10 and t2.c4 = 10 and t1.c2 =t2.c3 
+(2)、使用归并连接执行连接查询 
+例：select t1.c1,t1.c2,t2.c3,t2.c4 from t1,t2 where t1.c1=10 and t2.c4 = 10 and t1.c2 =t2.c3 
+(3)、三个以上的表进行连接查询采取的规则或者方法 
+（2）、GROUP BY：实现简单分组的功能，当用group by时，查询选择列中除了在group by中出现的和常量外，其他的列上要用分组函数。可以使用一些分组函数实现一些列不在group by中出现，min，max等。 
+（3）、HAVING的使用，对一些分组列进行条件判断。 
+（4）、ORDER BY子句使得SQL在显示查询结果时将各返回行按顺序排列，返回行的排列顺序由ORDER BY 子句指定的表达式的值确定。 
+2、DELETE：从表中删除记录 
+语法格式： 
+DELETE FROM tablename WHERE (conditions)  
+3、INSERT：向表中插入记录 
+语法格式： 
+INSERT INTO tablename (col1,col2,…) VALUES (value1,value2,…); 
+INSERT INTO tablename (col1,col2,…) VALUES (value1, value2,…), (value1, value2,…),…… 
+Insert不会等待任何程序，不会导致锁定。 
+4、UPDATE： 
+语法格式： 
+UPDATE tabname SET (col1=values1,col2=values2,…) WHERE (conditions); 
+[color=blue:b36c9124a3]注：update的速度比较慢，要在相应列上建立索引。[/color:b36c9124a3] 
+
+DCL—数据控制语言 
+
+ GRANT—授予用户权限 
+ REVOKE—撤消用户权限 
+ COMMIT—提交事务，可以使数据库的修改永久化  
+ ROLLBACK—回滚事务，消除上一个COMMIT命令后的所做的全部修改，使得数据库的内容恢复到上一个COMMIT执行后的状态.。 
+
+1、GRANT：所有着或者管理员把访问权限赋给其他用户 
+语法格式： 
+grant [all privileges|privileges,….] on tabname | viewname  to [public|user,….]  
+2、REVOKE:取消某一用户的某中访问权限 
+语法格式： 
+Revoke [all privileges|privileges,….] on tabname | viewname  from [public|user,….]  
+[color=blue:b36c9124a3]注：不能取消实例级别的用户的任何权限，他们不是通过grant授权的，是通过组实现的权限。[/color:b36c9124a3] 
+3、COMMIT:把事务中所做的修改永久化记录到数据库。 
+语法格式： 
+ commit [work] 
+4、ROLLBACK:将上次提交以来所做的更改全部撤消。 
+语法格式： 
+Rollback [work] 
+
+高级sql简单介绍 
+一、查询间使用运算词 
+A： UNION 运算符 
+UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION 一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。  
+B： EXCEPT 运算符 
+EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。  
+C： INTERSECT 运算符 
+INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。 
+注：使用运算词的几个查询结果行必须是一致的。 
+二、外连接 
+A、left outer join： 
+左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 
+B：right outer join: 
+右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 
+C：full outer join： 
+全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。 
+
+[color=blue:b36c9124a3]注：复合外连接按照从左到右的顺序执行连接，左边连接的结果集和右边连接[/color:b36c9124a3] 
+三、超级分组和移动函数 
+A：grouping sets：用来在单个sql中形成多级分组。 
+例：select company_id,node_id,count(customer_id) from customer group by  grouping sets(company_id,node_id) 
+B：rollup：可以在单个数据库操作中形成多个分组。 
+ 例：select company_id,node_id,count(customer_id) from customer group by  rollup(company_id,node_id) 
+注：rollup操作不是可交换的操作，指定用户组的顺序是很重要的。 
+C：cube： 生成分组表中分组的所有组合。 
+ 例：select company_id,node_id,count(customer_id) from customer group by  cube(company_id,node_id) 
+D：over：移动函数可以帮助实现移动的数据分析 
+  Select date,avg(qty) over(order by date rows between 1 preceding and 1 following) as values from sale 
+
+附录：常用函数介绍 
+1、类型转化函数： 
+  转化为数字类型的： 
+decimal, double, Integer, smallint,real 
+Hex(arg):转化为参数的16进制表示。 
+  转化为字符串类型的： 
+char, varchar 
+Digits(arg):返回arg的字符串表示法，arg必须为decimal。 
+  转化为日期时间的： 
+date, time,timestamp 
+2、时间日期： 
+year, quarter, month, week, day, hour, minute ,second 
+dayofyear(arg):返回arg在年内的天值 
+Dayofweek(arg):返回arg在周内的天值 
+days(arg):返回日期的整数表示法，从0001-01-01来的天数。  
+midnight_seconds(arg):午夜和arg之间的秒数。 
+Monthname(arg):返回arg的月份名。 
+Dayname(arg):返回arg的星期。 
+3、字符串函数： 
+length,lcase, ucase, ltrim, rtrim 
+Coalesce(arg1,arg2….):返回参数集中第一个非null参数。 
+Concat (arg1,arg2):连接两个字符串arg1和arg2。 
+insert(arg1,pos,size,arg2):返回一个，将arg1从pos处删除size个字符，将arg2插入该位置。 
+left(arg,length):返回arg最左边的length个字符串。 
+locate(arg1,arg2,<pos>):在arg2中查找arg1第一次出现的位置，指定pos，则从arg2的pos处开始找arg1第一次出现的位置。 
+posstr(arg1,arg2):返回arg2第一次在arg1中出现的位置。 
+repeat(arg1 ,num_times):返回arg1被重复num_times次的字符串。 
+replace(arg1,arg2,arg3):将在arg1中的所有arg2替换成arg3。 
+right(arg,length):返回一个有arg左边length个字节组成的字符串。 
+space(arg):返回一个包含arg个空格的字符串。 
+substr(arg1,pos,<length>):返回arg1中pos位置开始的length个字符，如果没指定length，则返回剩余的字符。 
+4、数学函数：  
+Abs, count, max, min, sum 
+Ceil(arg):返回大于或等于arg的最小整数。 
+Floor(arg):返回小于或等于参数的最小整数。 
+Mod(arg1,arg2):返回arg1除以arg2的余数，符号与arg1相同。 
+Rand():返回1到1之间的随机数。 
+Power(arg1,arg2):返回arg1的arg2次方。 
+Round(arg1,arg2):四舍五入截断处理，arg2是位数，如果arg2为负，则对小数点前的数做四舍五入处理。 
+Sigh(arg):返回arg的符号指示符。-1,0,1表示。 
+truncate(arg1,arg2):截断arg1，arg2是位数，如果arg2是负数，则保留arg1小数点前的arg2位。 
+
+5、其他： 
+nullif(arg1,arg2)：如果2个参数相等，则返回null，否则，返回参数1
+
+ 
+ 
