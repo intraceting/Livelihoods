@@ -1,0 +1,45 @@
+There are 5 files which comprise the documentation for the CIFS protocol
+and the CIFS extensions for enterprise networking. They are available in
+both .doc (Word 95) and .txt formats
+
+1. cifs6 is the main CIFS file sharing protocol spec.
+
+2. cifsbrow is the spec for the browser
+
+3. cifsrap2 is the spec for the RAP protocol and some remote
+admin requests that use it
+	- NetShareEnum
+	- NetServerEnum2
+	- NetServerGetInfo
+	- NetShareGetInfo
+	- NetWkstaUserLogon
+	- NetWksatUserLogoff
+	- NetUserGetInfo
+	- NetWkstaGetInfo
+	- SamOemChangePassword
+
+4. cifsprt is the spec for CIFS printing.
+
+5. cifslog is the spec for CIFS logon and passthrough authentication.
+
+
+
+There are also 4 files that make up the older SMB protocol specs (they are
+not pure ascii, they have some formatting characters in them
+for any standard line printer):
+
+1) COREP.TXT is the orginal core protocol developed for MSnet and PCLP.
+It is the common protocol (ie least common denominator) spoken
+by any SMB server (ie MSnet, Lan Manager, VMS SMB servers, XenixNet,
+etc).
+
+2) DOSEXTP.TXT is the LM 1.0 SMB protocol.
+
+3) SMB.TXT is the LM 2.0 protocol.  Note: In the doc is calls
+LM 2.0 as LM 1.2 (it's orginal name before being renamed to 
+LM 2.0).
+
+4) XEXTNP.TXT is the XenixNet SMB protocol.
+
+Happy reading.
+

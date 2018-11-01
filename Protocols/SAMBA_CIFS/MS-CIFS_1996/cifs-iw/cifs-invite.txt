@@ -1,0 +1,151 @@
+------------------------------
+
+Date:    Thu, 8 Aug 1996 10:16:35 -0700
+From:    Paul Leach <paulle@MICROSOFT.COM>
+Subject: ANNOUNCE: CIFS Workshop
+
+Dear CIFS Developer:
+
+Microsoft cordially invites you to attend the first Common Internet File
+System (CIFS) Implementor's Workshop. CIFS provides a standard, open and
+cross-platform remote file system protocol for the Internet, enabling
+groups of users to work together and share documents across the Internet
+or within their corporate intranets.
+
+
+This two-day event will be held Monday August 26 and Tuesday August  27
+1996 on Microsoft's corporate campus in Redmond, Washington.  The goals
+for this event are to: 1) ensure broad interoperability of CIFS
+implementations on all platforms; and 2) to provide a forum for detailed
+working sessions on the draft CIFS specification. Discussions will be
+led by senior developers and program managers from Microsoft and other
+CIFS vendors. Your participation will help ensure that CIFS technology
+is open, published and widely available for all computer users.
+
+
+The presentations will be highly technical, and a strong working
+knowledge of SMB networking is presumed. This event will provide
+detailed information about CIFS technology for both intranet and
+Internet applications.  In addition Microsoft will provide details on
+CIFS implementation issues not yet fully documented in the
+specification. There will be ample time provided for you to provide
+technical feedback.
+
+
+Because conference space is limited, please send us your confirmation by
+August 16, 1996. You will not be admitted to the conference without a
+confirmed registration.
+
+
+
+To confirm your attendance, please fax your completed registration form
+to the attention of Lori Koidahl, Building 12 South, 206-936-8762, or
+confirm via email to a-lorik@microsoft.com. Confirmation packets
+outlining suggested accommodations, design specification, final agenda,
+and details on the Redmond, Washington event location will be sent out
+after we receive your RSVP.
+
+
+We look forward to your participation in the first CIFS Implementor's
+Workshop.
+
+
+Sincerely,
+
+
+
+
+Paul Leach (paulle@microsoft.com)
+Architect, Distributed Services
+Desktop and Business Systems
+Microsoft Corporation
+
+-------------
+Preliminary Agenda
+Building 12, Kodiak Room, Microsoft Campus
+
+Day 1, August 26 1996
+8:00    Continental Breakfast
+        8:30    Welcome / CIFS Overview
+        9:00    Implementing CIFS on UNIX, Part 1
+        9:45    --- Break ---
+        10:00   CIFS for Corporate Intranets
+- WINS
+- Browsing
+- Login
+                - Pass-through authentication
+        12:00   --- Lunch ---
+        1:00    Implementing CIFS on UNIX, Part 2
+        1:45    Implementing CIFS for MacOS
+        2:30    --- Break ---
+        2:45    Demonstrations
+3:15    CIFS New Technology and Futures
+- Distributed File System (DFS)
+- CIFS in Windows Technology Roadmap
+        4:15    CIFS on the Internet
+- Working Discussion
+        6:00    End
+        7:00    --- Dinner ---
+
+Day 2, August 27 1996
+8:00    Continental Breakfast
+        8:30    CIFS Specification Technical Working Session
+        10:15   --- Break ---
+        10:30   CIFS Specification Technical Working Session (cont.)
+        12:00   --- Lunch ---
+        1:30    CIFS Specification Technical Working Session (cont.)
+        3:00    End
+
+------------------------------
+
+Date:    Thu, 8 Aug 1996 10:28:20 -0700
+From:    Paul Leach <paulle@MICROSOFT.COM>
+Subject: ANNOUNCE: CIFS Workshop Registration form
+
+Registration Form
+CIFS Implementor's Workshop
+August 26 and 27, 1996
+
+
+To register:    Please fill out this form and fax to:
+                Microsoft Corporation, 206-936-8762
+                Attn: Lori Koidahl, Building 12 South
+        OR
+
+                Call Lori Koidahl directly at (206) 882-8080 ext. 21889
+
+        OR
+
+                Send e-mail to a-lorik@microsoft.com
+
+
+NAME_______________________________________________
+
+TITLE______________________________________________
+
+DEPARTMENT_________________________________________
+
+COMPANY____________________________________________
+
+ADDRESS 1__________________________________________
+
+ADDRESS 2__________________________________________
+
+CITY_______________________________STATE___ZIP_____
+
+PHONE NUMBER (         )
+
+FAX NUMBER (         )
+
+E-MAIL  (if available, Internet, CompuServe, etc.)
+
+
+Upon receiving your registration you will be sent a confirmation packet
+that among other things, will include hotel accommodations information.
+You will be responsible for making your own travel arrangements
+including hotel and transportation to and from Redmond, Washington.
+
+We look forward to seeing you on August 26 and 27, 1996!
+
+------------------------------
+

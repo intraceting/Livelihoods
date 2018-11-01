@@ -1,0 +1,3482 @@
+2,5c2,5
+< Request for Comments: DRAFT                                P. Leach
+< Category: Informational                                    D. Perry
+< Title: draft-heizer-cifs-v1-spec-01.txt                    Microsoft
+<                                                            June 30, 1996
+---
+> Request for Comments: DRAFT                                 P. Leach
+> Category: Informational                                     D. Perry
+> Title: draft-heizer-cifs-v1-spec-02.txt                    Microsoft
+>                                                      August 23, 1996
+26,29c26,29
+< list <cifs@lists.msn.com>; subscribe by sending a message to 
+< <ListAdmin@lists.msn.com> with a body of "subscribe CIFS 
+< you@your.company.com". There is a CIFS home page at 
+< <ftp://ftp.microsoft.com/developr/drg/SMB-info/cifs.html>.
+---
+> list <cifs@listserv.msn.com>; subscribe by sending a message to 
+> <ListServ@listserv.msn.com> with a body of "subscribe CIFS 
+> you@your.domain". There is a CIFS home page at 
+> <http://www.microsoft.com/intdev/cifs>.
+48c48
+< 1.1.8 Server name resolution via DNS	10
+---
+> 1.1.8 Server name resolution independence	10
+55,93c55,97
+< 2.5 SMB Protocol Dialect Negotiation	15
+< 2.6 Message Transport	15
+< 2.6.1 Reliable Connection Oriented Transports	16
+< 2.6.2 Connectionless Transports	17
+< 2.7 Opportunistic Locks	21
+< 2.7.1 Exclusive Oplocks	21
+< 2.7.2 Batch Oplocks	23
+< 2.7.3 Level II Oplocks	25
+< 2.8 Security Model	26
+< 2.9 Resource Share/Access Example	27
+< 2.10 Authentication	29
+< 2.10.1 Pre NT LM 0.12	30
+< 2.10.2 NT LM 0.12	30
+< 2.11 Distributed Filesystem (DFS) Support	31
+< 3. SMB MESSAGE FORMATS AND DATA TYPES	32
+< 3.1 SMB Header	32
+< 3.1.1 Flags field	33
+< 3.1.2 Flags2 Field	34
+< 3.1.3 Tid Field	35
+< 3.1.4 Pid Field	36
+< 3.1.5 Mid Field	36
+< 3.1.6 Status Field	36
+< 3.1.7 Timeouts	37
+< 3.1.8 Data Buffer (BUFFER) and String Formats	37
+< 3.2 File Names	38
+< 3.3 Wildcards	38
+< 3.4 DFS Pathnames	39
+< 3.5 Time And Date Encoding	40
+< 3.6 Access Mode Encoding	41
+< 3.7 Open Function Encoding	42
+< 3.8 Open Action Encoding	43
+< 3.9 Device State Encoding	43
+< 3.10 File Attribute Encoding	44
+< 3.11 Batching Requests ("AndX" Messages)	45
+< 3.12 "Transaction" Style Subprotocols	46
+< 3.12.1 SMB_COM_TRANSACTION and SMB_COM_TRANSACTION2 Formats	47
+< 3.12.2 SMB_COM_NT_TRANSACTION Formats	50
+< 3.12.3 Functional Description	55
+< 3.13 Valid SMB Requests by Negotiated Dialect	59
+---
+> 2.4.1 Notation	13
+> 2.4.2 SMB header	14
+> 2.5 CIFS Protocol Dialect Negotiation	16
+> 2.6 Message Transport	16
+> 2.6.1 Connection Establishment	16
+> 2.6.2 Server-side Connection Procedures	17
+> 2.6.3 Connection Management	17
+> 2.7 Opportunistic Locks	18
+> 2.7.1 Exclusive Oplocks	18
+> 2.7.2 Batch Oplocks	20
+> 2.7.3 Level II Oplocks	22
+> 2.8 Security Model	23
+> 2.9 Resource Share/Access Example	24
+> 2.10 Authentication	26
+> 2.10.1 Pre NT LM 0.12	27
+> 2.10.2 NT LM 0.12	27
+> 2.11 Distributed Filesystem (DFS) Support	28
+> 3. SMB MESSAGE FORMATS AND DATA TYPES	29
+> 3.1 SMB Header	29
+> 3.1.1 Flags field	30
+> 3.1.2 Flags2 Field	31
+> 3.1.3 Tid Field	32
+> 3.1.4 Pid Field	32
+> 3.1.5 Mid Field	33
+> 3.1.6 Status Field	33
+> 3.1.7 Timeouts	33
+> 3.1.8 Data Buffer (BUFFER) and String Formats	34
+> 3.2 File Names	35
+> 3.3 Wildcards	35
+> 3.4 DFS Pathnames	36
+> 3.5 Time And Date Encoding	37
+> 3.6 Access Mode Encoding	38
+> 3.7 Access Mask Encoding	39
+> 3.8 Open Function Encoding	41
+> 3.9 Open Action Encoding	41
+> 3.10 File Attribute Encoding	42
+> 3.11 Extended File Attribute Encoding	43
+> 3.12 Batching Requests ("AndX" Messages)	45
+> 3.13 "Transaction" Style Subprotocols	46
+> 3.13.1 SMB_COM_TRANSACTION and SMB_COM_TRANSACTION2 Formats	47
+> 3.13.2 SMB_COM_NT_TRANSACTION Formats	50
+> 3.13.3 Functional Description	55
+> 3.14 Valid SMB Requests by Negotiated Dialect	59
+100,132c104,134
+< 4.1.5 TREE_DISCONNECT:  Tree Disconnect	78
+< 4.1.6 TRANS2_QUERY_FS_INFORMATION: Get File System Information	78
+< 4.1.7 ECHO: Ping the Server	82
+< 4.1.8 NT_CANCEL: Cancel request	83
+< 4.2 File Requests	83
+< 4.2.1 NT_CREATE_ANDX: Create or Open File **	83
+< 4.2.2 NT_TRANSACT_CREATE: Create or Open File with EAs or SD	90
+< 4.2.3 CREATE_TEMPORARY: Create Temporary File	93
+< 4.2.4 READ_ANDX:  Read Data	94
+< 4.2.5 READ_RAW: Read Raw	97
+< 4.2.6 WRITE_ANDX:  Write Bytes to file or resource	101
+< 4.2.7 WRITE_RAW: Write Raw Bytes	104
+< 4.2.8 LOCKING_ANDX:  Lock or Unlock Byte Ranges	108
+< 4.2.9 SEEK: Seek in File	112
+< 4.2.10 FLUSH: Flush File	114
+< 4.2.11 CLOSE: Close File	114
+< 4.2.12 DELETE: Delete File	115
+< 4.2.13 RENAME: Rename File	116
+< 4.2.14 MOVE:  Rename File	118
+< 4.2.15 COPY: Copy File	119
+< 4.2.16 TRANS2_QUERY_PATH_INFORMATION: Get File Attributes given Path	122
+< 4.2.17 TRANS2_SET_PATH_INFORMATION: Set File Attributes given Path	129
+< 4.2.18 TRANS2_QUERY_FILE_INFORMATION: Get File Attributes Given FID	131
+< 4.2.19 TRANS2_SET_FILE_INFORMATION: Set File Attributes Given FID	132
+< 4.3 Directory Requests	133
+< 4.3.1 TRANS2_CREATE_DIRECTORY: Create Directory (optional EAs)	133
+< 4.3.2 DELETE_DIRECTORY: Delete Directory	134
+< 4.3.3 CHECK_DIRECTORY: Check Directory	135
+< 4.3.4 TRANS2_FIND_FIRST2: Search Directory using Wildcards	136
+< 4.3.5 TRANS2_FIND_NEXT2: Resume Directory Search Using Wildcards	144
+< 4.3.6 FIND_CLOSE2: Close Directory Search	145
+< 4.3.7 NT_TRANSACT_NOTIFY_CHANGE: Request Change Notification	146
+< 4.4 DFS Operations	149
+---
+> 4.1.5 TREE_DISCONNECT:  Tree Disconnect	79
+> 4.1.6 TRANS2_QUERY_FS_INFORMATION: Get File System Information	79
+> 4.1.7 ECHO: Ping the Server	84
+> 4.1.8 NT_CANCEL: Cancel request	85
+> 4.2 File Requests	86
+> 4.2.1 NT_CREATE_ANDX: Create or Open File	86
+> 4.2.2 NT_TRANSACT_CREATE: Create or Open File with EAs or SD	91
+> 4.2.3 CREATE_TEMPORARY: Create Temporary File	94
+> 4.2.4 READ_ANDX:  Read Bytes	95
+> 4.2.5 WRITE_ANDX:  Write Bytes to file or resource	97
+> 4.2.6 LOCKING_ANDX:  Lock or Unlock Byte Ranges	99
+> 4.2.7 SEEK: Seek in File	103
+> 4.2.8 FLUSH: Flush File	105
+> 4.2.9 CLOSE: Close File	106
+> 4.2.10 DELETE: Delete File	107
+> 4.2.11 RENAME: Rename File	108
+> 4.2.12 MOVE:  Rename File	110
+> 4.2.13 COPY: Copy File	112
+> 4.2.14 TRANS2_QUERY_PATH_INFORMATION: Get File Attributes given Path	115
+> 4.2.15 TRANS2_QUERY_FILE_INFORMATION: Get File Attributes Given FID	121
+> 4.2.16 TRANS2_SET_PATH_INFORMATION: Set File Attributes given Path	121
+> 4.2.17 TRANS2_SET_FILE_INFORMATION: Set File Attributes Given FID	125
+> 4.3 Directory Requests	127
+> 4.3.1 TRANS2_CREATE_DIRECTORY: Create Directory (with optional EAs)	127
+> 4.3.2 DELETE_DIRECTORY: Delete Directory	127
+> 4.3.3 CHECK_DIRECTORY: Check Directory	128
+> 4.3.4 TRANS2_FIND_FIRST2: Search Directory using Wildcards	129
+> 4.3.5 TRANS2_FIND_NEXT2: Resume Directory Search Using Wildcards	137
+> 4.3.6 FIND_CLOSE2: Close Directory Search	138
+> 4.3.7 NT_TRANSACT_NOTIFY_CHANGE: Request Change Notification	139
+> 4.4 DFS Operations	141
+134c136
+< Referral	149
+---
+> Referral	141
+136,169c138,173
+< Error	153
+< 4.5 Print Spooling Operations	154
+< 4.5.1 OPEN_PRINT_FILE: Create Print Spool file	154
+< 4.5.2 GET_PRINT_QUEUE: Get Printer Queue Entries	155
+< 4.6 Miscellaneous Operations	157
+< 4.6.1 NT_TRANSACT_IOCTL	157
+< 4.6.2 NT_TRANSACT_QUERY_SECURITY_DESC	158
+< 4.6.3 NT_TRANSACT_SET_SECURITY_DESC	159
+< 5. OBSOLESCENT SMB REQUESTS	159
+< 5.1 CLOSE_PRINT_FILE:  Close and Spool Print Job*	160
+< 5.2 CREATE: Create File*	160
+< 5.3 CREATE_DIRECTORY: Create Directory	162
+< 5.4 CREATE_NEW: Create File*	162
+< 5.5 LOCK_AND_READ: Lock and Read Bytes*	164
+< 5.6 LOCK_BYTE_RANGE: Lock Bytes*	166
+< 5.7 OPEN: Open File*	167
+< 5.8 OPEN_ANDX:  Open File*	170
+< 5.9 PROCESS_EXIT: Process Exit*	172
+< 5.10 QUERY_INFORMATION:  Get File Attributes	174
+< 5.11 QUERY_INFORMATION2: Get File Information	175
+< 5.12 READ: Read File*	176
+< 5.13 READ_MPX: Read Block Multiplex*	177
+< 5.14 SEARCH: Search Directory using Wildcards*	180
+< 5.15 SET_INFORMATION: Set File Attributes	183
+< 5.16 SET_INFORMATION2: Set File Information	184
+< 5.17 QUERY_INFORMATION_DISK: Get Disk Attributes	185
+< 5.18 TRANS2_OPEN2: Create or Open File with Extended Attributes	186
+< 5.19 TREE_CONNECT: Tree Connect	190
+< 5.20 UNLOCK_BYTE_RANGE: Unlock Bytes*	193
+< 5.21 WRITE: Write Bytes*	193
+< 5.22 WRITE_AND_UNLOCK: Write Bytes and Unlock Range*	195
+< 5.23 WRITE_AND_CLOSE:  Write Bytes and Close File*	196
+< 5.24 WRITE_MPX: Write Block Multiplex*	198
+< 5.25 WRITE_PRINT_FILE: Write to Print File*	201
+---
+> Error	146
+> 4.5 Print Spooling Operations	147
+> 4.5.1 OPEN_PRINT_FILE: Create Print Spool file	147
+> 4.5.2 GET_PRINT_QUEUE: Get Printer Queue Entries	148
+> 4.6 Miscellaneous Operations	150
+> 4.6.1 NT_TRANSACT_IOCTL	150
+> 4.6.2 NT_TRANSACT_QUERY_SECURITY_DESC	151
+> 4.6.3 NT_TRANSACT_SET_SECURITY_DESC	152
+> 5. OBSOLESCENT SMB REQUESTS	153
+> 5.1 CLOSE_PRINT_FILE:  Close and Spool Print Job	153
+> 5.2 CREATE: Create File	154
+> 5.3 CREATE_DIRECTORY: Create Directory	155
+> 5.4 CREATE_NEW: Create File	155
+> 5.5 LOCK_AND_READ: Lock and Read Bytes	157
+> 5.6 LOCK_BYTE_RANGE: Lock Bytes	159
+> 5.7 OPEN: Open File	160
+> 5.8 OPEN_ANDX:  Open File	163
+> 5.9 PROCESS_EXIT: Process Exit	165
+> 5.10 QUERY_INFORMATION:  Get File Attributes	167
+> 5.11 QUERY_INFORMATION2: Get File Information	168
+> 5.12 READ: Read File	169
+> 5.13 READ_MPX: Read Block Multiplex	170
+> 5.14 READ_RAW: Read Raw	173
+> 5.15 SEARCH: Search Directory using Wildcards	176
+> 5.16 SET_INFORMATION: Set File Attributes	179
+> 5.17 SET_INFORMATION2: Set File Information	180
+> 5.18 QUERY_INFORMATION_DISK: Get Disk Attributes	181
+> 5.19 TRANS2_OPEN2: Create or Open File with Extended Attributes	182
+> 5.20 TREE_CONNECT: Tree Connect	186
+> 5.21 UNLOCK_BYTE_RANGE: Unlock Bytes	188
+> 5.22 WRITE: Write Bytes	188
+> 5.23 WRITE_AND_UNLOCK: Write Bytes and Unlock Range	190
+> 5.24 WRITE_AND_CLOSE:  Write Bytes and Close File	191
+> 5.25 WRITE_MPX: Write Block Multiplex	193
+> 5.26 WRITE_PRINT_FILE: Write to Print File	196
+> 5.27 WRITE_RAW: Write Raw Bytes	197
+172,195c176,197
+< 6.2 Named Pipe Transaction Protocol Subcommand Codes	205
+< 6.3 SMB_COM_TRANSACTION2 Subcommand codes	205
+< 6.4 SMB_COM_NT_TRANSACTION Subcommand Codes	206
+< 6.5 SMB Protocol Dialect Constants	208
+< 7. ERROR CODES AND CLASSES	210
+< 8. LEGAL NOTICE	216
+< 9. REFERENCES	216
+< 10. SECURITY CONSIDERATIONS	216
+< 10.1 Share level protection	216
+< 10.2 Plaintext Password Authentication	217
+< 10.3 LANMAN 2.1 (and earlier) Challenge/Response	217
+< 10.3.1 Known Plaintext Attacks	217
+< 10.3.2 Small Key Space	217
+< 10.3.3 Chosen Plaintext Attacks	218
+< 10.3.4 Dictionary Attacks	218
+< 10.3.5 Badly Chosen Passwords	218
+< 10.4 NT LM 0.12 Challenge/Response	218
+< 10.5 Other attacks	219
+< 10.5.1 Hijack connections	219
+< 10.5.2 Downgrade attack	219
+< 10.5.3 Spoofing by Counterfeit Servers	219
+< 10.5.4 Storing Passwords Safely	219
+< 11. AUTHOR'S ADDRESSES	220
+< 12.	221
+---
+> 6.2 SMB_COM_TRANSACTION2 Subcommand codes	204
+> 6.3 SMB_COM_NT_TRANSACTION Subcommand Codes	205
+> 6.4 SMB Protocol Dialect Constants	207
+> 7. ERROR CODES AND CLASSES	208
+> 8. LEGAL NOTICE	215
+> 9. REFERENCES	215
+> 10. SECURITY CONSIDERATIONS	215
+> 10.1 Share level protection	215
+> 10.2 Plaintext Password Authentication	216
+> 10.3 LANMAN 2.1 (and earlier) Challenge/Response	216
+> 10.3.1 Known Plaintext Attacks	216
+> 10.3.2 Small Key Space	216
+> 10.3.3 Chosen Plaintext Attacks	217
+> 10.3.4 Dictionary Attacks	217
+> 10.3.5 Badly Chosen Passwords	217
+> 10.4 NT LM 0.12 Challenge/Response	217
+> 10.5 Other attacks	218
+> 10.5.1 Hijack connections	218
+> 10.5.2 Downgrade attack	218
+> 10.5.3 Spoofing by Counterfeit Servers	218
+> 10.5.4 Storing Passwords Safely	218
+> 11. AUTHOR'S ADDRESSES	219
+227c229
+< o Server name resolution using DNS
+---
+> o Server name resolution independence
+229d230
+< o Operates over connection-oriented or connection-less transports
+275,276c276,278
+< 1.1.8 Server name resolution via DNS
+< The protocol supports resolving server names using the DNS, permitting 
+---
+> 1.1.8 Server name resolution independence
+> The protocol allows clients to resolve server names using any name 
+> resolution mechanism. In particular, it allows using the DNS, permitting 
+291,293c293,295
+< o Make a connection to the server (if using a connection-oriented 
+< transport and no connection has yet been made)
+< o Exchange SMB messages (see below for an example)
+---
+> o Make a connection to the server (if no connection is already 
+> available)
+> o Exchange CIFS messages (see below for an example)
+315,326c317,333
+< Once the server name has been determined, then the client needs to 
+< resolve that name to a transport address. This specification defines 
+< three ways of doing so: using the Domain Name System (DNS) [1,2], 
+< NETBIOS name resolution (see RFC 1001 and RFC 1002 [3,4]), or IPX naming 
+< (see appendix B). Which method is used is configuration dependent; the 
+< default is DNS to encourage interoperability over the Internet. The name 
+< resolution mechanism used will place constraints on the form of the 
+< server name. In the case of NETBIOS, the server name must be 15 
+< characters or less, and be upper case.
+< The server name can also be specified as the string form an IPv4 address 
+< in the usual dotted notation, e.g., "157.33.135.101" In this case, 
+< "resolution" consists of converting to the 32 bit IPv4 address.
+---
+> Like server name determination, how the client resolves the name to the 
+> transport address of the server is outside the scope of this 
+> specification. All that is required by CIFS is that a CIFS client MUST 
+> have some means to resolve the name of a CIFS server to a transport 
+> address, and that a CIFS server MUST register its name with a name 
+> resolution service known its clients.
+> Some examples of name resolution mechanisms include: using the Domain 
+> Name System (DNS) [1,2], and using NETBIOS name resolution (see RFC 1001 
+> and RFC 1002 [3,4]). The server name can also be specified as the string 
+> form of an IPv4 address in the usual dotted decimal notation, e.g., 
+> "157.33.135.101"; in this case, "resolution" consists of converting to 
+> the 32 bit IPv4 address.
+> Which method is used is configuration dependent; the default SHOULD be 
+> DNS to encourage interoperability over the Internet.
+> Note: The name resolution mechanism used may place constraints on the 
+> form of the server name; for example, in the case of NETBIOS, the server 
+> name must be 15 characters or less, and be upper case.
+331c338
+< the SMB request batching mechanism (called the "AndX" mechanism), the 
+---
+> the CIFS request batching mechanism (called the "AndX" mechanism), the 
+378,379c385,397
+< every SMB message has a common format.  Multi-byte values are always 
+< transmitted least significant byte first.
+---
+> every SMB message has a common format.
+> 2.4.1 Notation
+> This specification makes use of "C"-like notation to describe the 
+> formats of messages. Unlike the "C" language, which allows for 
+> implementation flexibility in laying out structures, this specification 
+> adopts the following rules.  Multi-byte values are always transmitted 
+> least significant byte first. All fields, except "bit-fields", are 
+> aligned on the nearest byte boundary (even if longer than a byte), and 
+> there is no implicit padding. Fields using the "bit field" notation are 
+> defined to be laid out within the structure with the first-named field 
+> occupying the lowest order bits, the next named field the next lowest 
+> order bits, and so on. 
+> 2.4.2 SMB header
+389,393d406
+< typedef struct {
+<     ULONG LowTime;
+<     LONG HighTime;
+< } TIME;
+< 
+399,400c412,413
+<             UCHAR ErrorClass;           // Error class
+<             UCHAR Reserved;             // Reserved for future use
+---
+>             UCHAR ErrorClass;           	// Error class
+>             UCHAR Reserved;       	// Reserved for future use
+403c416
+<         ULONG NtStatus;                 // NT-style 32-bit error code
+---
+>         ULONG Status;                   	// 32-bit error code
+405c418
+<     UCHAR Flags;                        // Flags
+---
+>     UCHAR Flags;                       	// Flags
+409c422
+< 					// bytes long
+---
+> bytes long
+411,416c424,427
+<             USHORT PidHigh;             // High part of PID
+< 					// (NT Create And X)
+<             ULONG  Unused;              // Not used
+<             USHORT Sid;                 // Session ID
+<             USHORT SequenceNumber;      // Sequence number
+< 	} Connectionless;              	// IPX
+---
+>             USHORT PidHigh;             	// High part of PID
+>             ULONG  Unused;              	// Not used
+>             ULONG  Unused2;
+> 	} Extra;
+422c433
+<     UCHAR  WordCount;			// Count of parameter words
+---
+>     UCHAR  WordCount;		// Count of parameter words
+424c435
+<     USHORT ByteCount;			// Count of bytes
+---
+>     USHORT ByteCount;		// Count of bytes
+428c439
+< All SMBs have identical format up to the PARAMETERWORDS fields.  
+---
+> All SMBs have identical format up to the ParameterWords fields.  
+430,432c441,443
+< PARAMETERWORDS and BUFFER.  All reserved fields in the SMB header must 
+< be zero.  All quantities are sent in native Intel format.
+< o COMMAND is the operation code which this SMB is requesting, or 
+---
+> ParameterWords and Buffer.  All reserved fields in the SMB header must 
+> be zero.
+> o Command is the operation code which this SMB is requesting, or 
+434c445
+< o STATUS.DOSERROR.ERRORCLASS and STATUS.DOSERROR.ERROR are set by the 
+---
+> o Status.DosError.ErrorClass and Status.DosError.Error are set by the 
+437c448
+< returns, the status is returned in STATUS.NTSTATUS instead.  When an 
+---
+> returns, the status is returned in STATUS.STATUS instead.  When an 
+440c451
+< o FLAGS and FLAGS2 contain bits which, depending on the negotiated 
+---
+> o Flags and Flags2 contain bits which, depending on the negotiated 
+442,446c453,454
+< o PIDHIGH is used in the NTCREATEANDX request SMB
+< o CONNECTIONLESS. SID, and CONNECTIONLESS.SEQUENCENUMBER are used when 
+< the client to server connection is on a datagram oriented protocol 
+< such as IPX.
+< o TID identifies the subdirectory, or "tree", on the server which the 
+---
+> o PidHigh is used in the NtCreateAndX request SMB
+> o Tid identifies the subdirectory, or "tree", on the server which the 
+448,449c456,457
+< should set TID to 0xFFFF
+< o PID is the caller's process id, and is generated by the client to 
+---
+> should set Tid to 0xFFFF.
+> o Pid is the caller's process id, and is generated by the client to 
+451,456c459,465
+< o MID is reserved for multiplexing multiple messages on a single 
+< Virtual Circuit (VC).  A response message will always contain the 
+< same value as the corresponding request message.
+< 2.5 SMB Protocol Dialect Negotiation
+< The first message sent from an SMB client to an SMB server must be one 
+< whose COMMAND field is SMB_COM_NEGOTIATE.  The format of this client 
+---
+> o Mid is reserved for multiplexing multiple messages on a single 
+> transport connection.  A response message will always contain the 
+> same value as the corresponding request message. The client MUST not 
+> have multiple outstanding requests to a server with the same Mid.
+> 2.5 CIFS Protocol Dialect Negotiation
+> The first message sent from an CIFS client to an CIFS server must be one 
+> whose Command field is SMB_COM_NEGOTIATE.  The format of this client 
+458c467
+< dialects of the SMB protocol which the client supports.  The server 
+---
+> dialects of the CIFS protocol which the client supports.  The server 
+462,465c471
+< Clients and servers can exchange messages over a NETBIOS reliable 
+< connection oriented transport, or a connectionless transport.
+< 2.6.1 Reliable Connection Oriented Transports
+< When using a reliable connection oriented transport, the SMB protocol 
+---
+> When using a reliable connection oriented transport, the CIFS protocol 
+472,510c478,507
+< resources open by that client on the server are closed.
+< 2.6.1.1 Connection Establishment
+< How the connection gets established depends on how the server name was 
+< resolved to the transport address: with DNS, with an explicit IP 
+< address, or with NETBIOS.
+< 2.6.1.1.1 DNS
+< When using DNS,  the server  name is mapped onto an IP address and the 
+< connection is established by using the session establishment protocol as 
+< outlined in RFC 1001 and RFC 1002. The client should initiate the 
+< session setup using a called name which is obtained by taking the first 
+< component of the server name, converting it to upper case, and padding 
+< it up to a length of 16 with banks (hex 20 value). 
+< 2.6.1.1.2 Explicit IP Address
+< The connection is established by using the session establishment 
+< protocol as outlined in RFC 1001 and RFC 1002; the client should use 
+< "*SMBSERVER      " as the called name in the session establishment 
+< protocol (since it does not know the server name).
+< 2.6.1.1.3 NETBIOS 
+< When using NETBIOS name resolution, the NETBIOS session establishment 
+< protocol as outlined in RFC 1001 and RFC 1002 must also be used. The 
+< NETBIOS name used for session establishment is the server name converted 
+< to upper case and padded to a length of 16 with blanks (hex 20 value).
+< Server-side Connection Procedures
+< The server should register a listen on at least one of the following 
+< names on the network using the NETBIOS name registration services.  If 
+< the server wishes to support clients that use NETBIOS name resolution, 
+< it registers a 16 character name that is obtained by padding the server 
+< machine name with additional blanks if required.  If the server wishes 
+< to support clients that use DNS name resolution, the name to register is 
+< obtained by taking the first component of the server name and padding it 
+< up to a length of 16 with blanks, and the 16th character of the name 
+< must be a blank (20 hex). Note: while the local server name and the 
+< registered DNS server name may differ, it usually makes administration 
+< easier to have them the same.
+< If servers wish to allow access via explicit IP address, they should 
+< register the name "*SMBSERVER      " (padded to 16 characters with 
+< blanks) as a local name in NETBIOS.  This name must not be defended on 
+< the network. 
+< 2.6.1.2 Connection Management
+---
+> resources open by that client on the server are closed. Message 
+> transport is done using NETBIOS session service (see section 5.3 of RFC 
+> 1001 and section 4.3 of RFC 1002).
+> 2.6.1 Connection Establishment
+> After the server name has been resolved to an IP address, then a 
+> connection to the server needs to be established if one has not already 
+> been set up. Connection establishment is done using the Call primitive 
+> of the NETBIOS session service, which requires the client to provide a 
+> "calling name" and a "called name". The calling name is not significant 
+> in CIFS, except that an identical name from the same transport address 
+> is assumed to represent the same client; the called name is always 
+> "*SMBSERVER      ". Over TCP, the Call primitive results in a "Session 
+> Request" packet to port 139 (see section 4.3.2 of RFC 1002).
+> 2.6.1.1 Backwards compatability
+> If a CIFS client wishes to interoperate with older SMB servers, then if 
+> the Call is rejected by the server, it can retry with a new called name. 
+> The choice of the new called name depends on the name resolution 
+> mechanism used. If DNS was used, the called name should be constructed 
+> from the first component of the server's DNS name, truncated to 15 
+> characters if necessary, and then padded to 16 characters with blank (20 
+> hex) characters. If NETBIOS was used, then the called named is just the 
+> NETBIOS name. If these fail, then a NETBIOS "Adapter Status" request may 
+> be made to obtain the server's NETBIOS name, and the connection 
+> establishment retried with that as the called name.
+> 2.6.2 Server-side Connection Procedures
+> A CIFS server MUST register a NETBIOS Listen that accepts any calling 
+> name on the name "*SMBSERVER     ".
+> In addition, if it wishes to support older SMB clients, it MAY have a 
+> NETBIOS name and register a Listen on that name.
+> 2.6.3 Connection Management
+531,686d527
+< 2.6.2 Connectionless Transports
+< The SMB protocol can be run over connectionless transports such as IPX 
+< and UDP/IP. Since connectionless transports do not support reliable 
+< delivery, this has to be implemented in the SMB protocol itself when 
+< utilizing such transports.
+< Unlike a traditional transport protocol, the connectionless SMB protocol 
+< is asymmetric.  Wherever possible, processing overhead has been moved 
+< from the server to the client so that the server can scale to a large 
+< number of clients efficiently.  For example, the server does not 
+< initiate retransmission of lost responses.  It is entirely up to the 
+< client to resend the request in the case of lost packets in either 
+< direction.
+< The SMB header includes two fields specifically designed for use on 
+< connectionless transports.  "Sid" is the server's session ID and 
+< "SequenceNumber" is the message sequence number.  The Sid value is 
+< generated by the server, and returned to the client in the 
+< NegotiateProtocol response.  The client must use this Sid value in all 
+< future SMB exchanges with this server during this resource sharing 
+< session.  SequenceNumber is supplied by the client. A valid 
+< SequenceNumber is either zero or one greater than the previous sequence 
+< number sent by the client.
+< For sequenced commands, the server requires that the sequence numbers 
+< progress in order, S, S+1, S+2, ...  The sequence number wraps to one 
+< (1) not zero.  The wrap around progression is: 65534, 65535, 1, 2, ...  
+< Out of sequence commands are ignored by the server.
+< For unsequenced commands (i.e. SequenceNumber is 0) the redirector must 
+< use the Mid field to identify SMB responses.  The redirector should take 
+< steps to generate relatively unique values for Mid for each request.  In 
+< particular, the client must ensure that it never has two or more 
+< distinct requests outstanding to the server whose SequenceNumbers are 0 
+< and whose Mids are identical.
+< The client must limit the negotiated buffer size to the maximum MTU of 
+< the connectionless transport.  If desired, the client could dynamically 
+< determine the maximum packet size by sending echo SMBs to the server 
+< using various packet sizes and then selecting the largest size which 
+< worked correctly.
+< For SMB operation over connectionless transports, commands are divided 
+< into two classes: sequenced commands and unsequenced commands. Sequenced 
+< commands are used for operations which cause a state change on the 
+< server that cannot be repeated, and which have relatively few bytes in 
+< the response.  For example, file open/close or record locking.  
+< Unsequenced commands are used for operations which can be performed as 
+< many times as necessary with the same result each time or which have 
+< multi-packet responses.  For example, reading or writing to a disk file.  
+< The client should must send all commands with a large response size as 
+< unsequenced; such commands include file read and file search.
+< 2.6.2.1 Errors specific to connectionless transport operation
+< If the response to a sequenced command is too large, the server will 
+< fail the request with a Status.DosError.ErrorClass set to 
+< SMB_ERR_CLASS_SERVER and Status.DosError.Error set to ERRerror.  If the 
+< Sid value is incorrect, the server will fail the request with a 
+< Status.DosError.ErrorClass set to SMB_ERR_CLASS_SERVER and 
+< Status.DosError.Error set to SMB_ERR_BAD_SID.  If the server has an SMB 
+< in progress which matches either SequenceNumber for sequenced commands 
+< or Mid for unsequenced commands, it will respond with 
+< Status.DosError.ErrorClass  set to SMB_ERR_CLASS_SERVER and 
+< Status.DosError.Error set to SMB_ERR_WORKING.
+< 2.6.2.2 Transaction SMBs
+< The exceptions to the "large response requires unsequenced" rule are 
+< transaction SMBs.  These SMBs are used both to retrieve bulk data from 
+< the server (EG: enumerate shares, etc.) and to change the server's state 
+< (EG: add a new share, change file permissions, etc.)  Transaction 
+< requests are also unusual because they can have a multiple part request 
+< and/or a multiple part response.  For this reason, transactions are 
+< handled as a set of sequenced commands to the server.  Each part of a 
+< request is sent as a sequenced command using the same Mid value and an 
+< increasing Seq value.  The server responds to each request piece except 
+< the last one with a response indicating that the server is ready for the 
+< next piece.  The last piece is responded to with the first piece of the 
+< result data.  The client then sends a transaction secondary SMB with 
+< ParameterDisplacement set to the number of parameter bytes received so 
+< far and DataDisplacement set to the number of data bytes received so far 
+< and ParameterCount, ParameterOffset, DataCount, and DataOffset set to 
+< zero (0).  The server responds with the next piece of the transaction 
+< result.  The process is repeated until all of the response information 
+< has been received.  When the transaction has been completed, the 
+< redirector must send another sequenced command (an echo SMB will do 
+< fine) to the server to allow the server to know that the final piece was 
+< received and that resources allocated to the transaction command may be 
+< released.
+< The flow is as follows, where (S) is the SequenceNumber,  (N) is the 
+< number of request packets to be sent from the client to the server, and 
+< (M) is the number of response packets to be sent by the server to the 
+< client:
+< Client
+< =======================
+< <->
+< ===
+< Server
+< ===========================
+< SMB(S)  Transact
+< ->
+< 
+< 
+< <-
+< OK (S) send more data
+<  [ repeat N-1 times:
+< 
+< 
+< SMB(S+1) Transact 
+< secondary
+< ->
+< 
+< 
+< <-
+< OK (S+1) send more data
+< SMB(S+N-1)
+< 
+< 
+<  ]
+< 
+< 
+< 
+< <-
+< OK (S+N-1) transaction 
+< response (1)
+<  [ repeat M-1 times:
+< 
+< 
+< SMB(S+N) Transact 
+< secondary
+< ->
+< 
+< 
+< <-
+< OK (S+N) transaction 
+< response (2)
+< SMB(S+N+M-2) Transact 
+< secondary
+< ->
+< 
+< 
+< <-
+< OK (S+N+M-2] transaction 
+< response (M)
+<   ]
+< 
+< 
+< SMB(S+N+M-1) Echo
+< ->
+< 
+< 
+< <-
+< OK (S+N+M-1) echoed
+< 
+< In order to allow the server to detect clients which have been powered 
+< off, have crashed, etc., the client must send commands to the server 
+< periodically if it has resources open on the server.  If nothing has 
+< been received from a client for awhile, the server will assume that the 
+< client is no longer running and disconnect the client.  This includes 
+< closing any files that the client had open at the time and releasing any 
+< resources being used on behalf of the client.  Clients should at least 
+< send an echo SMB to the server every four (4) minutes if there is 
+< nothing else to send.  The server will disconnect clients after a 
+< configurable amount of time which cannot be less than five (5) minutes.  
+< (Note: the NT server has a default timeout value of 15 minutes.)
+696,697c537,538
+< OPLOCKS for short.  Versions of the SMB file sharing protocol including 
+< and newer than the LANMAN1.0 dialect support oplocks.
+---
+> oplocks for short.  Versions of the CIFS file sharing protocol including 
+> and newer than the "LANMAN1.0" dialect support oplocks.
+699c540
+< o An EXCLUSIVE oplock allows a client to open a file for exclusive 
+---
+> o An exclusive oplock allows a client to open a file for exclusive 
+701c542
+< o A BATCH oplock allows a client to keep a file open on the server even 
+---
+> o A batch oplock allows a client to keep a file open on the server even 
+703c544
+< o A LEVEL II oplock indicates there are multiple readers of a file, and 
+---
+> o A Level II oplock indicates there are multiple readers of a file, and 
+712d552
+< Oplocks are not supported over connectionless transports.
+1000c840
+< The SMB protocol requires server authentication of users before file 
+---
+> The CIFS protocol requires server authentication of users before file 
+1004,1005c844,845
+< The SMB protocol defines two methods which can be selected by the server 
+< for security:  share level and user level:
+---
+> The CIFS protocol defines two methods which can be selected by the 
+> server for security:  share level and user level:
+1029c869
+< the SMB protocol was issued, and subsequently some clients may not be 
+---
+> the CIFS protocol was issued, and subsequently some clients may not be 
+1099c939
+< An SMB server keeps an encrypted form of a client's password.  To gain 
+---
+> An CIFS server keeps an encrypted form of a client's password.  To gain 
+1133c973
+< The contents of the response to the challenge depends on the SMB 
+---
+> The contents of the response to the challenge depends on the CIFS 
+1186c1026
+< exchanged between SMB clients and servers.  It also details which SMBs 
+---
+> exchanged between CIFS clients and servers.  It also details which SMBs 
+1295,1297c1135,1136
+< If set, the client knows how to handle names 
+< which do not conform to the MS-DOS 8.3 naming 
+< convention.
+---
+> If set in a request, the server may return long 
+> components in path names in the response.
+1301c1140
+< attributes
+---
+> attributes.
+1303,1305d1141
+< 2
+< If set, SMB_FLAGS2_IS_LONG_NAME
+< 
+1309c1145
+< System
+---
+> System.
+1319c1155
+< is a 32 bit error code in Status.NtStatus.  
+---
+> is a 32 bit error code in Status.Status.  
+1327,1329c1163,1165
+< If set, any strings in this SMB message are 
+< encoded as UNICODE.  Otherwise, all strings are 
+< in ASCII.
+---
+> If set, any fields of datatype STRING in this 
+> SMB message are encoded as UNICODE.  Otherwise, 
+> they are in ASCII.
+1333,1334c1169,1170
+< resource.  TID is returned by the server to the client when the client 
+< successfully connects to a resource, and the client uses TID in 
+---
+> resource.  Tid is returned by the server to the client when the client 
+> successfully connects to a resource, and the client uses Tid in 
+1336,1338c1172,1174
+< If the server is executing in a SHARE LEVEL security mode, TID is the 
+< only thing used to allow access to the shared resource. Thus if the user 
+< is able to perform a successful connection to the server specifying the 
+---
+> If the server is executing in share level security mode, Tid is the only 
+> thing used to allow access to the shared resource. Thus if the user is 
+> able to perform a successful connection to the server specifying the 
+1342c1178
+< If however the server is executing in USER LEVEL security mode, access 
+---
+> If however the server is executing in user level security mode, access 
+1347c1183
+< In most SMB requests, TID must contain a valid value. Exceptions include 
+---
+> In most SMB requests, Tid must contain a valid value. Exceptions include 
+1353,1354c1189,1190
+< PID uniquely identifies a client process.  Clients inform servers of the 
+< creation of a new process by simply introducing a new PID value into the 
+---
+> Pid uniquely identifies a client process.  Clients inform servers of the 
+> creation of a new process by simply introducing a new Pid value into the 
+1385c1221
+< An SMB returns error information to the client in the STATUS field.  
+---
+> An SMB returns error information to the client in the Status field.  
+1387,1395c1223,1231
+< the combination of STATUS.DOSERROR.ERRORCLASS and STATUS.DOSERROR.ERROR.  
+< Beginning with NT LM 0.12 SMB servers can return 32 bit error 
+< information to clients using STATUS.NTSTATUS if the incoming client SMB 
+< has bit 14 set in the FLAGS2 field of the SMB header.  Any valid NT 
+< status code may be returned in this case.  The contents of response 
+< parameters is not guaranteed in the case of an error return, and must be 
+< ignored.  For write behind activity, a subsequent write or close of the 
+< file may return the fact that a previous write failed.  Normally write 
+< behind failures are limited to hard disk errors and device out of space.
+---
+> the combination of Status.DosError.ErrorClass and Status.DosError.Error.  
+> Beginning with NT LM 0.12 CIFS servers can return 32 bit error 
+> information to clients using Status.Status if the incoming client SMB 
+> has bit 14 set in the Flags2 field of the SMB header. The contents of 
+> response parameters is not guaranteed in the case of an error return, 
+> and must be ignored.  For write behind activity, a subsequent write or 
+> close of the file may return the fact that a previous write failed.  
+> Normally write behind failures are limited to hard disk errors and 
+> device out of space.
+1461,1462c1297,1298
+< File names in the SMB protocol consist of components separated by a 
+< backslash ('\').  Early clients of the SMB protocol required that the 
+---
+> File names in the CIFS protocol consist of components separated by a 
+> backslash ('\').  Early clients of the CIFS protocol required that the 
+1466c1302
+< a '.'.  All characters are legal in the basename and extension EXCEPT 
+---
+> a '.'.  All characters are legal in the basename and extension except 
+1469,1470c1305,1306
+< If the client has indicated long name support by setting BIT2 in the 
+< FLAGS2 field of the SMB header, this indicates that the client is not 
+---
+> If the client has indicated long name support by setting bit2 in the 
+> Flags2 field of the SMB header, this indicates that the client is not 
+1514,1516c1350,1352
+< different server share, the access to the name will fail with the 
+< distinguished error STATUS_PATH_NOT_COVERED (SMB Status code 
+< 0xC0000257). 
+---
+> different server share, the access to the name will fail with the 32 bit 
+> status STATUS_PATH_NOT_COVERED (0xC0000257), or DOS error 
+> ERRsrv/ERRbadpath.
+1552c1388
+< The Month is encoded as 1-12, and the day ranges from 1-31.
+---
+> The Month is encoded as 1-12, and the day ranges from 1-31
+1571c1407
+< UTIME is the number of seconds since Jan 1, 1970, 00:00:00.0 GMT.
+---
+> UTIME is the number of seconds since Jan 1, 1970, 00:00:00.0.
+1604,1605c1440,1511
+< 3.7 Open Function Encoding
+< OPENFUNCTION specifies the action to be taken depending on whether or 
+---
+> 3.7 Access Mask Encoding
+> typedef ULONG ACCESS_MASK; 
+> The ACCESS_MASK structure is one 32 bit value containing standard, 
+> specific, and generic rights. These rights are used in access-control 
+> entries (ACEs) and are the primary means of specifying the requested or 
+> granted access to an object. 
+> The bits in this value are allocated as follows:   
+> Bits
+> Meaning
+> 0 
+> through 
+> 15
+> Specific rights. Contains the access mask specific to the 
+> object type associated with the mask.
+> 16 
+> through 
+> 23
+> Standard rights. Contains the object's standard access rights 
+> and can be a combination of the following predefined flags:
+> 
+> 
+> Bit
+> Flag
+> Meaning
+> 
+> 16
+> DELETE
+> Delete access 
+> 
+> 17
+> READ_CONTROL
+> Read access to the owner, group, and 
+> discretionary access-control list (ACL) of the 
+> security descriptor 
+> 
+> 18
+> WRITE_DAC
+> Write access to the discretionary access-
+> control list (ACL) 
+> 
+> 19
+> WRITE_OWNER
+> Write access to owner 
+> 
+> 20
+> SYNCHRONIZE
+> Windows NT: Synchronize access 
+>   
+> Bits
+> Meaning
+> 24
+> Access system security (ACCESS_SYSTEM_SECURITY). This flag is 
+> not a typical access type. It is used to indicate access to a 
+> system ACL. This type of access requires the calling process 
+> to have a specific privilege.
+> 25
+> Maximum allowed (MAXIMUM_ALLOWED)
+> 26 
+> through 
+> 27
+> Reserved
+> 28
+> Generic all (GENERIC_ALL)
+> 29
+> Generic execute (GENERIC_EXECUTE)
+> 30
+> Generic write (GENERIC_WRITE)
+> 31
+> Generic read (GENERIC_READ)
+> 
+> 3.8 Open Function Encoding
+> OpenFunction specifies the action to be taken depending on whether or 
+1620,1622c1526,1528
+< 3.8 Open Action Encoding
+< ACTION in the response to an open request specifies the action as a 
+< result of the Open request.  It has the following format:
+---
+> 3.9 Open Action Encoding
+> Action in the response to an open or create request describes the action 
+> taken as a result of the request.  It has the following format:
+1637,1654d1542
+< 3.9 Device State Encoding
+< DEVICESTATE is encoded as follows:
+<     1111 11
+<     5432 1098 7654 3210
+<     BE** TTRR ---- ----
+< where:
+<     B - Blocking
+<  	0 => reads/writes block  if  no data available
+< 	1 =>  reads/writes return immediately if no data
+<     E - Endpoint
+< 	0 => client end of pipe
+< 	1 => server end of pipe
+<     TT - Type of pipe
+< 	00 => pipe is a byte stream pipe
+< 	01  => pipe is a message pipe
+<     RR - Read Mode
+< 	00 => Read pipe as a byte stream
+< 	01 => Read messages from pipe
+1677,1678c1565,1707
+< 3.11 Batching Requests ("AndX" Messages)
+< LANMAN1.0 and later dialects of the SMB protocol allow multiple SMB 
+---
+> 3.11 Extended File Attribute Encoding
+> The extended file attributes is a 32 bit value composed of attributes 
+> and flags.
+> Any combination of the following attributes is acceptable, except all 
+> other file attributes override FILE_ATTRIBUTE_NORMAL:
+> FILE_ATTRIBUTE_ARCHIVE
+> 0x020
+> The file has not been archived since 
+> it was last modified. Applications 
+> use this attribute to mark files for 
+> backup or removal.
+> FILE_ATTRIBUTE_COMPRES
+> SED
+> 0x800
+> The file or directory is compressed. 
+> For a file, this means that all of 
+> the data in the file is compressed. 
+> For a directory, this means that 
+> compression is the default for newly 
+> created files and subdirectories.
+> FILE_ATTRIBUTE_NORMAL
+> 0x080
+> The file has no other attributes set. 
+> This attribute is valid only if used 
+> alone.
+> FILE_ATTRIBUTE_HIDDEN
+> 0x002
+> The file is hidden. It is not to be 
+> included in an ordinary directory 
+> listing.
+> FILE_ATTRIBUTE_READONL
+> Y
+> 0x001
+> The file is read only. Applications 
+> can read the file but cannot write to 
+> it or delete it.
+> FILE_ATTRIBUTE_TEMPORA
+> RY
+> 0x100
+> The file is temporary
+> FILE_ATTRIBUTE_DIRECTO
+> RY
+> 0x010
+> The file is a directory
+> FILE_ATTRIBUTE_SYSTEM
+> 0x004
+> The file is part of or is used 
+> exclusively by the operating system.
+> Any combination of the following flags is acceptable:
+> FILE_FLAG_WRITE_THROUG
+> H
+> 0x80000
+> 000
+> Instructs the operating system to 
+> write through any intermediate cache 
+> and go directly to the file. The 
+> operating system can still cache 
+> write operations, but cannot lazily 
+> flush them.
+> FILE_FLAG_NO_BUFFERING
+> 0x20000
+> 000
+> Requests the server to open the file 
+> with no intermediate buffering or 
+> caching; the server is not obliged 
+> to honor the request. An application 
+> must meet certain requirements when 
+> working with files opened with 
+> FILE_FLAG_NO_BUFFERING. File access 
+> must begin at offsets within the 
+> file that are integer multiples of 
+> the volume's sector size; and must 
+> be for numbers of bytes that are 
+> integer multiples of the volume's 
+> sector size. For example, if the 
+> sector size is 512 bytes, an 
+> application can request reads and 
+> writes of 512, 1024, or 2048 bytes, 
+> but not of 335, 981, or 7171 bytes. 
+> FILE_FLAG_RANDOM_ACCES
+> S
+> 0x10000
+> 000
+> Indicates that the application 
+> intends to access the file randomly. 
+> The server MAY use this flag to 
+> optimize file caching.
+> FILE_FLAG_SEQUENTIAL_S
+> CAN
+> 0x08000
+> 000
+> Indicates that the file is to be 
+> accessed sequentially from beginning 
+> to end. Windows uses this flag to 
+> optimize file caching. If an 
+> application moves the file pointer 
+> for random access, optimum caching 
+> may not occur; however, correct 
+> operation is still guaranteed. 
+> Specifying this flag can increase 
+> performance for applications that 
+> read large files using sequential 
+> access. Performance gains can be 
+> even more noticeable for 
+> applications that read large files 
+> mostly sequentially, but 
+> occasionally skip over small ranges 
+> of bytes.
+> FILE_FLAG_DELETE_ON_CL
+> OSE
+> 0x04000
+> 000
+> Requests that the server is delete 
+> the file immediately after all of 
+> its handles have been closed.
+> FILE_FLAG_BACKUP_SEMAN
+> TICS
+> 0x02000
+> 000
+> Indicates that the file is being 
+> opened or created for a backup or 
+> restore operation. The server SHOULD 
+> allow the client to override normal 
+> file security checks, provided it 
+> has the necessary permission to do 
+> so.
+> FILE_FLAG_POSIX_SEMANT
+> ICS
+> 0x01000
+> 000
+> Indicates that the file is to be 
+> accessed according to POSIX rules. 
+> This includes allowing multiple 
+> files with names differing only in 
+> case, for file systems that support 
+> such naming. (Use care when using 
+> this option because files created 
+> with this flag may not be accessible 
+> by applications written for MS-DOS, 
+> Windows 3.x, or Windows NT.)
+> 
+> 3.12 Batching Requests ("AndX" Messages)
+> LANMAN1.0 and later dialects of the CIFS protocol allow multiple SMB 
+1682c1711
+< Rather the next SMB starts at the WORDCOUNT field.
+---
+> Rather the next SMB starts at the WordCount field.
+1723c1752
+< ANDXOFFSET field in the various "and X" protocols defined later e.g. 
+---
+> AndXOffset field in the various "and X" protocols defined later e.g. 
+1726c1755
+< defined by WORDCOUNT and BYTECOUNT) and the start of the next chained 
+---
+> defined by WordCount and ByteCount) and the start of the next chained 
+1732c1761
+< (sectors) which will fit (starting at a DWORD boundary) in the 
+---
+> (sectors) which will fit (starting at a 32 bit boundary) in the 
+1735c1764
+< 3.12 "Transaction" Style Subprotocols
+---
+> 3.13 "Transaction" Style Subprotocols
+1742c1771
+< 3.12.1 SMB_COM_TRANSACTION and SMB_COM_TRANSACTION2 Formats
+---
+> 3.13.1 SMB_COM_TRANSACTION and SMB_COM_TRANSACTION2 Formats
+1750,1751d1778
+< 
+< 
+1773c1800
+< resp)
+---
+> response)
+1906c1933
+< 3.12.2 SMB_COM_NT_TRANSACTION Formats
+---
+> 3.13.2 SMB_COM_NT_TRANSACTION Formats
+2057c2084
+< 3.12.3 Functional Description
+---
+> 3.13.3 Functional Description
+2247,2248c2274,2275
+< 3.13 Valid SMB Requests by Negotiated Dialect
+< The following SMB messages may be exchanged by SMB clients and servers 
+---
+> 3.14 Valid SMB Requests by Negotiated Dialect
+> The following SMB messages may be exchanged by CIFS clients and servers 
+2528c2555
+< CAP_NT_STATUS
+---
+> CAP_STATUS32
+2531c2558
+< status codes in Status.NtStatus
+---
+> status codes in Status.Status
+2763c2790
+< CAP_NT_STATUS
+---
+> CAP_ STATUS32
+2766,2767c2793
+< errors encoded in 
+< STATUS.NTSTATUS
+---
+> errors encoded in Status.Status
+2874,2880c2900,2951
+< This message generally functions just as SMB_COM_TREE_CONNECT, except it 
+< allows an AndXCommand to follow.  Because PASSWORD may be encrypted, it 
+< is a variable length field with the length specified by PASSWORDLENGTH.   
+< If password encryption is not being used, PASSWORD should be a null 
+< terminated ASCII string with PASSWORDLENGTH set to the string size 
+< including the terminating null.
+< SERVICE is as described for SMB_COM_TREE_CONNECT.
+---
+> The serving machine verifies the combination and returns an error code 
+> or an identifier.  The full name is included in this request message and 
+> the identifier identifying the connection is returned in the TID field 
+> of the SMB header.  The TID field in the client request is ignored.  The 
+> meaning of this identifier (TID) is server specific; the client must not 
+> associate any specific meaning to it.
+> If the negotiated dialect is LANMAN1.0 or later, then it is a protocol 
+> violation for the client to send this message prior to a successful 
+> SMB_COM_SESSION_SETUP_ANDX, and the server ignores Password.
+> If the negotiated dialect is prior to LANMAN1.0 and the client has not 
+> sent a successful SMB_COM_SESSION_SETUP_ANDX request when the tree 
+> connect arrives, a user level security mode server must nevertheless 
+> validate the client's credentials as discussed earlier in this document.
+> Path follows UNC style syntax, that is to say it is encoded as 
+> \\server\share and it indicates the name of the resource to which the 
+> client wishes to connect.
+> Because Password may be an authentication response, it is a variable 
+> length field with the length specified by PasswordLength.   If 
+> authentication is not being used, Password should be a null terminated 
+> ASCII string with PasswordLength set to the string size including the 
+> terminating null.
+> The server can enforce whatever policy it desires to govern share 
+> access. Typically, if the server is paused, administrative privilege is 
+> required to connect to any share; if the server is not paused, 
+> administrative privilege is required only for administrative shares (C$, 
+> etc.). Other such policies may include valid times of day, software 
+> usage license limits, number of simultaneous server users or share 
+> users, etc.
+> The Service component indicates the type of resource the client intends 
+> to access.  Valid values are:
+> Service
+> ========
+> Description
+> ========================
+> Earliest Dialect Allowed
+> ================================
+> A:
+> disk share
+> PC NETWORK PROGRAM 1.0
+> LPT1:
+> printer
+> PC NETWORK PROGRAM 1.0
+> IPC
+> named pipe
+> MICROSOFT NETWORKS 3.0
+> COMM
+> communications device
+> MICROSOFT NETWORKS 3.0
+> ?????
+> any type of device
+> MICROSOFT NETWORKS 3.0
+> 
+2921c2992
+< ANSII
+---
+> ANSII.
+2948c3019,3020
+< SMB_COM_CREATE_DIRECTORY
+---
+> SMB_COM_CREATE_DIRECTO
+> RY
+2957,2958c3029,3032
+< SMB_COM_QUERY_INFORMATION
+< SMB_COM_SET_INFORMATION
+---
+> SMB_COM_QUERY_INFORMAT
+> ION
+> SMB_COM_SET_INFORMA
+> TION
+2960,2961c3034,3037
+< SMB_COM_OPEN_PRINT_FILE
+< SMB_COM_NO_ANDX_COMMAND
+---
+> SMB_COM_OPEN_PRINT_FIL
+> E
+> SMB_COM_NO_ANDX_COM
+> MAND
+2963a3040
+> 
+2997,2998c3074,3075
+< ERRSRV/invnid
+< ERRSRV/baduid
+---
+> ERRSRV/ERRinvnid
+> ERRSRV/ERRbaduid
+3041,3043d3117
+< NtQueryVolumeInformationFile 
+< equivalent
+< =============================
+3046d3119
+< 
+3049d3121
+< 
+3052d3123
+< FileFsVolumeInformation
+3055d3125
+< FileFsSizeInformation
+3058d3127
+< FileFsDeviceInformation
+3061d3129
+< FileFsAttributeInformation
+3064,3065c3132
+< of the data part of the transaction response for the non-NT-equivalent 
+< information levels.
+---
+> of the data part of the transaction response.
+3093c3160,3203
+< 4.1.6.3 Errors
+---
+> 4.1.6.3 SMB_QUERY_FS_VOLUME_INFO
+> typedef struct {
+>     LARGE_INTEGER VolumeCreationTime;
+>     ULONG VolumeSerialNumber;
+>     ULONG VolumeLabelLength;
+>     BOOLEAN SupportsObjects;
+>     WCHAR VolumeLabel[1];
+> } FILE_FS_VOLUME_INFORMATION;
+> 4.1.6.4 SMB_QUERY_FS_SIZE_INFO
+> typedef struct {
+>     LARGE_INTEGER TotalAllocationUnits;
+>     LARGE_INTEGER AvailableAllocationUnits;
+>     ULONG SectorsPerAllocationUnit;
+>     ULONG BytesPerSector;
+> } FILE_FS_SIZE_INFORMATION;
+> 4.1.6.5 SMB_QUERY_FS_DEVICE_INFO
+> typedef struct {
+>     DEVICE_TYPE DeviceType;
+>     ULONG Characteristics;
+> } FILE_FS_DEVICE_INFORMATION;
+> Where Characteristics is the sum of any of the following:
+> FILE_REMOVABLE_MEDIA            0x00000001
+> FILE_READ_ONLY_DEVICE           0x00000002
+> FILE_FLOPPY_DISKETTE            0x00000004
+> FILE_WRITE_ONCE_MEDIA           0x00000008
+> FILE_REMOTE_DEVICE              0x00000010
+> FILE_DEVICE_IS_MOUNTED          0x00000020
+> FILE_VIRTUAL_VOLUME             0x00000040
+> 4.1.6.6 SMB_QUERY_FS_ATTRIBUTE_INFO
+> typedef struct {
+>     ULONG FileSystemAttributes;
+>     LONG MaximumComponentNameLength;
+>     ULONG FileSystemNameLength;
+>     WCHAR FileSystemName[1];
+> } FILE_FS_ATTRIBUTE_INFORMATION;
+> Where FileSystemAttributes is the sum of any of the following:
+> FILE_CASE_SENSITIVE_SEARCH      0x00000001
+> FILE_CASE_PRESERVED_NAMES       0x00000002
+> FILE_UNICODE_ON_DISK            0x00000004
+> FILE_PERSISTENT_ACLS            0x00000008
+> FILE_FILE_COMPRESSION           0x00000010
+> FILE_VOLUME_QUOTAS              0x00000020
+> FILE_VOLUME_IS_COMPRESSED       0x00008000
+> 4.1.6.7 Errors
+3155,3158d3264
+< If a client is communicating to the server over a connectionless 
+< transport, this SMB can be used to ensure there is some activity on the 
+< connection as required in the "Connectionless Transports" section 
+< elsewhere in this document.
+3180c3286
+< 4.2.1 NT_CREATE_ANDX: Create or Open File **
+---
+> 4.2.1 NT_CREATE_ANDX: Create or Open File
+3211,3212c3317,3318
+< ULONG FileAttributes;
+< File attributes for creation **
+---
+> ULONG ExtFileAttributes;
+> File attributes
+3214c3320
+< Type of share access **
+---
+> Type of share access
+3231,3325c3337,3339
+< The FIleAttributes parameter specifies the file attributes and flags for 
+< the file. The parameter's value is the sum of allowed attributes and 
+< flags.
+< Any combination of the following attributes is acceptable, except all 
+< other file attributes override FILE_ATTRIBUTE_NORMAL:
+< FILE_ATTRIBUTE_ARCH
+< IVE
+< The file is an archive file. Applications use this 
+< attribute to mark files for backup or removal.
+< FILE_ATTRIBUTE_COMP
+< RESSED
+< The file or directory is compressed. For a file, 
+< this means that all of the data in the file is 
+< compressed. For a directory, this means that 
+< compression is the default for newly created files 
+< and subdirectories.
+< FILE_ATTRIBUTE_NORM
+< AL
+< The file has no other attributes set. This 
+< attribute is valid only if used alone.
+< FILE_ATTRIBUTE_HIDD
+< EN
+< The file is hidden. It is not to be included in an 
+< ordinary directory listing.
+< FILE_ATTRIBUTE_READ
+< ONLY
+< The file is read only. Applications can read the 
+< file but cannot write to it or delete it.
+< FILE_ATTRIBUTE_SYST
+< EM
+< The file is part of or is used exclusively by the 
+< operating system.
+< Any combination of the following flags is acceptable:
+< FILE_FLAG_WRITE_THROUGH	
+< Instructs the operating system to write through any intermediate cache 
+< and go directly to the file. The operating system can still cache write 
+< operations, but cannot lazily flush them.
+< FILE_FLAG_NO_BUFFERING	
+< Instructs the operating system to open the file with no intermediate 
+< buffering or caching. This can provide performance gains in some 
+< situations. An application must meet certain requirements when working 
+< with files opened with FILE_FLAG_NO_BUFFERING:
+<   File access must begin at offsets within the file that are integer 
+< multiples of the volume's sector size.
+<   File access must be for numbers of bytes that are integer multiples 
+< of the volume's sector size. For example, if the sector size is 512 
+< bytes, an application can request reads and writes of 512, 1024, or 
+< 2048 bytes, but not of 335, 981, or 7171 bytes. 
+<   Buffer addresses for read and write operations must be aligned on 
+< addresses in memory that are integer multiples of the volume's sector 
+< size. An application can determine a volume's sector size by calling 
+< the GetDiskFreeSpace function.
+< FILE_FLAG_RANDOM_ACCESS	
+< Indicates that the file is accessed randomly. Windows uses this flag to 
+< optimize file caching.
+< FILE_FLAG_SEQUENTIAL_SCAN	
+< Indicates that the file is to be accessed sequentially from beginning to 
+< end. Windows uses this flag to optimize file caching. If an application 
+< moves the file pointer for random access, optimum caching may not occur; 
+< however, correct operation is still guaranteed.
+< Specifying this flag can increase performance for applications that read 
+< large files using sequential access. Performance gains can be even more 
+< noticeable for applications that read large files mostly sequentially, 
+< but occasionally skip over small ranges of bytes.
+< FILE_FLAG_DELETE_ON_CLOSE	
+< Indicates that the operating system is to delete the file immediately 
+< after all of its handles have been closed.If you use this flag when you 
+< call CreateFile, then open the file again, and then close the handle for 
+< which you specified FILE_FLAG_DELETE_ON_CLOSE, the file will not be 
+< deleted until after you have closed the second and any other handle to 
+< the file.
+< FILE_FLAG_BACKUP_SEMANTICS	
+< Windows NT only: Indicates that the file is being opened or created for 
+< a backup or restore operation. The operating system ensures that the 
+< calling process overrides file security checks, provided it has the 
+< necessary permission to do so. The relevant permissions are 
+< SE_BACKUP_NAME and SE_RESTORE_NAME.A Windows NT application can also set 
+< this flag to obtain a handle to a directory. A directory handle can be 
+< passed to some Win32 functions in place of a file handle.
+< FILE_FLAG_POSIX_SEMANTICS	
+< Indicates that the file is to be accessed according to POSIX rules. This 
+< includes allowing multiple files with names, differing only in case, for 
+< file systems that support such naming. Use care when using this option 
+< because files created with this flag may not be accessible by 
+< applications written for MS-DOS, Windows 3.x, or Windows NT.
+< The desiredAccess parameter can have one or more of the following flags:
+< GENERIC_READ
+< Specifies read access to the file. Data can 
+< be read from the file and the file pointer 
+< can be moved.
+< GENERIC_WRITE
+< Specifies write access to the file. Data can 
+< be written to the file and the file pointer 
+< can be moved.
+< If neither value is specified, it still allows an application to query 
+---
+> The DesiredAccess parameter is specified in section 3.7 on Access Mask 
+> Encoding.
+> If no value is specified, it still allows an application to query 
+3326a3341,3365
+> The ExtFIleAttributes parameter specifies the file attributes and flags 
+> for the file. The parameter's value is the sum of allowed attributes and 
+> flags defined in section 3.11 on Extended File Attribute Encoding
+> The ShareAccess field Specifies how this file can be shared. This 
+> parameter must be some combination of the following values: 
+>   Value
+> 
+> Meaning
+> 0
+> 
+> Prevents the file from being shared.
+> FILE_SHARE_READ
+> 0x00000001
+> Other open operations can be performed on 
+> the file for read access. 
+> FILE_SHARE_WRITE
+> 0x00000002
+> Other open operations can be performed on 
+> the file for write access.
+> FILE_SHARE_DELET
+> E
+> 0x00000004
+> Other open operations can be performed on 
+> the file for delete access.
+> 
+3345a3385
+> 
+3359a3400
+> 
+3390a3432,3435
+> 0 - No oplock granted
+> 1 - Exclusive oplock granted
+> 2 - Batch oplock granted
+> 3 - Level II oplock granted
+3403c3448
+< ULONG FileAttributes;
+---
+> ULONG ExtFileAttributes;
+3436c3481
+< Desired access (NT format)
+---
+> Desired access
+3440,3441c3485,3486
+< ULONG FileAttributes;
+< The file attributes, (NT format)
+---
+> ULONG ExtFileAttributes;
+> The extended file attributes
+3443c3488
+< The share access (NT format)
+---
+> The share access 
+3446c3491
+< not (NT format)
+---
+> not 
+3448,3449c3493
+< Options for creating a new file 
+< (NT format)
+---
+> Options for creating a new file
+3457,3458c3501
+< Security QOS information (NT 
+< format)
+---
+> Security QOS information 
+3460,3461c3503
+< Security QOS information (NT 
+< format)
+---
+> Security QOS information 
+3501,3504d3542
+< 0 - No oplock granted
+< 1 - Exclusive oplock granted
+< 2 - Batch oplock granted
+< 3 - Level II oplock granted
+3521c3559
+< ULONG FileAttributes;
+---
+> ULONG ExtFileAttributes;
+3534c3572,3573
+< The above parameters are in native NT format.
+---
+> See the description of NT_CREATE_ANDX for the definition of the 
+> parameters.
+3536c3575
+< The server creates a data file in DIRECTORY relative to TID in the SMB 
+---
+> The server creates a data file in Directory relative to Tid in the SMB 
+3570,3573c3609,3611
+< FID is the returned handle for future file access.
+< Filename is the name of the file which was created within the requested 
+< Directory.   It is opened in compatibility mode with read/write access 
+< for the client.
+---
+> Fid is the returned handle for future file access. Filename is the name 
+> of the file which was created within the requested Directory.   It is 
+> opened in compatibility mode with read/write access for the client.
+3575,3602c3613
+< 4.2.4 READ_ANDX:  Read Data
+< Client Request
+< ================================
+< Description
+< ===================================
+< UCHAR WordCount;
+< Count of parameter words = 10
+< UCHAR AndXCommand;
+< Secondary (X) command;  0xFF = none
+< UCHAR AndXReserved;
+< Reserved (must be 0)
+< USHORT AndXOffset;
+< Offset to next command WordCount
+< USHORT Fid;
+< File handle
+< ULONG Offset;
+< Offset in file to begin read
+< USHORT MaxCount;
+< Max number of bytes to return
+< USHORT MinCount;
+< Min number of bytes to return
+< ULONG Reserved;
+< Must be 0
+< USHORT Remaining;
+< Bytes remaining to satisfy request
+< USHORT ByteCount;
+< Count of data bytes = 0
+< 
+---
+> 4.2.4 READ_ANDX:  Read Bytes
+3608c3619
+< Count of parameter words = 12
+---
+> Count of parameter words = 10 or 12
+3622c3633
+< Min number of bytes to return
+---
+> Reserved
+3626c3637
+< Bytes remaining to satisfy request
+---
+> Reserved
+3628c3639,3640
+< Upper 32 bits of offset
+---
+> Upper 32 bits of offset (only if 
+> WordCount is 12)
+3645c3657
+< Bytes remaining to be read
+---
+> Reserved -- must be -1
+3664,3681c3676,3682
+< Large File version of the request.  This version allows specification of 
+< 64 bit file offsets.  If CAP_LARGE_READX was indicated by the server in 
+< the negotiate protocol response, the request's MAXCOUNT field may exceed 
+< the negotiated buffer size if FID refers to a disk file.  The server may 
+< arbitrarily elect to return fewer than MAXCOUNT bytes in response.
+< MINCOUNT in the request is valid only if FID refers to a named pipe.  
+< MINCOUNT informs the server that at least MINCOUNT bytes should be 
+< returned, if possible.
+< REMAINING in the response is valid for pipes only.  It is used to return 
+< the number of bytes currently available in the pipe excluding the bytes 
+< returned in this response.  This information can then be used by the 
+< client to know when a subsequent (non blocking) read of the pipe may 
+< return some data.  When a future read request is actually received by 
+< the server there may be more or less actual data in the pipe (more data 
+< has been written to the pipe or another reader drained it).  If the 
+< information is currently not available or the request is NOT for a pipe, 
+< a -1 value should be returned.
+< The following SMBs may follow SMB_COM_READ_ANDX:
+---
+> 12 parameter word  version of the request.  This version allows 
+> specification of 64 bit file offsets.
+> If CAP_LARGE_READX was indicated by the server in the negotiate protocol 
+> response, the request's MaxCount field may exceed the negotiated buffer 
+> size if Fid refers to a disk file.  The server may arbitrarily elect to 
+> return fewer than MaxCount bytes in response.
+> The following SMBs may follow SMB_COM_READ_ANDX: 
+3683,3686c3684,3691
+< 4.2.5 READ_RAW: Read Raw
+< The SMB_COM_READ_RAW protocol is used to maximize the performance of 
+< reading a large block of data from the server to the client.  This 
+< request can be applied to files and named pipes.
+---
+> 4.2.4.1 Errors
+> ERRDOS/ERRnoaccess
+> ERRDOS/ERRbadfid
+> ERRDOS/ERRlock
+> ERRDOS/ERRbadaccess
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.5 WRITE_ANDX:  Write Bytes to file or resource
+3688,3813d3692
+< ================================
+< Description
+< ===================================
+< UCHAR WordCount;
+< Count of parameter words = 8
+< USHORT Fid;
+< File handle
+< ULONG Offset;
+< Offset in file to begin read
+< USHORT MaxCount;
+< Max bytes to return (maximum 65535)
+< USHORT MinCount;
+< Min bytes to return (normally 0)
+< ULONG Timeout;
+< Wait time if named pipe
+< USHORT Reserved;
+< 
+< USHORT ByteCount;
+< Count of data bytes = 0
+< 
+< FID identifies the resource being read, and may refer to a disk file or 
+< a named pipe.
+< TIMEOUT is the number of milliseconds to wait for completion FID refers 
+< to a named pipe.
+< When the client issues this request, the client must guarantee that 
+< there is (and will be) no other request to the server for the duration 
+< of the SMB_COM_READ_RAW.  The server will respond, in one send, with the 
+< raw data being read.  Thus the client is able to request up to 65,535 
+< bytes of data and receive it directly into the user's buffer, since the 
+< server response has no header or trailer.  Note that the amount of data 
+< requested is expected to be larger than the negotiated buffer size for 
+< this protocol.
+< The reason that no other requests can be active on the client's 
+< connection to the server for the duration of the request is that if 
+< other receives are present, there is normally no way to guarantee that 
+< the data will be received into the user space, rather the data may fill 
+< one (or more) of the other buffers.
+< The number of bytes actually returned is determined by the length of the 
+< message the client receives as reported by the transport layer.  If the 
+< request is to read more bytes than are present in the file, the read 
+< response will be of the length actually read from the file.
+< If none of the requested bytes exist (EOF) or an error occurs on the 
+< read, the server responds with a zero byte send.  Upon receipt of a zero 
+< length response, the client should send a different type of request to 
+< the server.  The response to that read will then tell the client that 
+< EOF was hit or identify the error condition.
+< The number of bytes returned may be less than the number requested only 
+< if a read specifies bytes beyond the current file size.  In this case 
+< only the bytes that exist are returned.  A read completely beyond the 
+< end of file results in a response of zero length.  If the number of 
+< bytes returned is less than the number of bytes requested, this 
+< indicates end of file (if reading other than a standard blocked disk 
+< file, only ZERO bytes returned indicates end of file).
+< The transport layer guarantees delivery of all response bytes to the 
+< client.  Thus no  SMB level confirmation protocol is required.  If an 
+< error should occur at the clients end, all bytes must be received and 
+< thrown away.  There is no need to inform the server of the error.
+< This message was introduced with the LANMAN1.0 SMB dialect.  Whether or 
+< not this request is supported is returned in the response to 
+< SMB_COM_NEGOTIATE.
+< The flow for reading a sequential file using SMB_COM_READ_BOCK_RAW is:
+< Client Request
+< ==============================
+< Server Response
+< =====================================
+< SMB_COM_OPEN file
+< Success
+< SMB_COM_READ_RAW
+< 
+< 
+< raw data returned
+< SMB_COM_READ_RAW
+< 
+< 
+< more raw data returned
+< SMB_COM_READ_RAW
+< 
+< 
+< short (or 0 length) response returned
+< SMB_COM_READ
+< 
+< 
+< 0 bytes returned indicating EOF
+< SMB_COM_CLOSE
+< Success
+< 
+< SMB_COM_READ_RAW has no way to return errors.  Because the response is 
+< raw data only, a zero length response indicates EOF, a read error or 
+< that the server is temporarily out of large buffers.  The client should 
+< then retry using a different type of read request.  This request will 
+< then either return the EOF condition, an error if the read is still 
+< failing, or will work if the problem was due to a temporary server 
+< condition.
+< If the negotiated dialect is NT LM 0.12 or later, and the response to 
+< the SMB_COM_NEGOTIATE SMB has CAP_LARGE_FILES set in the CAPABILITIES 
+< field, a new format of  the SMB_COM_READ_RAW request is allowed which 
+< accommodates very large files having 64 bit offsets.
+< Client Request
+< ================================
+< Description
+< ===================================
+< UCHAR WordCount;
+< Count of parameter words = 10
+< USHORT Fid;
+< File handle
+< ULONG Offset;
+< Offset in file to begin read
+< USHORT MaxCount;
+< Max bytes to return (maximum 65535)
+< USHORT MinCount;
+< Min bytes to return (normally 0)
+< ULONG Timeout;
+< Wait time if named pipe
+< USHORT Reserved;
+< 
+< ULONG OffsetHigh;
+< Upper 32 bits of offset
+< USHORT ByteCount;
+< Count of data bytes = 0
+< This form of the request is differentiated from the previous form of the 
+< request by the WORDCOUNT field.  In this case, the final offset to read 
+< from is used by combining OFFSETHIGH and OFFSET, the resulting value can 
+< not be negative or the request will be rejected by the server.
+< SMB_COM_READ_RAW can not be used over connectionless transports.
+< 4.2.6 WRITE_ANDX:  Write Bytes to file or resource
+< Client Request
+3818c3697
+< Count of parameter words = 12
+---
+> Count of parameter words = 12 or 14
+3832,3875d3710
+< Write mode:
+< 
+< 0 - write through
+< 
+< 1 - return Remaining
+< 
+< 2 - use WriteRawNamedPipe (n. 
+< pipes)
+< 
+< 3 - "this is the start of the msg"
+< USHORT Remaining;
+< Bytes remaining to satisfy request
+< USHORT Reserved;
+< 
+< USHORT DataLength;
+< Number of data bytes in buffer (>=0)
+< USHORT DataOffset;
+< Offset to data bytes
+< USHORT ByteCount;
+< Count of data bytes
+< UCHAR Pad[];
+< Pad to SHORT or LONG
+< UCHAR Data[DataLength];
+< Data to write
+< 
+< Large File Client Request
+< ===============================
+< Description
+< ====================================
+< UCHAR WordCount;
+< Count of parameter words = 14
+< UCHAR AndXCommand;
+< Secondary (X) command;  0xFF = none
+< UCHAR AndXReserved;
+< Reserved (must be 0)
+< USHORT AndXOffset;
+< Offset to next command WordCount
+< USHORT Fid;
+< File handle
+< ULONG Offset;
+< Offset in file to begin write
+< ULONG Reserved;
+< Must be 0
+< USHORT WriteMode;
+3879,3885d3713
+< 
+< 1 - return Remaining
+< 
+< 2 - use WriteRawNamedPipe (n. 
+< pipes)
+< 
+< 3 - "this is the start of the msg"
+3895c3723,3724
+< Upper 32 bits of offset
+---
+> Upper 32 bits of offset (only 
+> present if WordCount = 14)
+3918c3747
+< Bytes remaining to be read in pipe
+---
+> Reserved
+3924c3753
+< A BYTECOUNT of 0 does not truncate the file.  Rather a zero length write 
+---
+> A ByteCount of 0 does not truncate the file.  Rather a zero length write 
+3927c3756
+< If WRITEMODE has bit0 set in the request and FID refers to a disk file, 
+---
+> If WriteMode has bit0 set in the request and Fid refers to a disk file, 
+3930,3951c3759,3763
+< If FID refers to a named pipe, it is possible that the client wishes to 
+< transfer more data to the named pipe than the negotiated client and 
+< server buffer sizes permit.  In this case, the data will arrive at the 
+< server in multiple SMB_COM_WRITE_ANDX messages.  If WRITEMODE BIT2 and 
+< BIT3 are set, this is the first SMB of the sequence, and the total 
+< number of bytes which will be written are the sum of DATALENGTH and 
+< REMAINING.   Subsequent SMB_COM_WRITE_ANDX messages having WRITEMODE 
+< BIT2 set and possessing the same PID and FID will be gathered up in the 
+< server until DATALENGTH + REMAINING bytes have been received, at which 
+< time all the data is written to the named pipe in one message.
+< The return field REMAINING is valid only if FID refers to a named pipe, 
+< and WRITEMODE has BIT1 set in the request.  It is used to return the 
+< number of bytes currently available in the pipe.  This information can 
+< then be used by the client to know when a subsequent (non blocking) read 
+< of the pipe may return some data.  When the read request is actually 
+< received by the server there may be more or less actual data in the pipe 
+< (more data has been written to the pipe / device or another reader 
+< drained it).
+< If the negotiated dialect is NT LM 0.12 or later, the Large File format 
+< of this SMB may be used to access portions of files requiring offsets 
+< expressed as 64 bits.
+< The following are the only valid ANDXCOMMAND values for this SMB:
+---
+> If the negotiated dialect is NT LM 0.12 or later, the 14 word format of 
+> this SMB may be used to access portions of files requiring offsets 
+> expressed as 64 bits. Otherwise, the OffsetHigh field must be omitted 
+> from the request.
+> The following are the valid AndXCommand values for this SMB:
+3958,3973d3769
+< 4.2.7 WRITE_RAW: Write Raw Bytes 
+< The Write Block Raw protocol is used to maximize the performance of 
+< writing a large block of data from the client to the server.  The Write 
+< Block Raw command's scope includes files, Named Pipes, and spooled 
+< output (can be used in place COM_WRITE_PRINT_FILE ).
+< Client Request
+< ==========================
+< Description
+< =========================================
+< UCHAR WordCount;
+< Count of parameter words = 12
+< USHORT Fid;
+< File handle
+< USHORT Count;
+< Total bytes, including this buffer
+< USHORT Reserved;
+3975,3977d3770
+< ULONG Offset;
+< Offset in file to begin write
+< ULONG Timeout;
+3979,4143c3772,3779
+< USHORT WriteMode;
+< Write mode:
+< 
+< bit 0 - complete write to disk and send 
+< final result response
+< 
+< bit 1 - return Remaining (pipe/dev)
+< 
+< (see WriteAndX for #defines)
+< ULONG Reserved2;
+< 
+< USHORT DataLength;
+< Number of data bytes this buffer
+< USHORT DataOffset;
+< Offset (from header start) to data
+< USHORT ByteCount;
+< Count of data bytes
+< UCHAR Pad[];
+< Pad to SHORT or LONG
+< UCHAR Data[];
+< Data (# = DataLength)
+< 
+< First Server Response
+< ==============================
+< Description
+< =====================================
+< UCHAR WordCount;
+< Count of parameter words = 1
+< USHORT Remaining;
+< Bytes remaining to be read if pipe
+< USHORT ByteCount;
+< Count of data bytes = 0
+< 
+< Final Server Response
+< ==================================
+< Description
+< =================================
+< UCHAR Command (in SMB header)
+< SMB_COM_WRITE_COMPLETE
+< 
+< 
+< UCHAR WordCount;
+< Count of parameter words = 1
+< USHORT Count;
+< Total number of bytes written
+< USHORT ByteCount;
+< Count of data bytes = 0
+< 
+< The first response format will be that of the final server response in 
+< the case where the server gets an error while writing the data sent 
+< along with the request.  Thus COUNT is the number of bytes which did get 
+< written any time an error is returned.  If an error occurs after the 
+< first response has been sent allowing the client to send the remaining 
+< data, the final response should not be sent unless write through is set.  
+< Rather the server should return this "write behind" error on the next 
+< access to the FID.
+< The client must guarantee that there is (and will be) no other request 
+< on the connection for the duration of this request.  The server will 
+< reserve enough resources to receive the data and respond with a response 
+< SMB as defined above.  The client then sends the raw data in one send.  
+< Thus the server is able to receive up to 65,535 bytes of data directly 
+< into the server buffer.  The amount of data transferred is expected to 
+< be larger than the negotiated buffer size for this protocol.
+< The reason that no other requests can be active on the connection for 
+< the duration of the request is that if other receives are present on the 
+< connection, there is normally no way to guarantee that the data will be 
+< received into the correct server buffer, rather the data may fill one 
+< (or more) of the other buffers.  Also if the client is sending other 
+< requests on the connection, a request may land in the buffer that the 
+< server has allocated for the this SMB's data.
+< Whether or not SMB_COM_WRITE_RAW is supported is returned in the 
+< response to SMB_COM_NEGOTIATE.  SMB_COM_WRITE_RAW is not supported for 
+< connectionless clients.
+< When write through is not specified ((WRITEMODE & 01) == 0) this SMB is 
+< assumed to be a form of write behind.  The transport layer guarantees 
+< delivery of all secondary requests from the client.  Thus no "got the 
+< data you sent" SMB is needed.  If an error should occur at the server 
+< end, all bytes must be received and thrown away.  If an error occurs 
+< while writing data to disk such as disk full, the next access of the 
+< file handle (another write, close, read, etc.) will return the fact that 
+< the error occurred.
+< If write through is specified ((WRITEMODE & 01) != 0), the server will 
+< receive the data, write it to disk and then send a final response 
+< indicating the result of the write.  The total number of bytes written 
+< is also returned in this response in the COUNT field.
+< The flow for the SMB_COM_WRITE_RAW SMB is:
+< client -----> SMB_COM_WRITE_RAW request (optional data) >-------> server
+< client <------------------< OK send (more) data <---------------- server
+< client  ----------------------> raw data >----------------------> server
+< client  <---< data on disk or error (write through only) <------- server
+< 
+< This protocol is set up such that the SMB_COM_WRITE_RAW request may also 
+< carry data.  This is an optimization in that up to the server's buffer 
+< size (MAXCOUNT from SMB_COM_NEGOTIATE response), minus the size of the 
+< SMB_COM_WRITE_RAW SMB request, may be sent along with the request.  Thus 
+< if the server is busy and unable to support the raw write of the 
+< remaining data, the data sent along with the request has been delivered 
+< and need not be sent again.  The server will write any data sent in the 
+< request (and wait for it to be on the disk or device if write through is 
+< set), prior to sending the response.
+< The specific responses error class ERRSRV, error codes ERRusempx and 
+< ERRusestd, indicate that the server is temporarily out of the resources 
+< needed to support the raw write of the remaining data, but that any data 
+< sent along with the request has been successfully written.  The client 
+< should then write the remaining data using a different type of SMB write 
+< request, or delay and retry using SMB_COM_WRITE_RAW.  If a write error 
+< occurs writing the initial data, it will be returned and the write raw 
+< request is implicitly denied.
+< The return field REMAINING is returned for named pipes only.  It is used 
+< to return the number of bytes currently available in the pipe.  This 
+< information can then be used by the client to know when a subsequent 
+< (non blocking) read of the pipe may return some data.  Of course when 
+< the read request is actually received by the server there may be more or 
+< less actual data in the pipe (more data has been written to the pipe / 
+< device or another reader drained it).  If the information is currently 
+< not available or the request is NOT for a pipe or the server does not 
+< support this feature, a -1 value should be returned.
+< If the negotiated dialect is NT LM 0.12 or later, and the response to 
+< the SMB_COM_NEGOTIATE SMB has CAP_LARGE_FILES set in the CAPABILITIES 
+< field, an additional request format is allowed which accommodates very 
+< large files having 64 bit offsets:
+< Client Request
+< ==================================
+< Description
+< =================================
+< UCHAR WordCount;
+< Count of parameter words = 14
+<  USHORT Fid;
+< File handle
+<  USHORT Count;
+< Total bytes, including this 
+< buffer
+<  USHORT Reserved;
+< 
+<  ULONG Offset;
+< Offset in file to begin write
+<  ULONG Timeout;
+< 
+<  USHORT WriteMode;
+< Write mode:
+<   
+< bit 0 - complete write to disk 
+< and send final result response
+< 
+< bit 1 - return Remaining 
+< (pipe/dev)
+<  ULONG Reserved2;
+< 
+<  USHORT DataLength;
+< Number of data bytes this buffer
+<  USHORT DataOffset;
+< Offset (from header start) to 
+< data
+<  ULONG OffsetHigh;
+< Upper 32 bits of offset
+< USHORT ByteCount;
+< Count of data bytes
+< UCHAR Pad[];
+< Pad to SHORT or LONG
+<  UCHAR Data[];
+< Data (# = DataLength)
+< 
+< In this case the final offset in the file is formed by combining 
+< OFFSETHIGH and OFFSET, the resulting offset must not be negative.
+< 4.2.8 LOCKING_ANDX:  Lock or Unlock Byte Ranges
+---
+> 4.2.5.1 Errors
+> ERRDOS/ERRnoaccess
+> ERRDOS/ERRbadfid
+> ERRDOS/ERRlock
+> ERRDOS/ERRbadaccess
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.6 LOCKING_ANDX:  Lock or Unlock Byte Ranges
+4344c3980,3987
+< 4.2.9 SEEK: Seek in File
+---
+> 4.2.6.1 Errors
+> ERRDOS/ERRbadfile
+> ERRDOS/ERRbadfid
+> ERRDOS/ERRlock
+> ERRDOS/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.7 SEEK: Seek in File
+4399,4400c4042,4049
+< in 32 bits returns the least significant .
+< 4.2.10 FLUSH: Flush File
+---
+> in 32 bits returns the least significant.
+> 4.2.7.1 Errors
+> ERRDOS/ERRbadfid
+> ERRDOS/ERRnoaccess
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.8 FLUSH: Flush File
+4431c4080,4084
+< 4.2.11 CLOSE: Close File
+---
+> 4.2.8.1 Errors
+> ERRDOS/ERRbadfid
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.9 CLOSE: Close File
+4449,4454c4102,4107
+< If LASTWRITETIME and LASTWRITEDATE are 0, the server should allow its 
+< local operating system to set the file's times.  Otherwise, the server 
+< should set the time to the values requested.  Failure to set the times, 
+< even if requested by the client in the request message, should not 
+< result in an error response from the server.
+< If FID refers to a print spool file, the file should be spooled to the 
+---
+> If LastWriteTime is 0, the server should allow its local operating 
+> system to set the file's times.  Otherwise, the server should set the 
+> time to the values requested.  Failure to set the times, even if 
+> requested by the client in the request message, should not result in an 
+> error response from the server.
+> If Fid refers to a print spool file, the file should be spooled to the 
+4456d4108
+< 
+4465c4117,4122
+< 4.2.12 DELETE: Delete File
+---
+> 4.2.9.1 Errors
+> ERRDOS/ERRbadfid
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.10 DELETE: Delete File
+4486c4143
+< SEARCHATTRIBUTES indicates the attributes that the target file(s) must 
+---
+> SearchAttributes indicates the attributes that the target file(s) must 
+4492c4149
+< If BIT0 of the FLAGS2 field of the SMB header is set, a pattern is 
+---
+> If bit0 of the Flags2 field of the SMB header is set, a pattern is 
+4494c4151
+< match the long file name for the delete to succeed.  If BIT0 is clear, a 
+---
+> match the long file name for the delete to succeed.  If bit0 is clear, a 
+4505c4162,4171
+< 4.2.13 RENAME: Rename File
+---
+> 4.2.10.1 Errors
+> ERRDOS/ERRbadpath
+> ERRDOS/ERRbadfile
+> ERRDOS/ERRnoaccess
+> ERRHRD/ERRnowrite
+> ERRSRV/ERRaccess
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.11 RENAME: Rename File
+4527c4193
+< must be relative to the TID specified in the request.  Open files may be 
+---
+> must be relative to the Tid specified in the request.  Open files may be 
+4536,4537c4202,4203
+< renamed.  The encoding of SearchAttributes is described in the 
+< "Attribute Encoding" section of this document.
+---
+> renamed.  The encoding of SearchAttributes is described in section 3.10 
+> - File Attribute Encoding.
+4546c4212,4222
+< 4.2.14 MOVE:  Rename File
+---
+> 4.2.11.1 Errors
+> ERRDOS/ERRbadpath
+> ERRDOS/ERRbadfile
+> ERRDOS/ERRnoaccess
+> ERRDOS/ERRdiffdevice
+> ERRHRD/ERRnowrite
+> ERRSRV/ERRaccess
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> 4.2.12 MOVE:  Rename File
+4618c4294,4307
+< 4.2.15 COPY: Copy File
+---
+> 4.2.12.1 Errors
+> ERRDOS/ERRfilexists
+> ERRDOS/ERRbadfile
+> ERRDOS/ERRnoaccess
+> ERRDOS/ERRnofiles
+> ERRDOS/ERRbadshare
+> ERRHRD/ERRnowrite
+> ERRSRV/ERRnoaccess
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> ERRSRV/ERRnosupport
+> ERRSRV/ERRaccess
+> 4.2.13 COPY: Copy File
+4660c4349
+< The TID in the header is associated with the source while TID2 is 
+---
+> The TID in the header is associated with the source while Tid2 is 
+4662,4663c4351,4352
+< differing valid values. TID2 can be set to -1 indicating that this is to 
+< be the same TID as in the SMB header.  This allows use of the move 
+---
+> differing valid values. Tid2 can be set to -1 indicating that this is to 
+> be the same Tid as in the SMB header.  This allows use of the move 
+4697c4386
+< If the negotiated dialect is  LM1.2X002 or later, BIT5 of Flags is used 
+---
+> If the negotiated dialect is  LM1.2X002 or later, bit5 of Flags is used 
+4700c4389
+< mode must be binary.  A request with BIT5 set and either BIT0 or BIT3 
+---
+> mode must be binary.  A request with bit5 set and either bit0 or bit3 
+4703c4392,4405
+< 4.2.16 TRANS2_QUERY_PATH_INFORMATION: Get File Attributes given Path
+---
+> 4.2.13.1 Errors
+> ERRDOS/ERRfilexists
+> ERRDOS/ERRshare
+> ERRDOS/ERRnofids
+> ERRDOS/ERRbadfile
+> ERRDOS/ERRnoaccess
+> ERRDOS/ERRnofiles
+> ERRDOS/ERRbadshare
+> ERRSRV/ERRnoaccess
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> ERRSRV/ERRaccess
+> 4.2.14 TRANS2_QUERY_PATH_INFORMATION: Get File Attributes given Path
+4740,4742d4441
+< NtQueryInformationFile 
+< Equivalent
+< ============================
+4745d4443
+< 
+4748d4445
+< 
+4751d4447
+< 
+4754d4449
+< 
+4757d4451
+< 
+4760d4453
+< FileBasicInformation
+4763d4455
+< FileStandardInformation
+4766d4457
+< FileEaInformation
+4769d4459
+< FileNameInformation
+4772d4461
+< FileAllInformation
+4775d4463
+< FileAlternateNameInformation
+4778d4465
+< FileStreamInformation
+4781d4467
+< FileCompressionInformation
+4783,4789c4469,4473
+< Information levels whose values are greater than 0x101 are mapped to 
+< corresponding calls to NtQueryInformationFile calls by the server.  The 
+< five levels below 0x101 are described below.  The requested information 
+< is placed in the Data portion of the transaction response.  For the NT 
+< equivalent responses, the transaction response has 1 parameter word 
+< which should be ignored by the client.
+< 4.2.16.1 SMB_INFO_STANDARD & SMB_INFO_QUERY_EA_SIZE
+---
+> The requested information is placed in the Data portion of the 
+> transaction response.  For the information levels greater than 0x100, 
+> the transaction response has 1 parameter word which should be ignored by 
+> the client.
+> 4.2.14.1 SMB_INFO_STANDARD & SMB_INFO_QUERY_EA_SIZE
+4815c4499
+< 4.2.16.2 SMB_INFO_QUERY_EAS_FROM_LIST & SMB_INFO_QUERY_ALL_EAS
+---
+> 4.2.14.2 SMB_INFO_QUERY_EAS_FROM_LIST & SMB_INFO_QUERY_ALL_EAS
+4821,4825c4505
+< Length of FEAlist found (minimum value is 4)
+< 
+< 
+< 
+< 
+---
+> Length of EAlist found (minimum value is 4)
+4830d4509
+< 
+4834,4837d4512
+< 
+< 
+< 
+< 
+4846c4521
+< 4.2.16.3 SMB_INFO_IS_NAME_VALID
+---
+> 4.2.14.3 SMB_INFO_IS_NAME_VALID
+4850c4525
+< of the name is incorrect.  SUCCESS indicates the server accepts the path 
+---
+> of the name is incorrect.  Success indicates the server accepts the path 
+4852c4527
+< 4.2.16.4 SMB_QUERY_FILE_BASIC_INFO
+---
+> 4.2.14.4 SMB_QUERY_FILE_BASIC_INFO
+4860c4535
+< 4.2.16.5 SMB_QUERY_FILE_STANDARD_INFO
+---
+> 4.2.14.5 SMB_QUERY_FILE_STANDARD_INFO
+4868c4543
+< 4.2.16.6 SMB_QUERY_FILE_EA_INFO
+---
+> 4.2.14.6 SMB_QUERY_FILE_EA_INFO
+4872c4547
+< 4.2.16.7 SMB_QUERY_FILE_NAME_INFO
+---
+> 4.2.14.7 SMB_QUERY_FILE_NAME_INFO
+4877c4552
+< 4.2.16.8 SMB_QUERY_FILE_ALL_INFO
+---
+> 4.2.14.8 SMB_QUERY_FILE_ALL_INFO
+4881,4949d4555
+< typedef ULONG ACCESS_MASK; 
+< The ACCESS_MASK structure is one 32 bit value containing standard, 
+< specific, and generic rights. These rights are used in access-control 
+< entries (ACEs) and are the primary means of specifying the requested or 
+< granted access to an object. 
+< The bits in this value are allocated as follows:   
+< Bits
+< Meaning
+< 0 
+< through 
+< 15
+< Specific rights. Contains the access mask specific to the 
+< object type associated with the mask.
+< 16 
+< through 
+< 23
+< Standard rights. Contains the object's standard access rights 
+< and can be a combination of the following predefined flags:
+< 
+< 
+< Bit
+< Flag
+< Meaning
+< 
+< 16
+< DELETE
+< Delete access 
+< 
+< 17
+< READ_CONTROL
+< Read access to the owner, group, and 
+< discretionary access-control list (ACL) of the 
+< security descriptor 
+< 
+< 18
+< WRITE_DAC
+< Write access to the discretionary access-
+< control list (ACL) 
+< 
+< 19
+< WRITE_OWNER
+< Write access to owner 
+< 
+< 20
+< SYNCHRONIZE
+< Windows NT: Synchronize access 
+<   
+< Bits
+< Meaning
+< 24
+< Access system security (ACCESS_SYSTEM_SECURITY). This flag is 
+< not a typical access type. It is used to indicate access to a 
+< system ACL. This type of access requires the calling process 
+< to have a specific privilege.
+< 25
+< Maximum allowed (MAXIMUM_ALLOWED)
+< 26 
+< through 
+< 27
+< Reserved
+< 28
+< Generic all (GENERIC_ALL)
+< 29
+< Generic execute (GENERIC_EXECUTE)
+< 30
+< Generic write (GENERIC_WRITE)
+< 31
+< Generic read (GENERIC_READ)
+< 
+4973,4975c4579,4581
+< 4.2.16.9 SMB_QUERY_FILE_ALT_NAME_INFO
+< This infornation level returns a FILE_NAME_INFORMATION structure.
+< 4.2.16.10 SMB_QUERY_FILE_STREAM_INFO
+---
+> 4.2.14.9 SMB_QUERY_FILE_ALT_NAME_INFO
+> This information level returns a FILE_NAME_INFORMATION structure.
+> 4.2.14.10 SMB_QUERY_FILE_STREAM_INFO
+4983c4589
+< 4.2.16.11 SMB_QUERY_FILE_COMPRESSION_INFO
+---
+> 4.2.14.11 SMB_QUERY_FILE_COMPRESSION_INFO
+4992c4598,4624
+< 4.2.17 TRANS2_SET_PATH_INFORMATION: Set File Attributes given Path
+---
+> 4.2.15 TRANS2_QUERY_FILE_INFORMATION: Get File Attributes Given FID
+> This request is used to get information about a specific file or 
+> subdirectory given a handle to it.
+> Client Request
+> ==========================
+> Value
+> ==========================================
+> WordCount
+> 15
+> MaxSetupCount
+> 0
+> SetupCount
+> 1
+> Setup[0]
+> TRANS2_QUERY_FILE_INFORMATION
+> Parameter Block Encoding
+> ==========================
+> Description
+> ==========================================
+> USHORT Fid;
+> Handle of file for request
+> USHORT InformationLevel;
+> Level of information requested
+> 
+> The available information levels, as well as the format of the response 
+> are identical to TRANS2_QUERY_PATH_INFORMATION.
+> 4.2.16 TRANS2_SET_PATH_INFORMATION: Set File Attributes given Path
+5007,5010d4638
+< 
+< 
+< 
+< 
+5022c4650
+< The following INFORMATIONLEVELS may be set:
+---
+> The following InformationLevels may be set:
+5035c4663
+< 4.2.17.1 SMB_INFO_STANDARD & SMB_INFO_QUERY_EA_SIZE
+---
+> 4.2.16.1 SMB_INFO_STANDARD & SMB_INFO_QUERY_EA_SIZE
+5042,5045d4669
+< 
+< 
+< 
+< 
+5072c4696,4697
+< 4.2.17.2 SMB_INFO_QUERY_ALL_EAS
+---
+> 
+> 4.2.16.2 SMB_INFO_QUERY_ALL_EAS
+5079,5082d4703
+< 
+< 
+< 
+< 
+5087d4707
+< 
+5091,5094d4710
+< 
+< 
+< 
+< 
+5103,5117d4718
+< 4.2.18 TRANS2_QUERY_FILE_INFORMATION: Get File Attributes Given FID
+< This request is used to get information about a specific file or 
+< subdirectory given a handle to it.
+< Client Request
+< ==========================
+< Value
+< ==========================================
+< WordCount
+< 15
+< MaxSetupCount
+< 0
+< SetupCount
+< 1
+< Setup[0]
+< TRANS2_QUERY_FILE_INFORMATION
+5119,5133c4720
+< 
+< 
+< 
+< Parameter Block Encoding
+< ==========================
+< Description
+< ==========================================
+< USHORT Fid;
+< Handle of file for request
+< USHORT InformationLevel;
+< Level of information requested
+< 
+< The available information levels, as well as the format of the response 
+< are identical to TRANS2_QUERY_PATH_INFORMATION.
+< 4.2.19 TRANS2_SET_FILE_INFORMATION: Set File Attributes Given FID
+---
+> 4.2.17 TRANS2_SET_FILE_INFORMATION: Set File Attributes Given FID
+5148,5151d4734
+< 
+< 
+< 
+< 
+5168,5169d4750
+< NtSetFileInformation equiv.
+< =============================
+5172d4752
+< 
+5175d4754
+< 
+5178d4756
+< FileBasicInformation
+5181d4758
+< FileDispositionInformation
+5184d4760
+< FileAllocationInformation
+5187d4762
+< FileEndOfFileInformation
+5189,5195c4764,4780
+< Information levels whose values are greater than 0x100 are mapped to 
+< corresponding calls to NtSetInformationFile calls by the server.  The 
+< two levels below 0x100 are as described in the NT_SET_PATH_INFORMATION 
+< transaction.  The requested information is placed in the Data portion of 
+< the transaction response.  For the NT equivalent responses, the 
+< transaction response has 1 parameter word which should be ignored by the 
+< client.
+---
+> The two levels below 0x101 are as described in the 
+> NT_SET_PATH_INFORMATION transaction.  The requested information is 
+> placed in the Data portion of the transaction response. For the 
+> information levels greater than 0x100, the transaction response has 1 
+> parameter word which should be ignored by the client.
+> 4.2.17.1 SMB_FILE_DISPOSITION_INFO
+> typedef struct {
+>     BOOLEAN DeleteFile;
+> } FILE_DISPOSITION_INFORMATION;
+> 4.2.17.2 SMB_FILE_ALLOCATION_INFO
+> typedef struct {
+>     LARGE_INTEGER AllocationSize;
+> } FILE_ALLOCATION_INFORMATION;
+> 4.2.17.3 SMB_FILE_END_OF_FILE_INFO
+> typedef struct {
+>     LARGE_INTEGER EndOfFile;
+> } FILE_END_OF_FILE_INFORMATION,
+5197c4782
+< 4.3.1 TRANS2_CREATE_DIRECTORY: Create Directory (optional EAs)
+---
+> 4.3.1 TRANS2_CREATE_DIRECTORY: Create Directory (with optional EAs)
+5200d4784
+< 
+5213,5216d4796
+< 
+< 
+< 
+< 
+5237c4817
+< appropriate TID and additional pathname are passed.  The directory must 
+---
+> appropriate Tid and additional pathname are passed.  The directory must 
+5253c4833
+< TID.
+---
+> Tid.
+5269c4849
+< supply full pathnames relative to the TID in the SMB header.
+---
+> supply full pathnames relative to the Tid in the SMB header.
+5293a4874,4881
+> 4.3.3.1 Errors
+> ERRDOS/ERRbadfile
+> ERRDOS/ERRbadpath
+> ERRDOS/ERRnoaccess
+> ERRHRD/ERRdata
+> ERRSRV/ERRinvid
+> ERRSRV/ERRbaduid
+> ERRSRV/ERRaccess
+5338c4926
+< 
+---
+> See below
+5375c4963,4964
+< ==================================
+---
+> ================
+> ====
+5391,5397c4980,4983
+< Information levels whose values are greater than 0x101 are mapped to 
+< corresponding calls to NtQueryInformationFile calls by the server.  The 
+< three levels below 0x101 are described below.  The requested information 
+< is placed in the DATA portion of the transaction response.
+< A client which does not support long names can only request 
+< SMB_INFO_STANDARD.  The following sections detail the data returned for 
+< each InformationLevel.
+---
+> The following sections detail the data returned for each 
+> InformationLevel. The requested information is placed in the DATA 
+> portion of the transaction response. Note: a client which does not 
+> support long names can only request SMB_INFO_STANDARD.  
+5481,5483c5067,5069
+< ULONG FileAttributes;
+< NT style encoding of file 
+< attributes
+---
+> ULONG ExtFileAttributes;
+> Extended file attributes (see 
+> section 3.11)
+5511,5513c5097,5099
+< ULONG FileAttributes;
+< NT style encoding of file 
+< attributes
+---
+> ULONG ExtFileAttributes;
+> Extended file attributes (see 
+> section 3.11)
+5543,5545c5129,5131
+< ULONG FileAttributes;
+< NT style encoding of file 
+< attributes
+---
+> ULONG ExtFileAttributes;
+> Extended file attributes (see 
+> section 3.11)
+5552a5139,5140
+> UCHAR Reserved
+> 
+5585,5588d5172
+< 
+< 
+< 
+< 
+5606d5189
+< 
+5609,5612c5192,5193
+< 
+< 1 - close search if end of 
+< search reached
+< 
+---
+> 1 - close search if end of search 
+> reached
+5615,5618c5196,5197
+< 
+< 3 - resume/continue from 
+< previous ending place
+< 
+---
+> 3 - resume/continue from previous 
+> ending place
+5666c5245,5248
+< 
+---
+> 4.3.6.1 Errors
+> ERRDOS/ERRbadfid
+> ERRSRV/ERRinvid
+> ERRSRV/ERRaccess
+5673,5674c5255
+< Specifies operation to monitor 
+< (NT format)
+---
+> Specifies operation to monitor
+5683c5264
+< This command notifies the client when the directory specified by FID is 
+---
+> This command notifies the client when the directory specified by Fid is 
+5782c5363
+< BIT15 of Flags2 in the SMB header must be set, indicating this is a 
+---
+> Bit15 of Flags2 in the SMB header must be set, indicating this is a 
+5817c5398
+< Number of REQUESTFILENAME bytes  client
+---
+> Number of RequestFilename bytes client
+5822c5403
+< bit0 - The servers in REFERRALS are 
+---
+> bit0 - The servers in Referrals are 
+5825c5406
+< bit1 - The servers in REFERRALS should 
+---
+> bit1 - The servers in Referrals should 
+5842,5846c5423,5427
+< FLAGS indicates how this referral should be treated.  If BIT0 is clear, 
+< any entity in the REFERRALS list holds the storage for REQUESTFILENAME.  
+< If BIT0 is set, any entity in the REFERRALS list has further referral 
+< information for REQUESTFILENAME - a TRANS2_GET_DFS_REFERRAL request 
+< should be sent to an entity in the REFERRALS list for further 
+---
+> FLAGS indicates how this referral should be treated.  If bit0 is clear, 
+> any entity in the Referrals list holds the storage for RequestFileName.  
+> If BIT0 is set, any entity in the Referrals list has further referral 
+> information for RequestFilename - a TRANS2_GET_DFS_REFERRAL request 
+> should be sent to an entity in the Referrals list for further 
+5852,5853c5433,5434
+< uniform element, MAXREFERRALLEVEL is advisory only. Each element in 
+< REFERRALS has this envelope:
+---
+> uniform element, MaxReferralLevel is advisory only. Each element in 
+> Referrals has this envelope:
+5865c5446
+< Type of NODE handling referral:
+---
+> Type of Node handling referral:
+5872,5874c5453,5455
+< 01 - Strip off PATHCONSUMED characters 
+< before submitting REQUESTFILENAME to 
+< NODE
+---
+> 01 - Strip off PathConsumed 
+> characters before submitting 
+> RequestFileName to Node
+5881c5462
+< Type of NODE handling referral:
+---
+> Type of Node handling referral:
+5889c5470
+< 01 - Strip off PATHCONSUMED 
+---
+> 01 - Strip off PathConsumed 
+5891c5472
+< REQUESTFILENAME to NODE
+---
+> RequestFileName to Node
+5899c5480
+< of the servers listed in THIS 
+---
+> of the servers listed in this 
+5908,5909c5489,5490
+< PATHCONSUMED bytes of the 
+< REQUESTFILENAME.
+---
+> PathConsumed bytes of the 
+> RequestFileName.
+5914,5915c5495,5496
+< DFS Path that matched PATHCONSUMED 
+< bytes of the REQUESTFILENAME.
+---
+> DFS Path that matched PathConsumed 
+> bytes of the RequestFileName.
+5921c5502
+< The SMB protocol imposes no referral selection policy.
+---
+> The CIFS protocol imposes no referral selection policy.
+5962c5543
+< BIT15 of FLAGS2 in the SMB header must be set, indicating this is a 
+---
+> Bit15 of Flags2 in the SMB header must be set, indicating this is a 
+6013a5595,5601
+> 4.5.1.1 Errors
+> ERRDOS/ERRnoaccess
+> ERRDOS/ERRnofids
+> ERRSRV/ERRinvdevice
+> ERRSRV/ERRbaduid
+> ERRSRV/ERRqfull
+> ERRSRV/ERRqtoobig
+6030,6031c5618,5619
+< STARTINDEX specifies the first entry in the queue to return.
+< MAXCOUNT specifies the maximum number of entries to return, this may be 
+---
+> StartIndex specifies the first entry in the queue to return.
+> MaxCount specifies the maximum number of entries to return, this may be 
+6054c5642
+< COUNT indicates how many entries were actually returned.  RESTARTINDEX 
+---
+> Count indicates how many entries were actually returned.  RestartIndex 
+6056c5644
+< used as the STARTINDEX in a subsequent request to resume the queue 
+---
+> used as the StartIndex in a subsequent request to resume the queue 
+6095a5684,5687
+> 4.5.2.1 Errors
+> ERRHRD/ERRnotready
+> ERRHRD/ERRerror
+> ERRSRV/ERRbaduid
+6192c5784
+< 5.1 CLOSE_PRINT_FILE:  Close and Spool Print Job*
+---
+> 5.1 CLOSE_PRINT_FILE:  Close and Spool Print Job
+6221c5813
+< 5.2 CREATE: Create File*
+---
+> 5.2 CREATE: Create File
+6243,6244c5835,5836
+< FileAttributes are encoded as described in the "File Attribute Encoding" 
+< section.
+---
+> FileAttributes are encoded as described in "File Attribute Encoding",  
+> section 3.10.
+6294c5886
+< 5.4 CREATE_NEW: Create File*
+---
+> 5.4 CREATE_NEW: Create File
+6335c5927
+< 5.5 LOCK_AND_READ: Lock and Read Bytes*
+---
+> 5.5 LOCK_AND_READ: Lock and Read Bytes
+6394c5986
+< 5.6 LOCK_BYTE_RANGE: Lock Bytes*
+---
+> 5.6 LOCK_BYTE_RANGE: Lock Bytes
+6431c6023
+< 5.7 OPEN: Open File*
+---
+> 5.7 OPEN: Open File
+6531c6123
+< 5.8 OPEN_ANDX:  Open File*
+---
+> 5.8 OPEN_ANDX:  Open File
+6547d6138
+< 
+6549d6139
+< 
+6551d6140
+< 
+6613,6615c6202,6203
+< DesiredAccess describes the access the client desires for the file; the 
+< encoding of this field is described in the "Access Mode Encoding" 
+< section elsewhere in this document.
+---
+> DesiredAccess describes the access the client desires for the file (see 
+> section 3.6 - Access Mode Encoding).
+6617,6618c6205,6207
+< not the file exists (see section 3.7).  Action in the response specifies 
+< the action as a result of the Open request (see section 3.8). 
+---
+> not the file exists (see section 3.8 - Open Function Encoding).  Action 
+> in the response specifies the action as a result of the Open request 
+> (see section 3.9 - Open Action Encoding). 
+6657d6245
+< 
+6663c6251
+< 5.9 PROCESS_EXIT: Process Exit*
+---
+> 5.9 PROCESS_EXIT: Process Exit
+6773c6361
+< 5.12 READ: Read File*
+---
+> 5.12 READ: Read File
+6829c6417
+< 5.13 READ_MPX: Read Block Multiplex*
+---
+> 5.13 READ_MPX: Read Block Multiplex
+6931c6519,6648
+< 5.14 SEARCH: Search Directory using Wildcards*
+---
+> 5.14 READ_RAW: Read Raw
+> The SMB_COM_READ_RAW protocol is used to maximize the performance of 
+> reading a large block of data from the server to the client.  This 
+> request can be applied to files and named pipes.
+> Client Request
+> ================================
+> Description
+> ===================================
+> UCHAR WordCount;
+> Count of parameter words = 8
+> USHORT Fid;
+> File handle
+> ULONG Offset;
+> Offset in file to begin read
+> USHORT MaxCount;
+> Max bytes to return (maximum 65535)
+> USHORT MinCount;
+> Min bytes to return (normally 0)
+> ULONG Timeout;
+> Wait time if named pipe
+> USHORT Reserved;
+> 
+> USHORT ByteCount;
+> Count of data bytes = 0
+> 
+> FID identifies the resource being read, and may refer to a disk file or 
+> a named pipe.
+> TIMEOUT is the number of milliseconds to wait for completion FID refers 
+> to a named pipe.
+> When the client issues this request, the client must guarantee that 
+> there is (and will be) no other request to the server for the duration 
+> of the SMB_COM_READ_RAW.  The server will respond, in one send, with the 
+> raw data being read.  Thus the client is able to request up to 65,535 
+> bytes of data and receive it directly into the user's buffer, since the 
+> server response has no header or trailer.  Note that the amount of data 
+> requested is expected to be larger than the negotiated buffer size for 
+> this protocol.
+> The reason that no other requests can be active on the client's 
+> connection to the server for the duration of the request is that if 
+> other receives are present, there is normally no way to guarantee that 
+> the data will be received into the user space, rather the data may fill 
+> one (or more) of the other buffers.
+> The number of bytes actually returned is determined by the length of the 
+> message the client receives as reported by the transport layer.  If the 
+> request is to read more bytes than are present in the file, the read 
+> response will be of the length actually read from the file.
+> If none of the requested bytes exist (EOF) or an error occurs on the 
+> read, the server responds with a zero byte send.  Upon receipt of a zero 
+> length response, the client should send a different type of request to 
+> the server.  The response to that read will then tell the client that 
+> EOF was hit or identify the error condition.
+> The number of bytes returned may be less than the number requested only 
+> if a read specifies bytes beyond the current file size.  In this case 
+> only the bytes that exist are returned.  A read completely beyond the 
+> end of file results in a response of zero length.  If the number of 
+> bytes returned is less than the number of bytes requested, this 
+> indicates end of file (if reading other than a standard blocked disk 
+> file, only ZERO bytes returned indicates end of file).
+> The transport layer guarantees delivery of all response bytes to the 
+> client.  Thus no  SMB level confirmation protocol is required.  If an 
+> error should occur at the clients end, all bytes must be received and 
+> thrown away.  There is no need to inform the server of the error.
+> This message was introduced with the LANMAN1.0 SMB dialect.  Whether or 
+> not this request is supported is returned in the response to 
+> SMB_COM_NEGOTIATE.
+> The flow for reading a sequential file using SMB_COM_READ_BOCK_RAW is:
+> Client Request
+> ==============================
+> Server Response
+> =====================================
+> SMB_COM_OPEN file
+> Success
+> SMB_COM_READ_RAW
+> 
+> 
+> raw data returned
+> SMB_COM_READ_RAW
+> 
+> 
+> more raw data returned
+> SMB_COM_READ_RAW
+> 
+> 
+> short (or 0 length) response returned
+> SMB_COM_READ
+> 
+> 
+> 0 bytes returned indicating EOF
+> SMB_COM_CLOSE
+> Success
+> 
+> SMB_COM_READ_RAW has no way to return errors.  Because the response is 
+> raw data only, a zero length response indicates EOF, a read error or 
+> that the server is temporarily out of large buffers.  The client should 
+> then retry using a different type of read request.  This request will 
+> then either return the EOF condition, an error if the read is still 
+> failing, or will work if the problem was due to a temporary server 
+> condition.
+> If the negotiated dialect is NT LM 0.12 or later, and the response to 
+> the SMB_COM_NEGOTIATE SMB has CAP_LARGE_FILES set in the CAPABILITIES 
+> field, a new format of  the SMB_COM_READ_RAW request is allowed which 
+> accommodates very large files having 64 bit offsets.
+> Client Request
+> ================================
+> Description
+> ===================================
+> UCHAR WordCount;
+> Count of parameter words = 10
+> USHORT Fid;
+> File handle
+> ULONG Offset;
+> Offset in file to begin read
+> USHORT MaxCount;
+> Max bytes to return (maximum 65535)
+> USHORT MinCount;
+> Min bytes to return (normally 0)
+> ULONG Timeout;
+> Wait time if named pipe
+> USHORT Reserved;
+> 
+> ULONG OffsetHigh;
+> Upper 32 bits of offset
+> USHORT ByteCount;
+> Count of data bytes = 0
+> This form of the request is differentiated from the previous form of the 
+> request by the WORDCOUNT field.  In this case, the final offset to read 
+> from is used by combining OFFSETHIGH and OFFSET, the resulting value can 
+> not be negative or the request will be rejected by the server.
+> SMB_COM_READ_RAW can not be used over connectionless transports.
+> 5.15 SEARCH: Search Directory using Wildcards
+7051c6768
+< 5.15 SET_INFORMATION: Set File Attributes
+---
+> 5.16 SET_INFORMATION: Set File Attributes
+7084c6801
+< 5.16 SET_INFORMATION2: Set File Information
+---
+> 5.17 SET_INFORMATION2: Set File Information
+7122c6839
+< 5.17 QUERY_INFORMATION_DISK: Get Disk Attributes
+---
+> 5.18 QUERY_INFORMATION_DISK: Get Disk Attributes
+7166c6883
+< 5.18 TRANS2_OPEN2: Create or Open File with Extended Attributes
+---
+> 5.19 TRANS2_OPEN2: Create or Open File with Extended Attributes
+7304c7021
+< 5.19 TREE_CONNECT: Tree Connect
+---
+> 5.20 TREE_CONNECT: Tree Connect
+7306c7023,7025
+< message is generated to the server.
+---
+> message is generated to the server. This command is almost exactly like 
+> SMB_COM_TREE_CONNECT_ANDX, except that no AndX command may follow; see 
+> section 4.1.4.
+7328,7375c7047
+< The serving machine verifies the combination and returns an error code 
+< or an identifier.  The full name is included in this request message and 
+< the identifier identifying the connection is returned in the TID field 
+< of the SMB header.  The TID field in the client request is ignored.  The 
+< meaning of this identifier (TID) is server specific; the client must not 
+< associate any specific meaning to it.
+< If the negotiated dialect is prior to LANMAN1.0 and the client has not 
+< sent a successful SMB_COM_SESSION_SETUP_ANDX request when the tree 
+< connect arrives, a user level server must nevertheless validate the 
+< client's credentials as discussed earlier in this document.  If the 
+< negotiated dialect is LANMAN1.0 and later, then it is a protocol 
+< violation for the client to send this message prior to a successful 
+< SMB_COM_SESSION_SETUP_ANDX.  Having received an 
+< SMB_COM_SESSION_SETUP_AND_X, the server ignores PASSWORD.
+< PATH follows UNC style syntax, that is to say it is encoded as 
+< \\server\share and it indicates the name of the resource the client 
+< wishes to connect to.
+< If the server is paused, administrative privilege is required to connect 
+< to any share; if the server is not paused, administrative privilege is 
+< required only for administrative shares (C$, etc.).  Of course, the 
+< server can enforce whatever policy it desires to govern share access.  
+< Such policies may include valid times of day, software usage license 
+< limits, number of simultaneous server users or share users, etc.
+< The Service component indicates the type of resource the client intends 
+< to access.  Valid values are:
+< Service
+< ========
+< Description
+< ========================
+< Earliest Dialect Allowed
+< ================================
+< A:
+< disk share
+< PC NETWORK PROGRAM 1.0
+< LPT1:
+< printer
+< PC NETWORK PROGRAM 1.0
+< IPC
+< named pipe
+< MICROSOFT NETWORKS 3.0
+< COMM
+< communications device
+< MICROSOFT NETWORKS 3.0
+< ?????
+< any type of device
+< MICROSOFT NETWORKS 3.0
+< 
+< The SMB server responds with:
+---
+> The CIFS server responds with:
+7396c7068
+< 5.20 UNLOCK_BYTE_RANGE: Unlock Bytes*
+---
+> 5.21 UNLOCK_BYTE_RANGE: Unlock Bytes
+7426c7098
+< 5.21 WRITE: Write Bytes*
+---
+> 5.22 WRITE: Write Bytes
+7483c7155
+< 5.22 WRITE_AND_UNLOCK: Write Bytes and Unlock Range*
+---
+> 5.23 WRITE_AND_UNLOCK: Write Bytes and Unlock Range
+7542c7214
+< 5.23 WRITE_AND_CLOSE:  Write Bytes and Close File*
+---
+> 5.24 WRITE_AND_CLOSE:  Write Bytes and Close File
+7614c7286
+< 5.24 WRITE_MPX: Write Block Multiplex*
+---
+> 5.25 WRITE_MPX: Write Block Multiplex
+7761c7433
+< 5.25 WRITE_PRINT_FILE: Write to Print File*
+---
+> 5.26 WRITE_PRINT_FILE: Write to Print File
+7798a7471,7486
+> 5.27 WRITE_RAW: Write Raw Bytes 
+> The Write Block Raw protocol is used to maximize the performance of 
+> writing a large block of data from the client to the server.  The Write 
+> Block Raw command's scope includes files, Named Pipes, and spooled 
+> output (can be used in place COM_WRITE_PRINT_FILE ).
+> Client Request
+> ==========================
+> Description
+> =========================================
+> UCHAR WordCount;
+> Count of parameter words = 12
+> USHORT Fid;
+> File handle
+> USHORT Count;
+> Total bytes, including this buffer
+> USHORT Reserved;
+7799a7488,7656
+> ULONG Offset;
+> Offset in file to begin write
+> ULONG Timeout;
+> 
+> USHORT WriteMode;
+> Write mode:
+> 
+> bit 0 - complete write to disk and send 
+> final result response
+> 
+> bit 1 - return Remaining (pipe/dev)
+> 
+> (see WriteAndX for #defines)
+> ULONG Reserved2;
+> 
+> USHORT DataLength;
+> Number of data bytes this buffer
+> USHORT DataOffset;
+> Offset (from header start) to data
+> USHORT ByteCount;
+> Count of data bytes
+> UCHAR Pad[];
+> Pad to SHORT or LONG
+> UCHAR Data[];
+> Data (# = DataLength)
+> 
+> First Server Response
+> ==============================
+> Description
+> =====================================
+> UCHAR WordCount;
+> Count of parameter words = 1
+> USHORT Remaining;
+> Bytes remaining to be read if pipe
+> USHORT ByteCount;
+> Count of data bytes = 0
+> 
+> Final Server Response
+> ==================================
+> Description
+> =================================
+> UCHAR Command (in SMB header)
+> SMB_COM_WRITE_COMPLETE
+> 
+> 
+> UCHAR WordCount;
+> Count of parameter words = 1
+> USHORT Count;
+> Total number of bytes written
+> USHORT ByteCount;
+> Count of data bytes = 0
+> 
+> The first response format will be that of the final server response in 
+> the case where the server gets an error while writing the data sent 
+> along with the request.  Thus COUNT is the number of bytes which did get 
+> written any time an error is returned.  If an error occurs after the 
+> first response has been sent allowing the client to send the remaining 
+> data, the final response should not be sent unless write through is set.  
+> Rather the server should return this "write behind" error on the next 
+> access to the FID.
+> The client must guarantee that there is (and will be) no other request 
+> on the connection for the duration of this request.  The server will 
+> reserve enough resources to receive the data and respond with a response 
+> SMB as defined above.  The client then sends the raw data in one send.  
+> Thus the server is able to receive up to 65,535 bytes of data directly 
+> into the server buffer.  The amount of data transferred is expected to 
+> be larger than the negotiated buffer size for this protocol.
+> The reason that no other requests can be active on the connection for 
+> the duration of the request is that if other receives are present on the 
+> connection, there is normally no way to guarantee that the data will be 
+> received into the correct server buffer, rather the data may fill one 
+> (or more) of the other buffers.  Also if the client is sending other 
+> requests on the connection, a request may land in the buffer that the 
+> server has allocated for the this SMB's data.
+> Whether or not SMB_COM_WRITE_RAW is supported is returned in the 
+> response to SMB_COM_NEGOTIATE.  SMB_COM_WRITE_RAW is not supported for 
+> connectionless clients.
+> When write through is not specified ((WRITEMODE & 01) == 0) this SMB is 
+> assumed to be a form of write behind.  The transport layer guarantees 
+> delivery of all secondary requests from the client.  Thus no "got the 
+> data you sent" SMB is needed.  If an error should occur at the server 
+> end, all bytes must be received and thrown away.  If an error occurs 
+> while writing data to disk such as disk full, the next access of the 
+> file handle (another write, close, read, etc.) will return the fact that 
+> the error occurred.
+> If write through is specified ((WRITEMODE & 01) != 0), the server will 
+> receive the data, write it to disk and then send a final response 
+> indicating the result of the write.  The total number of bytes written 
+> is also returned in this response in the COUNT field.
+> The flow for the SMB_COM_WRITE_RAW SMB is:
+> client -----> SMB_COM_WRITE_RAW request (optional data) >-------> server
+> client <------------------< OK send (more) data <---------------- server
+> client  ----------------------> raw data >----------------------> server
+> client  <---< data on disk or error (write through only) <------- server
+> 
+> This protocol is set up such that the SMB_COM_WRITE_RAW request may also 
+> carry data.  This is an optimization in that up to the server's buffer 
+> size (MAXCOUNT from SMB_COM_NEGOTIATE response), minus the size of the 
+> SMB_COM_WRITE_RAW SMB request, may be sent along with the request.  Thus 
+> if the server is busy and unable to support the raw write of the 
+> remaining data, the data sent along with the request has been delivered 
+> and need not be sent again.  The server will write any data sent in the 
+> request (and wait for it to be on the disk or device if write through is 
+> set), prior to sending the response.
+> The specific responses error class ERRSRV, error codes ERRusempx and 
+> ERRusestd, indicate that the server is temporarily out of the resources 
+> needed to support the raw write of the remaining data, but that any data 
+> sent along with the request has been successfully written.  The client 
+> should then write the remaining data using a different type of SMB write 
+> request, or delay and retry using SMB_COM_WRITE_RAW.  If a write error 
+> occurs writing the initial data, it will be returned and the write raw 
+> request is implicitly denied.
+> The return field REMAINING is returned for named pipes only.  It is used 
+> to return the number of bytes currently available in the pipe.  This 
+> information can then be used by the client to know when a subsequent 
+> (non blocking) read of the pipe may return some data.  Of course when 
+> the read request is actually received by the server there may be more or 
+> less actual data in the pipe (more data has been written to the pipe / 
+> device or another reader drained it).  If the information is currently 
+> not available or the request is NOT for a pipe or the server does not 
+> support this feature, a -1 value should be returned.
+> If the negotiated dialect is NT LM 0.12 or later, and the response to 
+> the SMB_COM_NEGOTIATE SMB has CAP_LARGE_FILES set in the CAPABILITIES 
+> field, an additional request format is allowed which accommodates very 
+> large files having 64 bit offsets:
+> Client Request
+> ==================================
+> Description
+> =================================
+> UCHAR WordCount;
+> Count of parameter words = 14
+>  USHORT Fid;
+> File handle
+>  USHORT Count;
+> Total bytes, including this 
+> buffer
+>  USHORT Reserved;
+> 
+>  ULONG Offset;
+> Offset in file to begin write
+>  ULONG Timeout;
+> 
+>  USHORT WriteMode;
+> Write mode:
+>   
+> bit 0 - complete write to disk 
+> and send final result response
+> 
+> bit 1 - return Remaining 
+> (pipe/dev)
+>  ULONG Reserved2;
+> 
+>  USHORT DataLength;
+> Number of data bytes this buffer
+>  USHORT DataOffset;
+> Offset (from header start) to 
+> data
+>  ULONG OffsetHigh;
+> Upper 32 bits of offset
+> USHORT ByteCount;
+> Count of data bytes
+> UCHAR Pad[];
+> Pad to SHORT or LONG
+>  UCHAR Data[];
+> Data (# = DataLength)
+> 
+> In this case the final offset in the file is formed by combining 
+> OFFSETHIGH and OFFSET, the resulting offset must not be negative.
+> 
+7931,7966c7788
+< 6.2 Named Pipe Transaction Protocol Subcommand Codes
+< The subcommand codes, placed in SETUP[0], for named pipe operations are:
+< SubCommand Code
+< ===================
+< Value
+< =====
+< Description
+< =========================================
+< CallNamedPipe
+< 0x54
+< open/write/read/close pipe
+< WaitNamedPipe
+< 0x53
+<  wait for pipe to be nonbusy
+< PeekNmPipe
+< 0x23
+< read but don't remove data
+< QNmPHandState
+< 0x21
+< query pipe handle modes
+< SetNmPHandState
+< 0x01
+< set pipe handle modes
+< QNmPipeInfo
+< 0x22
+< query pipe attributes
+< TransactNmPipe
+< 0x26
+< write/read operation on pipe
+< RawReadNmPipe
+< 0x11
+< read pipe in "raw" (non message mode)
+< RawWriteNmPipe
+< 0x31
+< write pipe "raw" (non message mode) */
+< 6.3 SMB_COM_TRANSACTION2 Subcommand codes
+---
+> 6.2 SMB_COM_TRANSACTION2 Subcommand codes
+8038c7860
+< 6.4 SMB_COM_NT_TRANSACTION Subcommand Codes
+---
+> 6.3 SMB_COM_NT_TRANSACTION Subcommand Codes
+8069,8070c7891,7892
+< 6.5  SMB Protocol Dialect Constants
+< This is the list of  SMB protocol dialects, ordered from least 
+---
+> 6.4  SMB Protocol Dialect Constants
+> This is the list of  CIFS protocol dialects, ordered from least 
+8073c7895,7896
+< ===========================
+---
+> ======================
+> =====
+8077,8079c7900,7901
+< The original MSNET SMB protocol 
+< (otherwise known as the "core protocol")
+< 
+---
+> The original MSNET SMB protocol (otherwise 
+> known as the "core protocol")
+8081,8088c7903,7909
+< Some versions of the original MSNET 
+< defined this as an alternate to the core 
+< protocol name
+< 
+< MICROSOFT NETWORKS 1.03
+< This is used for the MS-NET 1.03 
+< product.  It defines 
+< Lock&Read,Write&Unlock, and a special 
+---
+> Some versions of the original MSNET defined 
+> this as an alternate to the core protocol 
+> name
+> MICROSOFT NETWORKS 
+> 1.03
+> This is used for the MS-NET 1.03 product.  It 
+> defines Lock&Read,Write&Unlock, and a special 
+8090d7910
+< 
+8093,8097c7913,7916
+< protocol.  It is equivalent to the 
+< LANMAN 1.0 protocol, except the server 
+< is required to map errors from the OS/2 
+< error to an appropriate DOS error.
+< 
+---
+> protocol.  It is equivalent to the LANMAN 1.0 
+> protocol, except the server is required to 
+> map errors from the OS/2 error to an 
+> appropriate DOS error.
+8099,8101c7918,7919
+< This is the first version of the full 
+< LANMAN 1.0 protocol
+< 
+---
+> This is the first version of the full LANMAN 
+> 1.0 protocol
+8103,8105c7921,7922
+< This is the first version of the full 
+< LANMAN 2.0 protocol
+< 
+---
+> This is the first version of the full LANMAN 
+> 2.0 protocol
+8107,8112c7924,7927
+< This is the dos equivalent of the 
+< LM1.2X002 protocol.  It is identical to 
+< the LM1.2X002 protocol, but the server 
+< will perform error mapping to 
+< appropriate DOS errors.
+< 
+---
+> This is the DOS equivalent of the LM1.2X002 
+> protocol.  It is identical to the LM1.2X002 
+> protocol, but the server will perform error 
+> mapping to appropriate DOS errors.
+8115d7929
+< 
+8118,8119c7932,7933
+< 
+< Windows for Workgroups 3.1a
+---
+> Windows for Workgroups 
+> 3.1a
+8121d7934
+< 
+8123,8125c7936,7938
+< The SMB protocol designed for NT 
+< networking.  This has special SMBs which 
+< duplicate the NT semantics.
+---
+> The SMB protocol designed for NT networking.  
+> This has special SMBs which duplicate the NT 
+> semantics.
+8127,8137c7940,7949
+< 
+< SMB servers select the most recent version of the protocol known to both 
+< client and server.  Any SMB server which supports dialects newer than 
+< the original core dialect must support all the messages and semantics of 
+< the dialects between the core dialect and the newer one.  This is to say 
+< that a server which supports the NT LM 0.12 dialect must also support 
+< all of the messages of the previous 10 dialects.  It is the client's 
+< responsibility to ensure it only sends SMBs which are appropriate to the 
+< dialect negotiated.  Clients must be prepared to receive an SMB response 
+< from an earlier protocol dialect -- even if the client used the most 
+< recent form of the request.
+---
+> CIFS servers select the most recent version of the protocol known to 
+> both client and server.  Any CIFS server which supports dialects newer 
+> than the original core dialect must support all the messages and 
+> semantics of the dialects between the core dialect and the newer one.  
+> This is to say that a server which supports the NT LM 0.12 dialect must 
+> also support all of the messages of the previous 10 dialects.  It is the 
+> client's responsibility to ensure it only sends SMBs which are 
+> appropriate to the dialect negotiated.  Clients must be prepared to 
+> receive an SMB response from an earlier protocol dialect -- even if the 
+> client used the most recent form of the request.
+8140,8141c7952,7953
+< STATUS.DOSERROR.ERRORCLASS, and most of the error codes for 
+< STATUS.DOSERROR.ERROR.
+---
+> Status.DosError.ErrorClass, and most of the error codes for 
+> Status.DosError.Error.
+8178,8184c7990
+< The following error codes may be generated with the ERRDOS error class. 
+< When an SMB dialect greater than equal to LANMAN 1.0 has been nego-
+< tiated, all of the error codes below may be generated plus any of the 
+< error codes defined for OS/2 (see OS/2 operating system documentation 
+< for complete list of OS/2 error codes).  When an earlier dialect has 
+< been negotiated, the server must map additional OS/2 (or OS/2 like) 
+< errors to the errors listed below.
+---
+> The following error codes may be generated with the ERRDOS error class.
+8216,8217c8022,8023
+< o write to fid open for read only
+< o read on fid open for write only
+---
+> o write to Fid open for read only
+> o read on Fid open for write only
+8273,8291c8079
+< The file named in a Create Directory, Make 
+< New File or Link request already exists.  The 
+< error may also be generated in the Create and 
+< Rename transaction.  
+< ERRbadpipe
+< 230
+< Pipe invalid.
+< ERRpipebusy
+< 231
+< All instances of the requested pipe are busy.
+< ERRpipeclosing
+< 232
+< Pipe close in progress.
+< ERRnotconnected
+< 233
+< No process on other end of pipe.
+< ERRmoredata
+< 234
+< There is more data to be returned.
+---
+> The file named in the request already exists. 
+8625,8626d8412
+< 
+< 12. 
+8629c8415
+< Heizer, et al	expires December 1996	[Page 10]
+---
+> Heizer, et al	expires December 1996	[Page 219]

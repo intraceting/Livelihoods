@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>sec2</TITLE>
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<H1>CIFS Security Specs Update</H1><DIR>
+<DIR>
+
+<B><P>(Pick up NEW VERSION of "CIFS Authentication Protocol" -- see below)</P></DIR>
+</DIR>
+
+</B><P>There are three new documents available describing proposed fixes to the CIFS/SMB authentication protocols. We are making these available in order to facilitate widespread public review. The fixes, if they pass review, will be available in Service Pack 3. </P>
+<P>The original protocol from which the new version descends was designed more than a decade ago; recently, quite a few weaknesses have been found in those previous versions. This latest revision is an attempt to repair some of those weaknesses with as small a change to the protocol as possible, so that it can be incrementally and rapidly deployed.</P>
+<P>The updated protocol has two main improvements -- it supports mutual authentication, so it closes a "man-in-the-middle" attack; and it supports message authentication, so it prevents active message attacks.</P>
+<P>All three documents are available in .doc, .txt and postscript. </P>
+<P>Distribution of these documents is unlimited. Please send comments to the authors at <A HREF="mailto:CIFS@MICROSOFT.COM">CIFS@MICROSOFT.COM</A>. Discussion of CIFS is on the mailing list <A HREF="mailto:CIFS@LISTSERV.MSN.COM">CIFS@LISTSERV.MSN.COM</A>; subscribe by sending a message to <A HREF="mailto:LISTSERV@LISTSERV.MSN.COM">LISTSERV@LISTSERV.MSN.COM</A> with a body of "subscribe CIFS you@your.domain". There is a CIFS home page at <A HREF="http://www.microsoft.com/intdev/cifs">http://www.microsoft.com/intdev/cifs</A>. </P>
+<H2>CIFS Authentication Protocol</H2>
+<P>This document describes authentication protocol abstracted from the implementation details, in order to make scrutiny of its security properties easier. It only describes the strongest of several variants of the authentication protocol; a brief summary of the other variants is at the end of the document, together with a description of how the real protocols vary from this abstraction. Click for .<A HREF="CIFS-Auth.doc">doc</A>, .<A HREF="CIFS-Auth.txt">txt</A>, <A HREF="CIFS-Auth.ps">postscript</A>. </P>
+<H2>CIFS Authentication Protocol Specification</H2>
+<P>The full details of the authentication protocols are in this document. Click for .<A HREF="CIFS-Auth-Spec.doc">doc</A>, .<A HREF="CIFS-Auth-Spec.txt">txt</A>, <A HREF="CIFS-Auth-Spec.ps">postscript</A>. </P>
+<H2>CIFS Security Considerations</H2>
+<P>This document contains a discussion of the security properties of the authentication protocols. Click for .<A HREF="CIFS-Security-Considerations.doc">doc</A>, .<A HREF="CIFS-Security-Considerations.txt">txt</A>, <A HREF="CIFS-Security-Considerations.ps">postscript</A>. </P>
+<H2>Changes:</H2>
+<P>3/28/97 -- new version (draft 4) of CIFS Authentication Protocol.<BR>
+Old version is saved as "cifs-auth-3.*" Summary of changes:<BR>
+- Incorporate all reported errata<BR>
+- fix sequence number handling<BR>
+- add description of key server protocol</P>
+<P>&nbsp;</P></BODY>
+</HTML>

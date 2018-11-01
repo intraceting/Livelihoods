@@ -1,0 +1,1278 @@
+{\rtf1\ansi \deff4\deflang1033{\fonttbl{\f0\froman\fcharset0\fprq2 Tms Rmn;}{\f1\froman\fcharset2\fprq2 Symbol;}{\f2\fswiss\fcharset0\fprq2 Helv;}{\f3\fmodern\fcharset0\fprq1 Courier;}
+{\f4\froman\fcharset0\fprq2 Times New Roman;}{\f5\fswiss\fcharset0\fprq2 Arial;}{\f6\froman\fcharset0\fprq2 MS Serif;}{\f7\fswiss\fcharset0\fprq2 MS Sans Serif;}{\f8\froman\fcharset0\fprq2 Times;}{\f9\fswiss\fcharset0\fprq2 Helvetica;}
+{\f10\fswiss\fcharset0\fprq2 System;}{\f11\fmodern\fcharset0\fprq1 Courier New;}{\f12\froman\fcharset0\fprq2 New York;}{\f13\fswiss\fcharset0\fprq2 Geneva;}{\f14\fswiss\fcharset0\fprq2 AvantGarde;}{\f15\froman\fcharset0\fprq2 ITC Bookman;}
+{\f16\fswiss\fcharset0\fprq2 Helvetica-Narrow;}{\f17\froman\fcharset0\fprq2 NewCenturySchlbk;}{\f18\froman\fcharset0\fprq2 Palatino;}{\f19\froman\fcharset0\fprq2 ZapfChancery;}{\f20\fdecor\fcharset2\fprq2 ZapfDingbats;}{\f21\fnil\fcharset2\fprq2 Marlett;}
+{\f22\fmodern\fcharset0\fprq1 Lucida Console;}{\f23\fswiss\fcharset0\fprq2 Lucida Sans Unicode;}{\f24\fnil\fcharset2\fprq2 Wingdings;}{\f25\fswiss\fcharset0\fprq2 Arial Narrow;}{\f26\fswiss\fcharset0\fprq2 Arial Black;}
+{\f27\fswiss\fcharset0\fprq2 Arial Rounded MT Bold;}{\f28\froman\fcharset0\fprq2 Book Antiqua;}{\f29\froman\fcharset0\fprq2 Bookman Old Style;}{\f30\fswiss\fcharset0\fprq2 Century Gothic;}{\f31\froman\fcharset0\fprq2 Century Schoolbook;}
+{\f32\fnil\fcharset2\fprq2 Monotype Sorts;}{\f33\fswiss\fcharset0\fprq2 Haettenschweiler;}{\f34\fdecor\fcharset0\fprq2 Algerian;}{\f35\fdecor\fcharset0\fprq2 Braggadocio;}{\f36\fswiss\fcharset0\fprq2 Britannic Bold;}
+{\f37\fscript\fcharset0\fprq2 Brush Script MT;}{\f38\fdecor\fcharset0\fprq2 Colonna MT;}{\f39\fdecor\fcharset0\fprq2 Desdemona;}{\f40\froman\fcharset0\fprq2 Footlight MT Light;}{\f41\froman\fcharset0\fprq2 Garamond;}{\f42\fswiss\fcharset0\fprq2 Impact;}
+{\f43\fdecor\fcharset0\fprq2 Kino MT;}{\f44\froman\fcharset0\fprq2 Wide Latin;}{\f45\fscript\fcharset0\fprq2 Matura MT Script Capitals;}{\f46\fdecor\fcharset0\fprq2 Playbill;}{\f47\fmodern\fcharset2\fprq1 MS LineDraw;}{\f48\fswiss\fcharset0\fprq2 Tahoma;}
+{\f49\fnil\fcharset2\fprq2 MS Outlook;}{\f50\fscript\fcharset0\fprq2 Comic Sans MS;}{\f51\froman\fcharset255\fprq2 Roman;}{\f52\fscript\fcharset255\fprq2 Script;}{\f53\fmodern\fcharset255\fprq2 Modern;}{\f54\fswiss\fcharset0\fprq1 MS Dialog;}
+{\f55\fswiss\fcharset0\fprq2 Verdana;}{\f56\fswiss\fcharset0\fprq2 MS Shell Dlg;}{\f57\fmodern\fcharset0\fprq1 Roman 10cpi;}{\f58\froman\fcharset238\fprq2 Times New Roman CE;}{\f59\froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f60\froman\fcharset161\fprq2 Times New Roman Greek;}{\f61\froman\fcharset162\fprq2 Times New Roman Tur;}{\f62\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f63\fswiss\fcharset238\fprq2 Arial CE;}{\f64\fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f65\fswiss\fcharset161\fprq2 Arial Greek;}{\f66\fswiss\fcharset162\fprq2 Arial Tur;}{\f67\fswiss\fcharset186\fprq2 Arial Baltic;}{\f68\fmodern\fcharset238\fprq1 Courier New CE;}{\f69\fmodern\fcharset204\fprq1 Courier New Cyr;}
+{\f70\fmodern\fcharset161\fprq1 Courier New Greek;}{\f71\fmodern\fcharset162\fprq1 Courier New Tur;}{\f72\fmodern\fcharset186\fprq1 Courier New Baltic;}{\f73\fswiss\fcharset238\fprq2 Tahoma CE;}{\f74\fswiss\fcharset204\fprq2 Tahoma Cyr;}
+{\f75\fswiss\fcharset161\fprq2 Tahoma Greek;}{\f76\fswiss\fcharset162\fprq2 Tahoma Tur;}{\f77\fswiss\fcharset186\fprq2 Tahoma Baltic;}{\f78\fmodern\fcharset238\fprq1 Lucida Console CE;}{\f79\fmodern\fcharset204\fprq1 Lucida Console Cyr;}
+{\f80\fmodern\fcharset161\fprq1 Lucida Console Greek;}{\f81\fmodern\fcharset162\fprq1 Lucida Console Tur;}{\f82\fswiss\fcharset238\fprq2 Lucida Sans Unicode CE;}{\f83\fswiss\fcharset204\fprq2 Lucida Sans Unicode Cyr;}
+{\f84\fswiss\fcharset161\fprq2 Lucida Sans Unicode Greek;}{\f85\fswiss\fcharset162\fprq2 Lucida Sans Unicode Tur;}{\f86\fswiss\fcharset238\fprq2 Arial Narrow CE;}{\f87\fswiss\fcharset204\fprq2 Arial Narrow Cyr;}
+{\f88\fswiss\fcharset161\fprq2 Arial Narrow Greek;}{\f89\fswiss\fcharset162\fprq2 Arial Narrow Tur;}{\f90\fswiss\fcharset186\fprq2 Arial Narrow Baltic;}{\f91\fswiss\fcharset238\fprq2 Arial Black CE;}{\f92\fswiss\fcharset204\fprq2 Arial Black Cyr;}
+{\f93\fswiss\fcharset161\fprq2 Arial Black Greek;}{\f94\fswiss\fcharset162\fprq2 Arial Black Tur;}{\f95\fswiss\fcharset186\fprq2 Arial Black Baltic;}{\f96\froman\fcharset238\fprq2 Bookman Old Style CE;}
+{\f97\froman\fcharset204\fprq2 Bookman Old Style Cyr;}{\f98\froman\fcharset161\fprq2 Bookman Old Style Greek;}{\f99\froman\fcharset162\fprq2 Bookman Old Style Tur;}{\f100\froman\fcharset186\fprq2 Bookman Old Style Baltic;}
+{\f101\froman\fcharset238\fprq2 Garamond CE;}{\f102\froman\fcharset204\fprq2 Garamond Cyr;}{\f103\froman\fcharset161\fprq2 Garamond Greek;}{\f104\froman\fcharset162\fprq2 Garamond Tur;}{\f105\froman\fcharset186\fprq2 Garamond Baltic;}
+{\f106\fswiss\fcharset238\fprq2 Impact CE;}{\f107\fswiss\fcharset204\fprq2 Impact Cyr;}{\f108\fswiss\fcharset161\fprq2 Impact Greek;}{\f109\fswiss\fcharset162\fprq2 Impact Tur;}{\f110\fswiss\fcharset186\fprq2 Impact Baltic;}}{\colortbl;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;
+\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\keepn\widctlpar \f4\fs20 \snext0 Normal;}{\s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 \sbasedon0\snext0 heading 1;}{
+\s2\sb240\sa240\keepn\widctlpar \b\i\f5 \sbasedon0\snext0 heading 2;}{\s3\sb240\sa240\keepn\widctlpar \b\f4 \sbasedon0\snext0 heading 3;}{\s4\sb240\sa120\keepn\widctlpar \b\i\f4 \sbasedon0\snext0 heading 4;}{\s5\sb240\sa60\keepn\widctlpar \f5\fs22 
+\sbasedon0\snext0 heading 5;}{\s6\sb240\sa60\keepn\widctlpar \i\f4\fs22 \sbasedon0\snext0 heading 6;}{\s7\sb240\sa60\keepn\widctlpar \f5\fs20 \sbasedon0\snext0 heading 7;}{\s8\sb240\sa60\keepn\widctlpar \i\f5\fs20 \sbasedon0\snext0 heading 8;}{
+\s9\sb240\sa60\keepn\widctlpar \b\i\f5\fs18 \sbasedon0\snext0 heading 9;}{\*\cs10 \additive Default Paragraph Font;}{\s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 \snext15 
+Code example;}{\s16\sl-240\slmult0\keep\keepn\widctlpar\tx576\tx1152\tx1728 \f11\fs20 \snext16 Prototype (declarati;}{\s17\keepn\widctlpar\tqc\tx4320\tqr\tx8640 \f4\fs20 \sbasedon0\snext17 header;}{\s18\keepn\widctlpar\tqc\tx4320\tqr\tx8640 \f4\fs20 
+\sbasedon0\snext18 footer;}{\*\cs19 \additive\sbasedon10 page number;}{\s20\keepn\widctlpar\tqr\tx9360 \f11\fs20 \sbasedon0\snext20 I-D Header;}{\s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 \sbasedon0\snext21 Heading;}{
+\s22\sb120\sa120\keepn\widctlpar\tqr\tldot\tx10368 \b\caps\f4\fs20 \sbasedon0\snext0 toc 1;}{\s23\li200\keepn\widctlpar\tqr\tldot\tx10368 \scaps\f4\fs20 \sbasedon0\snext0 toc 2;}{\s24\li400\keepn\widctlpar\tqr\tldot\tx10368 \i\f4\fs20 \sbasedon0\snext0 
+toc 3;}{\s25\li600\keepn\widctlpar\tqr\tldot\tx10368 \f4\fs18 \sbasedon0\snext0 toc 4;}{\s26\li800\keepn\widctlpar\tqr\tldot\tx10368 \f4\fs18 \sbasedon0\snext0 toc 5;}{\s27\li1000\keepn\widctlpar\tqr\tldot\tx10368 \f4\fs18 \sbasedon0\snext0 toc 6;}{
+\s28\li1200\keepn\widctlpar\tqr\tldot\tx10368 \f4\fs18 \sbasedon0\snext0 toc 7;}{\s29\li1400\keepn\widctlpar\tqr\tldot\tx10368 \f4\fs18 \sbasedon0\snext0 toc 8;}{\s30\li1600\keepn\widctlpar\tqr\tldot\tx10368 \f4\fs18 \sbasedon0\snext0 toc 9;}{
+\s31\widctlpar \f11\fs20 \sbasedon0\snext31 Plain Text;}{\s32\fi-1152\li1152\keepn\widctlpar \f4\fs20 \sbasedon0\snext32 Body Text 2;}{\s33\li360\nowidctlpar \f11\fs20\cf1 \sbasedon0\snext33 Code;}{\s34\fi-360\li360\sa240\nowidctlpar \f4\fs20 
+\sbasedon0\snext34 List;}}{\*\revtbl {Unknown;}}{\info{\title CIFS Remote Administration Protocol}{\author Dilip C. Naik}{\operator Dilip C. Naik}{\creatim\yr1997\mo3\dy19\hr19\min53}{\revtim\yr1997\mo3\dy19\hr19\min57}{\printim\yr1997\mo3\dy10\hr15\min55}{\version2}
+{\edmins0}{\nofpages31}{\nofwords10450}{\nofchars59566}{\*\company Microsoft}{\vern57443}}\margl1008\margr864 \deftab1152\widowctrl\ftnbj\aenddoc\hyphcaps0\formshade \fet0\sectd \psz1\linex0\endnhere\titlepg {\header \pard\plain 
+\s17\keepn\widctlpar\tqc\tx0\tqc\tx4320\tqr\tx9270 \f4\fs20 INTERNET-DRAFT\tab CIFS Remote Admin Protocol\tab January 10, 1997
+\par }{\footer \pard\plain \s18\keepn\widctlpar\tqc\tx4320\tqr\tx8640 \f4\fs20 Leach, Naik\tab \tab [Page {\field{\*\fldinst {\cs19  PAGE }}{\fldrslt {\cs19\lang1024 31}}}{\cs19 ]}
+\par }{\footerf \pard\plain \s18\keepn\widctlpar\tqc\tx4320\tqr\tx8640 \f4\fs20 Leach, Naik\tab \tab [Page {\field{\*\fldinst {\cs19  PAGE }}{\fldrslt {\cs19\lang1024 1}}}{\cs19 ]}
+\par }{\*\pnseclvl1\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl3\pnlcrm\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s20\keepn\widctlpar\tqr\tx9360 \f11\fs20 Network Working Group\tab Paul J. Leach, Microsoft
+\par INTERNET-DRAFT\tab Dilip C. Naik, Microsoft
+\par draft-leach-cifs-rap-spec-00.txt
+\par Category: Informational
+\par Expires August 26, 1997\tab February 26, 1997
+\par \pard\plain \qc\keepn\widctlpar \f4\fs20 {\b\f5\fs36 
+\par CIFS Remote Administration Protocol
+\par }{\i Preliminary Draft
+\par }\pard\plain \s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 STATUS OF THIS MEMO 
+\par \pard\plain \keepn\widctlpar \f4\fs20 THIS IS A PRELIMINARY DRAFT OF AN INTERNET-DRAFT.  IT DOES NOT REPRESENT THE CONSENSUS OF THE ANY WORKING GROUP.
+\par 
+\par This document is an Internet-Draft. Internet-Drafts are working documents of the Internet Engineering Task Force (IETF), its areas, and its working groups. Note that other groups may also distribute working documents as Internet-Drafts.
+\par 
+\par Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time. It is inappropr
+iate to use Internet-Drafts as reference material or to cite them other than as "work in progress".
+\par 
+\par To learn the current status of any Internet-Draft, please check the "1id-abstracts.txt" listing contained in the Internet-Drafts Shadow Directories on ftp.is.co.za (Africa), nic.nordu.net (Europe), munnari.oz.au (Pacific Rim), ds.internic.net (US East Coa
+st), or ftp.isi.edu (US West Coast).
+\par 
+\par Distribution of this document is unlimited.  Please send comments to the authors or the CIFS mailing list at <cifs@listserv.msn.com>.  Discussions of the mailing list are archived at <URL:http://microsoft.ease.lsoft.com/archives/cifs.html>.
+\par 
+\par \pard\plain \s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 ABSTRACT
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+This specification defines how an RPC like mechanism may be implemented using the Common Internet File System (CIFS) Transact SMB. Specific examples are provided of how a CIFS client may request a CIFS server to execute a function. The examples show compl
+ete details of the request sent by the CIFS client and the response from the CIFS server.
+\par 
+\par \pard\plain \s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 Table of Contents
+\par \pard\plain \s22\sb120\sa120\keepn\widctlpar\tx400\tqr\tldot\tx10368 \b\caps\f4\fs20 {\field\fldedit{\*\fldinst  TOC \\o "1-3" }{\fldrslt {\lang1024 1.\tab Objective\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598144 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310034003400000000}}}{\fldrslt {\lang1024 2}}}{\lang1024 
+\par 2.\tab Prerequisites and suggested reading\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598145 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310034003500000000}}
+}{\fldrslt {\lang1024 2}}}{\lang1024 
+\par 3.\tab Remote Administration Protocol overview\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598146 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310034003600000000}}
+}{\fldrslt {\lang1024 2}}}{\lang1024 
+\par 4.\tab Remote Administration Protocol\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598147 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310034003700000000}}}{\fldrslt 
+{\lang1024 3}}}{\lang1024 
+\par }\pard\plain \s23\li200\keepn\widctlpar\tx800\tqr\tldot\tx10368 \scaps\f4\fs20 {\lang1024 4.1\tab Notation\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598148 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310034003800000000}}}{\fldrslt {\lang1024 3}}}{\lang1024 
+\par 4.2\tab Descriptors\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598149 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310034003900000000}}}{\fldrslt {\lang1024 4}}}{
+\lang1024 
+\par }\pard\plain \s24\li400\keepn\widctlpar\tx1200\tqr\tldot\tx10368 \i\f4\fs20 {\lang1024 4.2.1\tab Request Parameter Descriptors\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598150 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003000000000}}}{\fldrslt {\lang1024 4}}}{\lang1024 
+\par 4.2.2\tab Response Parameter Descriptors\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598151 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003100000000}}
+}{\fldrslt {\lang1024 4}}}{\lang1024 
+\par 4.2.3\tab Data Descriptors\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598152 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003200000000}}}{\fldrslt {\lang1024 
+4}}}{\lang1024 
+\par }\pard\plain \s23\li200\keepn\widctlpar\tx800\tqr\tldot\tx10368 \scaps\f4\fs20 {\lang1024 4.3\tab Transaction Request Parameters section\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598153 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003300000000}}}{\fldrslt {\lang1024 5}}}{\lang1024 
+\par 4.4\tab Transaction Request Data section\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598154 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003400000000}}
+}{\fldrslt {\lang1024 5}}}{\lang1024 
+\par 4.5\tab Transaction Response Parameters section\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598155 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003500000000}}
+}{\fldrslt {\lang1024 5}}}{\lang1024 
+\par 4.6\tab Transaction Response Data section\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598156 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003600000000}}
+}{\fldrslt {\lang1024 6}}}{\lang1024 
+\par }\pard\plain \s22\sb120\sa120\keepn\widctlpar\tx400\tqr\tldot\tx10368 \b\caps\f4\fs20 {\lang1024 5.\tab NetShareEnum\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598157 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003700000000}}}{\fldrslt {\lang1024 6}}}{\lang1024 
+\par 6.\tab NetServerEnum2\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598158 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003800000000}}}{\fldrslt {\lang1024 8}}}{
+\lang1024 
+\par 7.\tab NetServerGetInfo\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598159 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310035003900000000}}}{\fldrslt {\lang1024 11}
+}}{\lang1024 
+\par 8.\tab NetShareGetInfo\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598160 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003000000000}}}{\fldrslt {\lang1024 12}
+}}{\lang1024 
+\par 9.\tab NetwkstaUserLogon\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598161 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003100000000}}}{\fldrslt {\lang1024 15
+}}}{\lang1024 
+\par }\pard \s22\sb120\sa120\keepn\widctlpar\tx600\tqr\tldot\tx10368 {\lang1024 10.\tab NetwkstaUserLogoff\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598162 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003200000000}}}{\fldrslt {\lang1024 19}}}{\lang1024 
+\par 11.\tab NetUserGetInfo\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598163 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003300000000}}}{\fldrslt {\lang1024 21}
+}}{\lang1024 
+\par 12.\tab NetWkstaGetInfo\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598164 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003400000000}}}{\fldrslt {\lang1024 24}
+}}{\lang1024 
+\par 13.\tab SamOemChangePassword\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598165 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003500000000}}}{\fldrslt {
+\lang1024 26}}}{\lang1024 
+\par 14.\tab Author's Addresses\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598166 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003600000000}}}{\fldrslt {\lang1024 
+28}}}{\lang1024 
+\par 15.\tab Appendix A\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598167 \\h }{\lang1024 {\*\datafield 08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003700000000}}}{\fldrslt {\lang1024 29}}}{
+\lang1024 
+\par }\pard\plain \s24\li400\keepn\widctlpar\tx1200\tqr\tldot\tx10368 \i\f4\fs20 {\lang1024 15.1.1\tab TRANSACTIONS\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598168 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003800000000}}}{\fldrslt {\lang1024 30}}}{\lang1024 
+\par }\pard\plain \s22\sb120\sa120\keepn\widctlpar\tx600\tqr\tldot\tx10368 \b\caps\f4\fs20 {\lang1024 16.\tab Appendix B\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598169 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310036003900000000}}}{\fldrslt {\lang1024 31}}}{\lang1024 
+\par }\pard\plain \s23\li200\keepn\widctlpar\tx800\tqr\tldot\tx10368 \scaps\f4\fs20 {\lang1024 16.1\tab Marshaling and unmarshaling using descriptor strings\tab }{\field{\*\fldinst {\lang1024  PAGEREF _Toc381598170 \\h }{\lang1024 {\*\datafield 
+08d0c9ea79f9bace118c8200aa004ba90b02000000080000000e0000005f0054006f006300330038003100350039003800310037003000000000}}}{\fldrslt {\lang1024 31}}}{\lang1024 
+\par }\pard\plain \s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 }}\pard\plain \s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598144}1.\tab Objective{\*\bkmkend _Toc381598144}
+\par \pard\plain \keepn\widctlpar \f4\fs20 This document details an RPC like mechanism used by CIFS clients to submit requests to CIFS servers and obtain the results of the request back from the server. 
+\par 
+\par For convenience, some sections from the CIFS specification have been reproduced in part within this document. Note that the CIFS specification should be considered to be the authoritative reference, in case of any doubts, rather than this document.
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598145}2.\tab Prerequisites and suggested reading{\*\bkmkend _Toc381598145}
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard\plain \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs20 Familiarity with Common Internet File Systems specification (CIFS) 
+\par \pard \keepn\widctlpar 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc377264569}{\*\bkmkstart _Toc381598146}3.\tab Remote Administration Protocol overview{\*\bkmkend _Toc377264569}{\*\bkmkend _Toc381598146} 
+\par \pard\plain \keepn\widctlpar \f4\fs20 The Remote Administration Protocol (RAP) is similar to an RPC protocol, in that:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}it is an at-most-once synchronous request-response protocol
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}it is a framework that can be used for remotely requesting many different kinds of services
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}it is designed  to allow (but not require) the programming interface to the protocol to be that of remotely executed procedure calls \endash 
+ which means that one thinks if the protocol in terms of marshaling and unmarshaling procedure call input and output arguments into messages and reliably transporting the messages to and from the client and server
+\par \pard \keepn\widctlpar Each RAP request is characterized by a set of ASCII descriptor strings  that are sufficient to be used to interpretively drive the marshaling and unmarshaling process, if an implementation wanted to use them 
+for that purpose. These descriptor strings are included in each request packet, and make the requests self-describing. 
+\par 
+\par RAP is layered on the CIFS Transact SMB, which provides reliable message delivery, security, and messages larger than the underlying network maximum packet size. When used for RAP, the name field in the Transact SMB is always set to "\\PIPE\\
+LANMAN". The Transact SMB is sent on a session/connection that is established to the remote server using a SessionSetupAndX SMB, and using a TID obtained by doing a TreeConnectAndX SMB to a share named "IPC$".
+\par 
+\par [Refer to the CIFS specification for complete details on SMBs in general, and the Transact SMB in particular. For convenience, relevant portions from the CIFS specification have been reproduced here in Appendix A. Note that the CIFS specification should b
+e considered the authoritative source of information, rather than Appendix A as far as details on the Transact SMB are concerned.]
+\par 
+\par The model of a RAP service is that there are a few {\i parameters} as inputs and outputs to the service, exactly one of which may be a buffer descriptor that indicates the presence of a potentially much larger input or output {\i data buffer}
+. An argument may be a scalar, pointer, fixed length small array or struct, or a buffer descriptor. The data buffer consists of {\i entries} followed by a{\i  heap}
+. An entry consists of a primary data struct and a sequence of  0 or more auxiliary data structs. An input buffer must contain exactly one entry; an output buffer may contain 0 or more. The heap is where data is stored that is referenced by pointers in th
+e entries. The parameters are described by a {\i parameter descriptor string}; the primary data struct by a {\i data descriptor string}; and the auxiliary data structs by an {\i auxiliary data descriptor string}.
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc377264570}{\*\bkmkstart _Toc381598147}4.\tab Remote Administration Protocol{\*\bkmkend _Toc377264570}{\*\bkmkend _Toc381598147} 
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+A RAP service request is sent to the server encapsulated in a Transact request SMB and the server sends back a Transact SMB response. An attribute of the Transact SMB is that it divides the payload of request and response messages into two sections: a {
+\i parameters} section and a {\i data}
+ section. As might be expected from the nomenclature, RAP service parameters are sent in the parameters section of a Transact SMB, and the data buffer in the data section. Therefore, to define a service protocol, it is necessary to
+ define the formats of the parameter and data sections of the Transact request and response.
+\par 
+\par This is done in two stages. First, a C-like declaration notation is used to define descriptor strings, and then the descriptor strings define the formats of the  parameter and data sections.. Note well: even though the declarations may look like a program
+ming interface, they are not: they are a notation for describing the contents of RAP requests and responses; an implementation on any particular system can use any programming interface to RAP services that is appropriate to that system.
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc381598148}4.1\tab Notation{\*\bkmkend _Toc381598148}
+\par \pard\plain \keepn\widctlpar \f4\fs20 Parameter descriptor strings are defined using a C-like function declaration; data descriptor and auxiliary data descriptor strings are defined using a C-like structure declaration.
+\par 
+\par Parameter descriptor strings are defined with the following C-like function declaration syntax:
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 rap-service\tab \tab = "unsigned short" service-name "(" parameters ");"
+\par service-name\tab \tab = <upper and lower case alpha and numeric>
+\par \pard\plain \keepn\widctlpar \f4\fs20 The return type of the function is always "unsigned short", and represents the status code from the function. The service-name is for documentation purposes.
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 parameters \tab \tab = parameter [ ";" parameter ]
+\par \pard\plain \keepn\widctlpar \f4\fs20 The parameter descriptor string for the service is the concatenation of the descriptor characters for the parameters.
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 parameter \tab \tab = [ "const" ] param-data-type parameter-name
+\par \tab \tab \tab \tab   [ "[" size "]" ]
+\par param-data-type\tab = <from parameter descriptor tables below>
+\par parameter-name\tab \tab = <upper and lower case alpha and numeric>
+\par size\tab \tab \tab \tab = <string of ASCII 0-9>
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+The descriptor character for a parameter is determined by looking up the data-type in the tables below for request or response parameter descriptors. The parameter-name is for documentation purposes. If there is a size following the parameter-name, then i
+t is placed in the descriptor string following the descriptor character.  
+\par 
+\par Data and auxiliary data descriptor strings are defined  with the following C-like structure declaration syntax:
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 rap-struct\tab \tab = "struct" struct-name "\{" members "\}"
+\par \pard\plain \keepn\widctlpar \f4\fs20 The descriptor string for the struct is the concatenation of the descriptor characters for the members. The struct-name is for documentation purposes.
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 members\tab \tab \tab = member [  ";" member ]
+\par member \tab \tab \tab = member-data-type member-name [ "[" size "]" ]
+\par member-data-type\tab = <from data descriptor tables below>
+\par \pard\plain \keepn\widctlpar \f4\fs20 The descriptor character for a member is determined by looking up the data-type in the tables below for data descriptors. The member-name is for documentation purposes. If there is a size following the member-name, th
+en it is placed in the descriptor string following the descriptor character.
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc381598149}4.2\tab Descriptors{\*\bkmkend _Toc381598149}
+\par \pard\plain \keepn\widctlpar \f4\fs20 The following section contain tables that specify the descriptor character and the notation for each data type for that data type. 
+\par \pard\plain \s3\sb240\sa240\keepn\widctlpar \b\f4 {\*\bkmkstart _Toc381598150}4.2.1\tab Request Parameter Descriptors{\*\bkmkend _Toc381598150}
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keep\keepn\widctlpar\intbl Descriptor
+\par ==========\cell Data Type{\b 
+\par =========\cell }Format
+\par =====\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keep\keepn\widctlpar\intbl W\cell {\b unsigned short}\cell indicates parameter type of 16 bit integer (word). \cell \pard \widctlpar\intbl \row 
+\pard \keep\keepn\widctlpar\intbl D\cell {\b\f11 unsigned long\cell }indicates parameter type of 32 bit integer (dword). \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl b\cell {\b\f11 BYTE}\cell 
+indicates bytes (octets). May be followed by an ASCII number indicating number of bytes.. \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl O\cell {\b\f11 NULL}\cell indicates a NULL pointer\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl z\cell {\b\f11 char }\cell indicates a NULL terminated ASCII string present in the parameter area\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl F\cell {\b\f11 PAD}\cell 
+indicates Pad bytes (octets). May be followed by an ASCII number indicating the number of bytes\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl r\cell {\b\f11 RCVBUF}\cell pointer to receive data buffer in response parameter section
+\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl L\cell {\b RCVBUFLEN}\cell 16 bit integer containing length of receive data buffer in (16 bit) words\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl s\cell {\b SNDBUF}
+\cell pointer to send data buffer in request parameter section\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keep\keepn\widctlpar\intbl T\cell {\b SNDBUFLEN\cell }
+16 bit integer containing length of send data buffer in words\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \pard\plain \s3\sb240\sa240\keepn\widctlpar \b\f4 {\*\bkmkstart _Toc381598151}4.2.2\tab Response Parameter Descriptors{\*\bkmkend _Toc381598151}
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10458 \pard \keep\keepn\widctlpar\intbl Descriptor
+\par \pard \keepn\widctlpar\intbl ==========\cell Data Type
+\par {\b =========\cell }Format
+\par =====\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keepn\widctlpar\intbl g\cell {\b\f11 BYTE *}\cell 
+indicates a byte is  to be received. May be followed by an ASCII number indicating number of bytes to receive \cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl h\cell {\b\f11 unsigned short * }\cell indicates a word is to be received\cell 
+\pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl i\cell {\b\f11 unsigned long *\cell }indicates  a dword is to be received\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keepn\widctlpar\intbl e
+\cell {\b\f11 ENTCOUNT}\cell indicates a word is to be received  which indicates the number of entries returned\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \pard\plain \s3\sb240\sa240\keepn\widctlpar \b\f4 {\*\bkmkstart _Toc381598152}4.2.3\tab Data Descriptors{\*\bkmkend _Toc381598152}
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keep\keepn\widctlpar\intbl Descriptor
+\par \pard \keepn\widctlpar\intbl ==========\cell Data Type
+\par {\b =========\cell }Format
+\par =====\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keepn\widctlpar\intbl W\cell {\b unsigned short}\cell 
+indicates data type of 16 bit integer (word). Descriptor char may be followed by an ASCII number indicating the number of 16 bit words present\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl D\cell {\b\f11 unsigned long\cell }
+indicates data type of 32 bit integer (dword). Descriptor char may be followed by an ASCII number indicating the number of 32 bit words present\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl B\cell {\b\f11 BYTE }\cell 
+indicates item of data type 8 bit byte (octet). The indicated number of bytes are present  in the data. Descriptor char may be followed by an ASCII number indicating the number of 8 bit bytes present\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar\intbl O\cell {\b\f11 NULL}\cell indicates a NULL pointer\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl z\cell {\b\f11 char *}\cell 
+indicates a 32 bit pointer to a NULL terminated ASCII string is present in the response parameter area. The actual string is in the response data area and the pointer in the parameter area points to the string in the data area. The high word of the pointe
+r should be ignored. The converter word present in the response parameter section should be subtracted from the low 16 bit value to obtain an offset into the data area indicating where the data area resides. \cell \pard \widctlpar\intbl \row \trowd 
+\trgaph108\trleft-108 \cellx1620\cellx4140\cellx10476 \pard \keepn\widctlpar\intbl N\cell {\b\f11 AUXCOUNT}\cell 
+indicates number of auxiliary data structures. The transaction response data section contains an unsigned 16 bit number corresponding to this data item.\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc377264571}{\*\bkmkstart _Toc381598153}4.3\tab Transaction Request Parameters section{\*\bkmkend _Toc377264571}{\*\bkmkend _Toc381598153}
+\par \pard\plain \keepn\widctlpar \f4\fs20 The parameters and data being sent and received are described by ASCII descriptor strings. These descriptor strings are described in section 4.2. 
+\par 
+\par The parameters section of the Transact SMB request contains the following (in the order described)
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The function number: an unsigned short 16 bit integer identifying the function being remoted
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string: a null terminated ASCII string
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string: a null terminated ASCII string. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The request parameters, as described by the parameter descriptor string, in the order that the request parameter descriptor characters appear in the parameter descriptor string
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+An optional auxiliary data descriptor string: a null terminated ASCII string. It will be present if there is an auxiliary data structure count in the primary data struct (an "N" descriptor in the data descriptor string).
+\par \pard \keepn\widctlpar 
+\par RAP requires that the length of the return parameters be less than or equal to the length of the parameters being sent; this requirement is made to simply buffer management in implementations. This is reasonable as the functions were designed to return
+ data in the data section and use the return parameters for items like data length, handles, etc. If need be, this restriction can be circumvented by filling in some pad bytes into the parameters being sent. 
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc377264572}{\*\bkmkstart _Toc381598154}4.4\tab Transaction Request Data section{\*\bkmkend _Toc377264572}{\*\bkmkend _Toc381598154}
+\par \pard\plain \keepn\widctlpar \f4\fs20 The Data section for the transaction request is present if the parameter description string contains an "s" (SENDBUF) descriptor. If present, it contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A primary data struct, as described by the data descriptor string
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}Zero or more instances of the auxiliary
+ data struct, as described by the auxiliary data descriptor string. The number of instances is determined by the value of the an auxiliary data structure count member of the primary data struct, indicated by the "N" (AUXCOUNT) descriptor. The auxiliary da
+ta is present only if the auxiliary data descriptor string is non null.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}Possibly some pad bytes
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The heap: the data referenced by pointers in the primary and auxiliary data structs.
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc377264573}{\*\bkmkstart _Toc381598155}4.5\tab Transaction Response Parameters section{\*\bkmkend _Toc377264573}{\*\bkmkend _Toc381598155}
+\par \pard\plain \keepn\widctlpar \f4\fs20 The response sent by the server contains a parameter section which consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit integer indicating the status or return code. The possible values for different functions are different. 
+
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+A 16 bit converter word, used adjust pointers to information in the response data section. Pointers returned within the response buffer are 32 bit pointers. The high order 16 bit word should be ignored. The converter word needs to be subtracted from the l
+ow order  16 bit word to arrive at an offset into the response buffer. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The response parameters, as described by the parameter descriptor string, in the order that the response parameter descriptor characters appear in the parameter descriptor string.
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc377264574}{\*\bkmkstart _Toc381598156}4.6\tab Transaction Response Data section{\*\bkmkend _Toc377264574}{\*\bkmkend _Toc381598156}
+\par \pard\plain \keepn\widctlpar \f4\fs20 The Data section for the transaction response is present if the parameter description string contains an "r" (RCVBUF) descriptor. If present, it contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}
+Zero or more entries. The number of entries is determined by the value of the entry count parameter, indicated by the "e"(ENTCOUNT) descriptor. Each entry contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li1512\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A primary data struct, as described by the data descriptor string
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+Zero or more instances of the auxiliary data struct, as described by the auxiliary data descriptor string. The number of instances is determined by the value of the AUXCOUNT member of the primary data struct (whose descriptor is "N"). The auxiliary data i
+s present only if the auxiliary data descriptor string is non null.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}Possibly some pad bytes
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The heap: the data referenced by pointers in the primary and auxiliary data structs.
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598157}5.\tab NetShareEnum{\*\bkmkend _Toc381598157}
+\par \pard\plain \ri245\sa120\sl1\slmult0\keepn\widctlpar \f4\fs20 The NetShareEnum RAP function retrieves information about each shared resource on a CIFS server. The definition is:
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b unsigned} short {\b NetShareEnum}(
+\par \pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b unsigned short} \tab {\i sLevel};{\fs24 \tab \tab \tab \tab \tab 
+\par }{\b RCVBUF } \tab {\i pbBuffer};{\fs24 \tab \tab \tab \tab \tab 
+\par }{\b RCVBUFLEN} \tab {\i cbBuffer};
+\par {\b ENTCOUNT } \tab {\i pcEntriesRead};{\fs24 \tab \tab \tab \tab \tab 
+\par }{\b unsigned short\tab }*{\i pcTotalAvail};
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar );{\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar sLevel specifies the level of detail returned and must have the value of 1.
+\par 
+\par pbBuffer points to the buffer to receive the returned data. If the function is successful, the buffer contains a sequence of {\b SHARE_INFO_1} structures (defined later). 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcEntriesRead points to a 16 bit variable that receives a count of the number of shared resources enumerated in the buffer. This count is valid only if {\b NetShareEnum} returns the NERR_Success or ERROR_MORE_DATA values. 
+\par 
+\par pcTotalAvail points to a 16-bit variable that receives a count of the total number of shared resources. This count is valid only if {\b NetShareEnum} returns the NERR_Success or ERROR_MORE_DATA values. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetShareEnum which is 0. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "WrLeh". 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "B13BWz" 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}
+A 16 bit integer with a value of 1 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer.  
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par 
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx4050\cellx5037\cellx9972 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx4050\cellx5037\cellx9972 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_ACCESS_DENIED\cell 5\cell  User has insufficient privilege\cell 
+\pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_NETWORK_ACCESS_DENIED\cell 65\cell Network access is denied\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_MORE_DATA\cell 
+234\cell Additional data is available\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_ServerNotStarted\cell 2114\cell The server service on the remote computer is not running\cell \pard \widctlpar\intbl \row 
+\trowd \trgaph108\trleft-108 \cellx4050\cellx5037\cellx9972 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_BadTransactConfig\cell 2141\cell The server is not configured for transactions, IPC$ is not shared\cell \pard \widctlpar\intbl \row 
+\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit number representing the number of entries returned. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit number representing the total number of available entries. If the supplied buffer is large enough, this will equal the number of entries returned.
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar The return data section consists of a number of SHARE_INFO_1 structures. The number of such structures present is determined by the third entry (described above) in the return parameters section. 
+\par 
+\par \pard \li120\ri120\sb80\sa120\sl-240\slmult0\keepn\widctlpar The {\b SHARE_INFO_1 }structure is defined as:
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct SHARE_INFO_1 \{
+\par \tab char\tab \tab \tab \tab shi1_netname[13]
+\par \tab char\tab \tab \tab \tab shi1_pad;
+\par \tab unsigned short \tab shi1_type
+\par \tab char  \tab \tab \tab *shi1_remark;
+\par \}
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par where:
+\par 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar shi1_netname contains a null terminated ASCII string that specifies the share name of the resource. 
+\par 
+\par shi1_pad aligns the next data strructure element to a word boundary.
+\par 
+\par shi1_type contains an integer that specifies the type of the shared resource. The possible values are:
+\par \pard \li120\ri120\sa60\keepn\widctlpar 
+\par \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx9900 \pard \keepn\widctlpar\intbl Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx9900 \pard \keepn\widctlpar\intbl 
+STYPE_DISKTREE\cell 0\cell Disk Directory Tree\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl STYPE_PRINTQ\cell 1\cell Printer Queue\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl STYPE_DEVICE\cell 2\cell 
+Communications device\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx9900 \pard \keepn\widctlpar\intbl STYPE_IPC\cell 3\cell Inter process communication (IPC)\cell \pard \widctlpar\intbl \row \pard 
+\fi-720\li1008\keepn\widctlpar 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar 
+shi1_remark points to a null terminated ASCII string that contains a comment abthe shared resource. The value for shi1_remark is null for ADMIN$ and IPC$ share names.  The shi1_remark pointer is a 32 bit pointer. The higher 16 bits need to be ignored. The
+ converter word returned in the parameters section needs to be subtracted from the lower 16 bits to calculate an offset into the return buffer where this ASCII string resides. 
+\par {\f5 
+\par }In case 
+there are multiple SHARE_INFO_1 data structures to return, the server may put all these fixed length structures in the return buffer, leave some space and then put all the variable length data (the actual value of the shi1_remark strings) at the end of th
+e buffer. 
+\par \pard \keepn\widctlpar 
+\par There is no auxiliary data to receive. 
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598158}6.\tab NetServerEnum2{\*\bkmkend _Toc381598158}
+\par \pard\plain \ri245\sa120\sl1\slmult0\keepn\widctlpar \f4\fs20 The {\b NetServerEnum2} RAP service lists all computers of the specified type or types that are visible in the specified domains. It may also enumerate domains. The definition is:
+\par \pard\plain \s16\sl-240\slmult0\keep\keepn\widctlpar\tx576\tx1152\tx1728 \f11\fs20 {\b\f4 unsigned short}{\f4  }{\b\f4 NetServerEnum2 (
+\par \tab unsigned short}{\f4  \tab sL}{\i\f4 evel}{\f4 ,
+\par }{\b\f4 \tab RCVBUF  \tab    \tab }{\f4 pbBuffer,
+\par }{\b\f4 \tab RCVBUFLEN \tab }{\f4 cbBuffer,
+\par }{\b\f4 \tab ENTCOUNT  \tab }{\f4 pcEntriesRead,
+\par }{\b\f4 \tab unsigned short \tab *}{\f4 pcTotalAvail,
+\par }{\b\f4 \tab unsigned long  \tab }{\f4 fServerType,
+\par }{\b\f4 \tab char \tab \tab \tab *}{\f4 pszDomain,
+\par \tab }{\b\f4 );
+\par }{\f4 
+\par }{\f4\ul where:
+\par }\pard\plain \keepn\widctlpar \f4\fs20 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar sLevel specifies the level of detail (0 or 1) requested. 
+\par 
+\par pbBuffer points to the buffer to receive the returned data. If the function is successful, the buffer contains a sequence of {\b server_info_}{\i x} structures, where {\i x} is 0 or 1, depending on the level of detail requested. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcEntriesRead points to a 16 bit variable that receives a count of the number of servers enumerated in the buffer. This count is valid only if {\b NetServerEnum2} returns the NERR_Success or ERROR_MORE_DATA values. 
+\par 
+\par pcTotal Avail points to a 16 bit variable that receives a count of the total number of available entries. This count is valid only if {\b NetServerEnum2} returns the NERR_Success or ERROR_MORE_DATA values. 
+\par 
+\par \pard \li576\keepn\widctlpar fServerType specifies the type or types of computers to enumerate. Computers that match at least one of the specified types are returned in the buffer. Possible values are defined in the request parameters section.
+\par \pard \keepn\widctlpar  
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar pszDomain points to a null-terminated string that contains the name of the workgroup in which to enumerate computers of the specified type or types. If the {\i pszDomain}
+ parameter is a null string or a null pointer, servers are enumerated for the current domain of the computer. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetServerEnum2 which is 104. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "WrLehDz". 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "B16" for level detail 0 or  "B16BBDz" for level detail 1. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit integer with a value of 0 or 1 (corresponding to the "W" in the paramet
+er descriptor string. This represents the level of detail the server is expected to return
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 32 bit integer that represents the type of servers the function should enumerate. The possible values may be any of the following or a combination of the following:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec } 
+\par \trowd \trgaph108\trleft-108 \cellx3780\cellx5532\cellx10440 \pard\plain \s15\sl-240\slmult0\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }\f11\fs20 {\f4 SV_TYPE_WORKSTATION\cell }0x00000001\cell {\f4 All workstations\cell }\pard\plain \widctlpar\intbl 
+\f4\fs20 \row \trowd \trgaph108\trleft-108 \cellx3780\cellx5532\cellx10440 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_SERVER\cell {\f11 0x00000002\cell }All servers\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_SQLSERVER\cell {\f11 0x00000004\cell }Any server running with SQL server\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_DOMAIN_CTRL\cell {\f11 0x00000008
+\cell }Primary domain controller\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_DOMAIN_BAKCTRL\cell {\f11 0x00000010\cell }Backup domain controller\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_TIME_SOURCE\cell {\f11 0x00000020\cell }Server running the timesource service\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_AFP\cell {\f11 0x00000040
+\cell }Apple File Protocol servers\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_NOVELL\cell {\f11 0x00000080\cell }Novell servers\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_DOMAIN_MEMBER\cell {\f11 0x00000100\cell }Domain Member\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_PRINTQ_SERVER\cell {\f11 0x00000200\cell }
+Server sharing print queue\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_DIALIN_SERVER\cell {\f11 0x00000400\cell }Server running dialin service.\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_XENIX_SERVER\cell {\f11 0x00000800\cell }Xenix server\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_NT\cell {\f11 0x00001000\cell }NT server\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_WFW\cell {\f11 0x00002000\cell }Server running Windows for Workgroups\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }
+SV_TYPE_SERVER_NT\cell {\f11 0x00008000\cell }Windows NT non DC server\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_POTENTIAL_BROWSER\cell {\f11 0x00010000\cell }Server that can run the browser service
+\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_BACKUP_BROWSER\cell {\f11 0x00020000\cell }Backup browser server\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }
+SV_TYPE_MASTER_BROWSER\cell {\f11 0x00040000\cell }Master browser server\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_DOMAIN_MASTER\cell {\f11 0x00080000\cell }Domain Master Browser server\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_LOCAL_LIST_ONLY\cell {\f11 0x40000000\cell }Enumerate only entries marked "local"\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3780\cellx5532
+\cellx10440 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }SV_TYPE_DOMAIN_ENUM\cell {\f11 0x80000000\cell }Enumerate Domains. The pszServer and pszDomain parameters must be NULL.\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A null terminated ASCII string representing the pszDomain parameter described above
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx3330\cellx4292\cellx9580 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4292\cellx9580 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_MORE_DATA\cell 234\cell Additional data is available\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_ServerNotStarted\cell 2114\cell The RAP service on the remote computer is not running\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4292
+\cellx9580 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_BadTransactConfig\cell 2141\cell The server is not configured for transactions, IPC$ is not shared\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit number representing the number of entries returned. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit number representing the total number of available entries. If the supplied buffer is large enough, this will equal the number of entries returned. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar The return data section consists of a number of SHARE_INFO_1 structures. The number of such structures present is determined by the third entry (described above) in the return parameters section. 
+\par 
+\par At level detail 0, the Transaction response data section contains a number of SERVER_INFO_0 data structure. The number of such structures is equal to the 16 bit number returned by the server in the third parameter in the Transaction response parameter sec
+tion. The SERVER_INFO_0 data structure is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct SERVER_INFO_0 \{
+\par \tab char\tab \tab sv0_name[16];
+\par \};
+\par \pard\plain \li180\ri240\sl-220\slmult0\keepn\widctlpar \f4\fs20 
+\par where:
+\par \pard \sl-160\slmult0\keepn\widctlpar 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar sv0_name is a null-terminated string that specifies the name of a computer or domain . 
+\par \pard \keepn\widctlpar 
+\par At level detail 1, the Transaction response data section contains a number of SERVER_INFO_1 data structure. The number of such structures is equal to the 16 bit number returned by the server in the third parameter in the Transaction response parameter sec
+tion. The SERVER_INFO_1 data structure is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct SERVER_INFO_1 \{
+\par \tab char\tab \tab \tab sv1_name[16];
+\par \tab char\tab \tab \tab sv1_version_major;
+\par \tab char\tab \tab \tab sv1_version_minor;
+\par \tab unsigned long\tab sv1_type;
+\par \tab char  \tab \tab *sv1_comment_or_master_browser;
+\par \};
+\par \pard\plain \li187\ri245\sl-220\slmult0\keepn\widctlpar \f4\fs20 {\f5\fs24 
+\par }\pard \li540\ri240\sl1\slmult0\keepn\widctlpar sv1_name contains a null-terminated string that specifies the name of a computer. 
+\par 
+\par sv1_version_major specifies the major release version number of the networking software the server is running. This is entirely informational and something the caller of the NetServerEnum2 function gets to see. 
+\par 
+\par sv1_version_minor specifies the minor release version number of the networking software the server is running. This is entirely informational and something the caller of the NetServerEnum2 function gets to see. 
+\par 
+\par sv1_type specifies the type of software the computer is running. The member can be one or a combination of the values defined above in the Transaction request parameters section for fServerType. 
+\par 
+\par \pard \li547\keepn\widctlpar sv1_comment_or_master_browser points to a null-terminated string. If the sv1_type indicates that the entry is for a domain, this specifies the name of the domain master browser; otherwise, it specifies a comme
+nt describing the server. The comment can be a null string or the pointer may be a null pointer. 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar 
+\par In case there are multiple SERVER_INFO_1 data structures to return, the server may put all these fixed length structures in the return buffer, leave some space and then put all the variable length data (the actual value of the sv1_comment strings) at the 
+end of the buffer. 
+\par \pard \keepn\widctlpar 
+\par There is no auxiliary data to receive. 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598159}7.\tab NetServerGetInfo{\*\bkmkend _Toc381598159}
+\par \pard\plain \keepn\widctlpar \f4\fs20 The NetServerGetInfo function returns information about the specified server. The definition is:
+\par 
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  }{\b\f5 short}{\f5  }{\b\f5 NetServerGetInfo}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned short}{\f5  \tab }{\i\f5 sLevel}{\f5 ;
+\par }{\b\f5 RCVBUF \tab }{\i\f5 pbBuffer}{\f5 ;}{\f5\fs24 \tab \tab \tab \tab \tab \tab 
+\par }{\b\f5 RCVBUFLEN}{\f5  \tab }{\i\f5 cbBuffer}{\f5 ;
+\par }{\b\f5 unsigned short\tab }{\f5 *}{\i\f5 pcbTotalAvail}{\f5 ;
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar sLevel specifies the level of detail returned.  (Legal values are 0 and 1)
+\par 
+\par pbBuffer points to the buffer to receive the returned data. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par \pard \li547\keepn\widctlpar pcbTotalAvail points to a  16 bit variable that receives a count of the total number of bytes of information available. This count is valid only if {\b NetServerGetInfo} returns the
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar NERR_Success or ERROR_MORE_DATA values. 
+\par 
+\par The return value is one of the following:
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetServerGetInfo which is 13.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "WrLh"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "B16" for level detail 0 or  "B16BBDz" for level detail 1. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}
+A 16 bit integer with a value of 0 or 1 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer. 
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \trowd \trgaph108\trleft-108 \cellx3330\cellx4292\cellx9580 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4292\cellx9580 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_MORE_DATA\cell 234\cell Additional data is available\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_ServerNotStarted\cell 2114\cell The RAP service on the remote computer is not running\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4292
+\cellx9580 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_BadTransactConfig\cell 2141\cell The server is not configured for transactions, IPC$ is not shared\cell \pard \widctlpar\intbl \row \pard \li187\ri245\sl-220\slmult0
+\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\f11 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+A 16 bit number representing the total number of available bytes. This has meaning only if the return status is NERR_Success or ERROR_MORE_DATA. In case of success, this will indicate the number of useful bytes available. In case of failure, this indicate
+s the required size of the receive buffer. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar At level detail 0, the Transaction response data section contains a SERVER_INFO_0 data structure.  The SERVER_INFO_0 data structure is defined in section 7.4
+\par 
+\par At level detail 1, the Transaction response data section contains a SERVER_INFO_1 data structure.  The SERVER_INFO_1 data structure is defined in section 7.4
+\par 
+\par There is no auxiliary data to receive. 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598160}8.\tab NetShareGetInfo{\*\bkmkend _Toc381598160}
+\par \pard\plain \li180\ri240\sa120\sl1\slmult0\keepn\widctlpar \f4\fs20 {\f5 The NetShareGetInfo function retrieves information about a particular shared resource on a CIFS server. The definition is:
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  }{\b\f5 short}{\f5  }{\b\f5 NetShareGetInfo}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 char  \tab \tab }{\f5 *}{\i\f5 pszNetName}{\f5 ;
+\par }{\b\f5 unsigned short}{\f5  \tab }{\i\f5 sLevel}{\f5 ;
+\par }{\b\f5 RCVBUF\tab \tab }{\f5 p}{\i\f5 bBuffer}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 RCVBUFLEN}{\f5  \tab \tab }{\i\f5 cbBuffer}{\f5 ;
+\par }{\b\f5 unsigned short \tab }{\f5 *}{\i\f5 pcbTotalAvail}{\f5 ;
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar pszNetName points to an ASCII  null-terminated string specifying the name of the shared resource for which information should be retrieved.
+\par 
+\par sLevel specifies the level of detail returned.  (Legal values are 0, 1 and 2)
+\par 
+\par pbBuffer points to the buffer to receive the returned data. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcbTotalAvail points to a 16 bit variable that receives a count of the total number of bytes of information available. This count is valid only if {\b NetShareGetInfo} returns the NERR_Success or ERROR_MORE_DATA values. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetServerGetInfo which is 1.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "zWrLh"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "B13" for level detail 0 or  "B13BWz" for level detail 1 or  "B13BWzWWWzB9B" for level detail 2.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A null terminated ASCII string indicating the share for which information should be retrieved.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer with a value of 0, 1 or 2 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer. 
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \trowd \trgaph108\trleft-108 \cellx3330\cellx4292\cellx9580 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4292\cellx9580 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_MORE_DATA\cell 234\cell Additional data is available\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_ServerNotStarted\cell 2114\cell The RAP service on the remote computer is not running\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4292
+\cellx9580 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_BadTransactConfig\cell 2141\cell The server is not configured for transactions, IPC$ is not shared\cell \pard \widctlpar\intbl \row \pard \li187\ri245\sl-220\slmult0
+\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\f11 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar\tx2340{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}
+A 16 bit number representing the total number of available bytes. This has meaning only if the return status is NERR_Success or  ERROR_MORE_DATA. Upon success, this number indicates the number of useful bytes available. Upon failure, this indicates how bi
+g the receive buffer needs to be. 
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }At level detail 0, the Transaction response data section contains a SHARE_INFO_0 data structure, which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912{\*\pn \pnlvlcont\pndec }\f11\fs20 struct SHARE_INFO_0 \{
+\par \tab char\tab \tab \tab shi1_netname[13]
+\par \}
+\par \pard\plain \li120\ri120\sl-160\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }\f4\fs20 
+\par 
+\par where:
+\par 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }shi0_netname contains an ASCIIZ string that specifies the share name of the resource. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par At level detail 1, the Transaction response data section contains a SHARE_INFO_1 data structure, which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912{\*\pn \pnlvlcont\pndec }\f11\fs20 struct SHARE_INFO_1 \{
+\par \tab char\tab \tab \tab shi1_netname[13]
+\par \tab char\tab \tab \tab shi1_pad;
+\par \tab unsigned short\tab shi1_type
+\par \tab char  \tab \tab \tab *shi1_remark;
+\par \}
+\par \pard\plain \li120\ri120\sl-160\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }\f4\fs20 
+\par 
+\par where
+\par 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }shi1_netname contains an ASCIIZ string that specifies the share name of the resource. 
+\par 
+\par shi1_pad aligns the next data structure element to a word boundary.
+\par 
+\par shi1_type contains an integer that specifies the type of the shared resource. The possible values are:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx9900 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx9900 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_DISKTREE\cell 0\cell Disk Directory Tree\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_PRINTQ\cell 1\cell Printer Queue\cell \pard \widctlpar\intbl \row 
+\pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_DEVICE\cell 2\cell Communications device\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx9900 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_IPC
+\cell 3\cell Inter process communication (IPC)\cell \pard \widctlpar\intbl \row \pard \li120\ri120\sa60\keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \pard \li547\keepn\widctlpar{\*\pn \pnlvlcont\pndec }shi1_remark points to a null-terminated string that specifies a comment describing the share. The comment can be a null string or the pointer may be a null pointer.
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+The shi1_remark pointer is a 32 bit pointer. The higher 16 bits must be ignored. The converter word returned in the parameters section needs to be subtracted from the lower 16 bits to calculate an offset into the return buffer where this ASCII string resi
+des. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par At level detail 2, the Transaction response data section contains a SHARE_INFO_2 data structure, which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912{\*\pn \pnlvlcont\pndec }\f11\fs20 struct SHARE_INFO_2 \{
+\par \tab char\tab \tab \tab \tab shi2_netname[13]
+\par \tab char\tab \tab \tab \tab shi2_pad;
+\par \tab unsigned short\tab \tab shi2_type
+\par \tab char  *\tab \tab \tab shi2_remark;
+\par \tab unsigned short\tab \tab shi2_permissions;
+\par \tab unsigned short\tab \tab shi2_max_uses;
+\par \tab unsigned short\tab \tab shi2_current_uses;
+\par \tab unsigned short\tab \tab shi2_path;
+\par \tab unsigned short\tab \tab shi2_passwd[9]
+\par \tab unsigned short\tab \tab shi2_pad2;
+\par \}
+\par \pard\plain \keepn\widctlpar{\*\pn \pnlvlcont\pndec }\f4\fs20 
+\par where
+\par 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }shi2_netname contains a null terminated ASCII string that specifies the share name of the resource. 
+\par 
+\par shi2_pad aligns the next data strructure element to a word boundary.
+\par 
+\par shi2_type contains an integer that specifies the type of the shared resource. The possible values are:
+\par \pard \li120\ri120\sa60\keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx6744 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx6744 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_DISKTREE\cell 0\cell Disk Directory Tree\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_PRINTQ\cell 1\cell Printer Queue\cell \pard \widctlpar\intbl \row 
+\pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_DEVICE\cell 2\cell Communications device\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2172\cellx3300\cellx6744 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }STYPE_IPC
+\cell 3\cell Inter process communication (IPC)\cell \pard \widctlpar\intbl \row \pard \li120\ri120\sa60\keepn\widctlpar{\*\pn \pnlvlcont\pndec } 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }shi2_remark is a pointer to a null terminated ASCII string specifying a comment for the share
+\par 
+\par shi2_permissions specifies the permissions on the shared resource if the CIFS server is operating with share level security. The values are this element can take are defined as a series of bit masks that may be OR\rquote 
+ed with each other. The bit mask values are:
+\par \pard \li120\ri120\sa60\keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx2340\cellx4590\cellx11106 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Name\cell Bit Mask Value\cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2340\cellx4590\cellx11106 
+\pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_READ\cell 0x01\cell Permission to read & execute from resource\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_WRITE\cell 0x02\cell 
+Permission to write data to resource\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_CREATE\cell 0x04\cell Permission to create an instance of  the resource\cell \pard \widctlpar\intbl \row \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_EXEC\cell 0x08\cell Permission to execute from resource\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_DELETE\cell 0x10\cell 
+Permission to delete the resource\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_ATRIB\cell 0x20\cell Permission to modify the resource attributes such as date & time of last modification, etc\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_PERM\cell 0x40\cell Permission to change permissions on the resource\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2340\cellx4590\cellx11106 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ACCESS_ALL\cell 0x7F\cell All of the above permissions\cell \pard \widctlpar\intbl \row \pard \li540\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par shi2_max_uses specifies the maximum number of current uses the shared resource can accommodate. A Value of -1 indicates there is no limit.
+\par 
+\par shi2_current_uses specifies the current number of connections to the resource
+\par 
+\par shi2_path point to an ASCIIZ string that contains the local (on the remote CIFS server) path  name of the shared resource. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li900\ri240\sl1\slmult0\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}For printer resources, shi2_path specifies  the name of the printer queue being shared
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}For disk devices, shi2_path specifies the path being shared
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}For communication device queues, shi2_path specifies the name of the of the communication device
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}For ADMIN$ or IPC$ resources, shi2_path must be a null pointer
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar 
+\par shi2_passwd specifies the password for the resource in case the CIFS server is running with share level security. For CIFS servers running with user level security, this field is set to null and is ignored.
+\par 
+\par shi2_pad2 is just a pad byte 
+\par 
+\par All of the pointers to an ASCII string in this data structure (shi2_remark and shi2_path) need to be treated specially. The  pointer is a 32 bit pointer. The higher 16 bits need to be ignored. The converter word returned in the parameters section needs to
+ be subtracted from the lower 16 bits to calculate an offset into the return buffer where this ASCII string resides. 
+\par \pard \li120\ri120\sa60\keepn\widctlpar 
+\par \pard \keepn\widctlpar There is no auxiliary data in the response. 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\fs24 {\*\bkmkstart _Toc381598161}9.\tab NetwkstaUserLogon{\*\bkmkend _Toc381598161}
+\par }\pard\plain \keepn\widctlpar \f4\fs20 
+This is a function executed on a remote CIFS server to log on a user. The purpose is to perform checks such as whether the specified user is permitted to logon from the specified computer, whether the specified user is permitted to log on at the given mom
+ent, etc. as well as perform housekeeping and statistics updates.
+\par 
+\par There is a p
+assword field in the parameters for this function. However, this field is always set to null before the function is sent on the wire, in order to preserve security. The remote CIFS server ignores this meaningless password that is sent. The remote CIFS ser
+ver ensures security by checking that the user name and computer name that are in the request parameters are the same used to establish the session and connection to the IPC$ share on the remote CIFS server. 
+\par 
+\par The definition is:
+\par 
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  }{\b\f5 short}{\f5  }{\b\f5 NetWkstaUserLogon}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 char  \tab \tab }{\f5 *reserved1;}{\f5\fs24 \tab \tab \tab 
+\par }{\b\f5 char  \tab \tab }{\f5 *reserved2;
+\par }{\b\f5 unsigned short\tab }{\f5  }{\i\f5 sLevel}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 BYTE}{\f5  \tab \tab b}{\i\f5 ReqBuffer[54]}{\f5 ;}{\f5\fs24 \tab 
+\par }{\b\f5 unsigned short}{\f5  \tab }{\i\f5 cbReqBuffer}{\f5 ;
+\par }{\b\f5 RCVBUF \tab }{\i\f5 pbBuffer}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 RCVBUFLEN }{\f5  \tab }{\i\f5 cbBuffer}{\f5 ;
+\par }{\b\f5 unsigned short }{\f5  \tab *}{\i\f5 pcbTotalAvail}{\f5 ;
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar reserved1 and reserved2 are reserved fields and must be null.
+\par 
+\par sLevel specifies the level of detail returned. The only legal value is 1.
+\par 
+\par pbReqBuffer points to the request buffer. This buffer contains parameters that need to be sent to the server. The actual value and structure is defined in the Transaction Request Parameters section.
+\par 
+\par cbReqBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbReqBuffer} parameter.  The value must be decimal 54. 
+\par 
+\par pbBuffer points to the buffer to receive the returned data. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcbTotalAvail is a pointer to an unsigned short which gets filled with the total number of data bytes available if the function succeeds. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetWkstaUserLogon which is 132.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "OOWb54WrLh"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "WB21BWDWWDDDDDDDzzzD" 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}
+A 16 bit integer with a value of 1 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return)
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}a byte array of length 54 bytes. These 54 bytes are defined as
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912{\*\pn \pnlvlcont\pndec }\f11\fs20 char\tab wlreq1_name[21];\tab \tab // User Name
+\par char\tab wlreq1_pad1; \tab \tab \tab //Pad next field to a word boundary
+\par char\tab wlreq1_password[15]; \tab //Password, set to null, ignored by server
+\par char\tab wlreq1_pad2;\tab \tab \tab //Pad next field to word boundary
+\par char\tab wlreq1_workstation[16];\tab //ASCII name of computer
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard\plain \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs20 A 16 bit integer with a value of 54
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_ACCESS_DENIED\cell 5\cell User has insufficient privilege\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_LogonScriptError\cell 2212\cell An error occurred while loading or running the logon script\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont
+\pndec }NERR_StandaloneLogon\cell 2214\cell The logon was not validated by any server\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_NonValidatedLogon\cell 2217\cell 
+The logon server is running an older software version and cannot validate the logon\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_InvalidWorkstation\cell 2240\cell 
+The user is not allowed to logon from this computer\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_InvalidLogonHours\cell 2241\cell The user is not allowed to logon at this time\cell \pard \widctlpar\intbl \row 
+\trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_PasswordExpired\cell 2242\cell The user password has expired\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar{\*\pn \pnlvlcont
+\pndec }
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+A 16 bit number representing the total number of available bytes. This has meaning only if the return status is NERR_Success or  ERROR_MORE_DATA. Upon success, this number indicates the number of useful bytes available. Upon failure, this indicates how bi
+g the receive buffer needs to be. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar The Transaction response data section contains a data structure user_logon_info_1 which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct user_logon_info_1 \{
+\par \tab unsigned short  \tab usrlog1_code; \tab \tab \tab  
+\par \tab char\tab \tab \tab \tab usrlog1_eff_name[21];
+\par \tab char            \tab usrlog1_pad_1;
+\par \tab unsigned short  \tab usrlog1_priv;
+\par \tab unsigned long   \tab usrlog1_auth_flags;
+\par \tab unsigned short  \tab usrlog1_num_logons; 
+\par \tab unsigned short  \tab usrlog1_bad_pw_count;
+\par \tab unsigned long   \tab usrlog1_last_logon;
+\par \tab unsigned long   \tab usrlog1_last_logoff;
+\par \tab unsigned long   \tab usrlog1_logoff_time;
+\par \tab unsigned long   \tab usrlog1_kickoff_time;
+\par \tab long            \tab usrlog1_password_age;
+\par \tab unsigned long   \tab usrlog1_pw_can_change;
+\par \tab unsigned long   \tab usrlog1_pw_must_change;
+\par \tab char  \tab \tab \tab *usrlog1_computer;
+\par \tab char  \tab \tab \tab *usrlog1_domain;
+\par \tab char\tab \tab \tab \tab *usrlog1_script_path;
+\par \tab unsigned long   \tab usrlog1_reserved1;
+\par \};      
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par where:
+\par 
+\par \pard \fi-720\li1008\keepn\widctlpar usrlog1_code specifies the result and can have the following values:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9631 \pard \keepn\widctlpar\intbl Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9631 \pard \keepn\widctlpar\intbl 
+NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell 5\cell User has insufficient privilege\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl 
+NERR_LogonScriptError\cell 2212\cell An error occurred while loading or running the logon script\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl NERR_StandaloneLogon\cell 2214\cell The logon was not validated by any server\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl NERR_NonValidatedLogon\cell 2217\cell The logon server is running an older software version and cannot validate the logon\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl 
+NERR_InvalidWorkstation\cell 2240\cell The user is not allowed to logon from this computer\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl NERR_InvalidLogonHours\cell 2241\cell The user is not allowed to logon at this time\cell \pard 
+\widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9631 \pard \keepn\widctlpar\intbl NERR_PasswordExpired\cell 2242\cell Administrator privilege\cell \pard \widctlpar\intbl \row \pard \fi-720\li1008\keepn\widctlpar 
+\par 
+\par usrlog1_eff_name specifies the account to which the user was logged on
+\par 
+\par usrlog1_pad1 aligns the next data structure element to a word boundary
+\par 
+\par usrlog1_priv specifies the user\rquote s privilege level. The possible values are:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx2352\cellx3480\cellx9630 \pard \keepn\widctlpar\intbl Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2352\cellx3480\cellx9630 \pard \keepn\widctlpar\intbl 
+USER_PRIV_GUEST\cell 0\cell Guest privilege\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl USER_PRIV_USER\cell 1\cell User privilege\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2352\cellx3480\cellx9630 \pard 
+\keepn\widctlpar\intbl USER_PRV_ADMIN\cell 2\cell Administrator privilege\cell \pard \widctlpar\intbl \row \pard \fi-720\li1008\keepn\widctlpar 
+\par usrlog1_auth_flags specifies the account operator privileges. The possible values are:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx2328\cellx3456\cellx9630 \pard \keepn\widctlpar\intbl Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2328\cellx3456\cellx9630 \pard \keepn\widctlpar\intbl 
+AF_OP_PRINT\cell 0\cell Print operator\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl AF_OP_COMM\cell 1\cell Communications operator\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl AF_OP_SERVER\cell 2\cell Server operator
+\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2328\cellx3456\cellx9630 \pard \keepn\widctlpar\intbl AF_OP_ACCOUNTS\cell 3\cell Accounts operator\cell \pard \widctlpar\intbl \row \pard \fi-720\li1008\keepn\widctlpar 
+\par usrlog1_num_logons specifies the number of times this user has logged on. A value of -1 means the number of logons is unknown. 
+\par 
+\par usrlog1_bad_pw_count specifies the number of incorrect passwords entered since the last successful logon. 
+\par 
+\par usrlog1_last_logon specifies the time when the user last logged on. This value is stored as the number of seconds elapsed since 00:00:00, January 1, 1970. 
+\par 
+\par usrlog1_last_logoff specifies the time when the user last logged off. This value is stored as the number of seconds elapsed since 00:00:00, January 1, 1970. A value of 0 means the last logoff  time is unknown. 
+\par 
+\par usrlog1_logoff_time specifies the time when the user should logoff. This value is stored as the number of seconds elapsed since 00:00:00, Jan 1, 1970. A value of -1 means the user never has to logoff. 
+\par 
+\par usrlog1_kickoff_time specifies the time when the user will be logged off by the system. This value is stored as the number of seconds elapsed since 00:00:00, Jan 1, 1970. A value of -1 means the system will  never logoff the user.
+\par 
+\par  usrlog1_password_age specifies the time in seconds since the user last changed his/her password.
+\par 
+\par usrlog1_password_can_change specifies the time when the user can change the password. This value is stored as the number of seconds elapsed since 00:00:00, Jan 1, 1970. A value of -1 means the user can never change the password.
+\par 
+\par usrlog1_password_must_change specifies the time when the user must change the password. This value is stored as the number of seconds elapsed since 00:00:00, Jan 1, 1970. 
+\par 
+\par usrlog1_computer specifies the computer where the user is logged on.
+\par  
+\par usrlog1_script_path specifies the relative path to the user logon script.
+\par 
+\par usrlog1_reserved is reserved with an undefined value.
+\par 
+\par \pard \keepn\widctlpar The following table defines the valid fields in the user_logon_info_1 structure based upon the return values::
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx3060\cellx6660\cellx10440 \pard \keepn\widctlpar\intbl function return code\cell usrlog1_code element\cell Valid elements of  logoff_info_1\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3060
+\cellx6660\cellx10440 \pard \keepn\widctlpar\intbl NERR_Success\cell NERR_Success\cell All\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl NERR_Success\cell NERR_StandaloneLogon\cell None except usrlog1_code\cell \pard \widctlpar\intbl \row 
+\pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell NERR_PasswordExpired\cell None except usrlog1_code\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell NERR_InvalidWorkstation\cell None except usrlog1_code\cell 
+\pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell NERR_InvalidLogonhours\cell None except usrlog1_code\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell NERR_LogonScriptError\cell 
+None except usrlog1_code\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell ERROR_ACCESS_DENIED\cell None except usrlog1_code\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3060\cellx6660\cellx10440
+ \pard \keepn\widctlpar\intbl All other errors\cell None; the code is meaningless\cell None\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \pard \ri240\sl1\slmult0\keepn\widctlpar All of the pointers in this data structure need to be treated specially. The  pointer is a 32 bit pointer. The higher 16 bits need to be i
+gnored. The converter word returned in the parameters section needs to be subtracted from the lower 16 bits to calculate an offset into the return buffer where this ASCII string resides. 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar 
+\par \pard \keepn\widctlpar There is no auxiliary data in the response. 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598162}10.\tab NetwkstaUserLogoff{\*\bkmkend _Toc381598162}
+\par \pard\plain \keepn\widctlpar \f4\fs20 This is a function executed on a remote CIFS server to log on a user. The purpose is to perform some checks and accomplish housekeeping and statistics updates.
+\par 
+\par The definition is:
+\par 
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  short }{\b\f5 NetWkstaUserLogoff}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 char  \tab \tab }{\f5 *reserved1;}{\f5\fs24 \tab 
+\par }{\b\f5 char  \tab \tab }{\f5 *reserved2;}{\f5\fs24 \tab 
+\par }{\b\f5 unsigned short}{\f5  \tab }{\i\f5 sLevel}{\f5 ;
+\par }{\b\f5 BYTE \tab \tab }{\i\f5 bReqBuffer[54]}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 unsigned short}{\f5  \tab }{\i\f5 cbReqBuffer}{\f5 ;
+\par }{\b\f5 REQBUF \tab }{\i\f5 pbBuffer}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 REQBUFLEN}{\f5  \tab }{\i\f5 cbBuffer}{\f5 ;
+\par }{\b\f5 unsigned short }{\f5  \tab *}{\i\f5 pcbTotalAvail}{\f5 ;
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar reserved1 and reserved2 are reserved fields and must be null.
+\par 
+\par sLevel specifies the level of detail returned. The only legal value is 1.
+\par 
+\par pbReqBuffer points to the request buffer. This buffer contains parameters that need to be sent to the server. The actual value and structure is defined in the Transaction Request Parameters section.
+\par 
+\par cbReqBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbReqBuffer} parameter.  The value must be decimal 54. 
+\par 
+\par pbBuffer points to the buffer to receive the returned data. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcbTotalAvail is a pointer to an unsigned short which gets filled with the total number of data bytes available if the function succeeds. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetWkstaUserLogoff which is 133.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "zzWb38WrLh"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "WDW"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A null pointer 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}Another null pointer
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer with a value of 1 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return)
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}An array of  length 38 bytes. These 38 bytes are defined as
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912{\*\pn \pnlvlcont\pndec }\f11\fs20 char            wlreq1_name[21];\tab \tab // User Name
+\par char            wlreq1_pad1; \tab \tab //Pad next field to a word boundary
+\par char            wlreq1_workstation[16]; \tab //ASCII name of computer
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard\plain \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs20 A 16 bit integer with a value of decimal 38. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx3330\cellx4276\cellx10350 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4276\cellx10350 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_StandaloneLogon\cell 2214\cell 
+The logon was not validated by any server\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3330\cellx4276\cellx10350 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_NonValidatedLogon\cell 2217\cell 
+The logon server is running an older software version and cannot validate the logoff\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+A 16 bit number representing the total number of available bytes. This has meaning only if the return status is NERR_Success or  ERROR_MORE_DATA. Upon success, this number indicates the number of useful bytes available. Upon failure, this indicates how bi
+g the receive buffer needs to be. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar The Transaction response data section contains a data structure user_logoff_info_1 which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct user_logoff_info_1 \{
+\par         {\b unsigned short}  usrlogf1_code;
+\par         {\b unsigned long}   usrlogf1_duration;
+\par         {\b unsigned short}  usrlogf1_num_logons;
+\par \};     
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par where:
+\par 
+\par \pard \fi-720\li1008\keepn\widctlpar usrlogf1_code specifies the result and can have the following values:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx3420\cellx4435\cellx10350 \pard \keepn\widctlpar\intbl Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4435\cellx10350 \pard \keepn\widctlpar\intbl 
+NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell 5\cell User has insufficient privilege\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4435
+\cellx10350 \pard \keepn\widctlpar\intbl NERR_InvalidWorkstation\cell 2240\cell The user is not allowed to logon from this computer\cell \pard \widctlpar\intbl \row \pard \fi-720\li1008\keepn\widctlpar 
+\par usrlogf1_duration specifies the time in number of seconds for which the user was logged 
+\par 
+\par usrlogf1_num_logons specifies the number of times this user has logged on. A value of -1 indicates the number is unknown.
+\par 
+\par \pard \keepn\widctlpar The following table defines the valid fields in the logoff_info_1 structure based upon the return values::
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx2160\cellx5490\cellx10350 \pard \keepn\widctlpar\intbl function return code\cell usrlogf11_code element\cell Valid elements of  logoff_info_1\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2160
+\cellx5490\cellx10350 \pard \keepn\widctlpar\intbl NERR_Success\cell NERR_Success\cell All\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl NERR_Success\cell NERR_StandaloneLogon\cell None except usrlogf1_code\cell \pard \widctlpar\intbl 
+\row \trowd \trgaph108\trleft-108 \cellx2160\cellx5490\cellx10350 \pard \keepn\widctlpar\intbl All other errors\cell None; the code is meaningless\cell None\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par There is no auxiliary data in the response. 
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598163}11.\tab NetUserGetInfo{\*\bkmkend _Toc381598163}
+\par \pard\plain \keepn\widctlpar \f4\fs20 This is a function executed on a remote CIFS server to obtain detailed information about a particular user.
+\par 
+\par The definition is:
+\par 
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  }{\b\f5 short}{\f5  }{\b\f5 NetUserGetInfo}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 char  \tab \tab }{\f5 *pszUser;}{\f5\fs24 \tab \tab \tab 
+\par }{\b\f5 unsigned short\tab }{\f5  }{\i\f5 sLevel}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 RCVBUF}{\f5 \tab pBuffer;}{\f5\fs24 \tab 
+\par }{\b\f5 RCVBUFLEN }{\f5  \tab }{\i\f5 cbBuffer}{\f5 ;
+\par }{\b\f5 unsigned short }{\f5  \tab *}{\i\f5 pcbTotalAvail}{\f5 ;
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar pszUser points to a null terminated ASCII string signifying the name of the user for which information should be retrieved.
+\par 
+\par sLevel specifies the level of detail returned. The only legal value is 11.
+\par 
+\par pbBuffer points to the buffer to receive the returned data. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcbTotalAvail is a pointer to an unsigned short which gets filled with the total number of data bytes available if the function succeeds. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetUserGetInfo which is 56.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "zWrLh"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "B21BzzzWDDzzDDWWzWzDWb21W" 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A null terminated ASCII string indicating the user for which information should be retrieved.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer with a value of decimal 11 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return)
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_ACCESS_DENIED\cell 5\cell User has insufficient privilege\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_MORE_DATA\cell 234\cell additional data is available\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_BufTooSmall\cell 2123\cell 
+The supplied buffer is too small\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_UserNotFound\cell 2221\cell The user name was not found\cell \pard 
+\widctlpar\intbl \row {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+A 16 bit number representing the total number of available bytes. This has meaning only if the return status is NERR_Success or  ERROR_MORE_DATA. Upon success, this number indicates the number of useful bytes available. Upon failure, this indicates how bi
+g the receive buffer needs to be. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar The Transaction response data section contains a data structure user_logon_info_1 which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct user_info_11 \{
+\par \tab char\tab \tab \tab \tab usri11_name[21]; \tab \tab \tab  
+\par \tab char\tab \tab \tab \tab usri11_pad;
+\par \tab char            \tab *usri11_comment;
+\par \tab char  \tab \tab \tab *usri11_usr_comment;
+\par \tab char\tab \tab \tab \tab *usri11_full_name;
+\par \tab unsigned short  \tab usri11_priv; 
+\par \tab unsigned long\tab \tab usri11_auth_flags;
+\par \tab long\tab \tab \tab \tab usri11_password_age;\tab 
+\par \tab char            \tab *usri11_homedir;
+\par \tab char  \tab \tab \tab *usri11_parms;
+\par \tab long\tab \tab \tab \tab usri11_last_logon;
+\par \tab long\tab \tab \tab \tab usri11_last_logoff;
+\par \tab unsigned short\tab \tab usri11_bad_pw_count;
+\par \tab unsigned short\tab \tab usri11_num_logons;
+\par \tab char\tab \tab \tab \tab *usri11_logon_server;
+\par \tab unsigned short\tab \tab usri11_country_code;
+\par \tab char \tab \tab \tab *usri11_workstations;
+\par \tab unsigned long\tab \tab usri11_max_storage;
+\par \tab unsigned short\tab \tab usri11_units_per_week;
+\par \tab unsigned char \tab \tab *usri11_logon_hours;
+\par \tab unsigned short\tab \tab usri11_code_page;
+\par \};      
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par where:
+\par 
+\par \pard \fi-720\li1008\keepn\widctlpar usri11_name specifies the user name for which information is retireved
+\par 
+\par usri11_pad aligns the next data structure element to a word boundary
+\par 
+\par usri11_comment is a null terminated ASCII comment
+\par 
+\par usri11_user_comment is a null terminated ASCII comment about the user
+\par 
+\par usri11_full_name is a null terminated ASCII specifying the full name of the user
+\par 
+\par usri11_priv specifies the level of the privilege assigned to the user. The possible values are:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx2352\cellx3480\cellx9630 \pard \keepn\widctlpar\intbl Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2352\cellx3480\cellx9630 \pard \keepn\widctlpar\intbl 
+USER_PRIV_GUEST\cell 0\cell Guest privilege\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl USER_PRIV_USER\cell 1\cell User privilege\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2352\cellx3480\cellx9630 \pard 
+\keepn\widctlpar\intbl USER_PRV_ADMIN\cell 2\cell Administrator privilege\cell \pard \widctlpar\intbl \row \pard \fi-720\li1008\keepn\widctlpar 
+\par usri11_auth_flags specifies the account operator privileges. The possible values are:
+\par 
+\par \trowd \trgaph108\trleft-108 \cellx2328\cellx3456\cellx9630 \pard \keepn\widctlpar\intbl Name\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2328\cellx3456\cellx9630 \pard \keepn\widctlpar\intbl 
+AF_OP_PRINT\cell 0\cell Print operator\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl AF_OP_COMM\cell 1\cell Communications operator\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl AF_OP_SERVER\cell 2\cell Server operator
+\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx2328\cellx3456\cellx9630 \pard \keepn\widctlpar\intbl AF_OP_ACCOUNTS\cell 3\cell Accounts operator\cell \pard \widctlpar\intbl \row \pard \fi-720\li1008\keepn\widctlpar 
+\par 
+\par usri11_password_age specifies how many seconds have elapsed since the password was last changed. 
+\par 
+\par usri11_home_dir points to a null terminated ASCII string that contains the path name of the user's home directory. 
+\par 
+\par usri11_parms points to a null terminated ASCII string that is set aside for use by applications.
+\par 
+\par usri11_last_logon specifies the time when the user last logged on. This value is stored as the number of seconds elapsed since 00:00:00, January 1, 1970. 
+\par 
+\par usri11_last_logoff specifies the time when the user last logged off. This value is stored as the number of seconds elapsed since 00:00:00, January 1, 1970. A value of 0 means the last logoff  time is unknown. 
+\par 
+\par usri11_bad_pw_count specifies the number of incorrect passwords entered since the last successful logon. 
+\par 
+\par usri11_log1_num_logons specifies the number of times this user has logged on. A value of -1 means the number of logons is unknown. 
+\par 
+\par usri11_logon_server points to a null terminated ASCII string that contains the name of the server to which logon requests are sent. A null string indicates logon requests should be sent to the domain controller. 
+\par 
+\par usri11_country_code specifies the country code for the user's language of choice. 
+\par 
+\par usri11_workstations points to a null terminated ASCII string that contains the names of workstations the user may log on from. There may be up to 8 workstations, with the names separated by commas. A null strings indicates there are no restrictions. 
+
+\par 
+\par usri11_max_storage specifies the maximum amount of disk space the user can occupy. A value of 0xffffffff indicates there are no restrictions. 
+\par 
+\par usri11_units_per_week specifies the equal number of time units into which a week is divided. This value must be equal to 168. 
+\par 
+\par usri11_logon_hours points to a 21 byte (168 bits) string that specifies the time during which the user can log on. Each bit represents one unique hour in a week. The first bit (bit 0, word 0) is Sunday,
+ 0:00 to 0:59, the second bit (bit 1, word 0) is Sunday, 1:00 to 1:59 and so on. A null pointer indicates there are no restrictions. 
+\par 
+\par usri11_code_page specifies the code page for the user's language of choice
+\par 
+\par \pard \ri240\sl1\slmult0\keepn\widctlpar 
+All of the pointers in this data structure need to be treated specially. The  pointer is a 32 bit pointer. The higher 16 bits need to be ignored. The converter word returned in the parameters section needs to be subtracted from the lower 16 bits to calcul
+ate an offset into the return buffer where this ASCII string resides. 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar 
+\par \pard \keepn\widctlpar There is no auxiliary data in the response. 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598164}12.\tab NetWkstaGetInfo{\*\bkmkend _Toc381598164}
+\par \pard\plain \keepn\widctlpar \f4\fs20 This is a function executed on a remote CIFS server to obtain detailed information about a workstation.
+\par 
+\par The definition is:
+\par 
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  }{\b\f5 short}{\f5  }{\b\f5 NetWkstaGetInfo}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned short\tab }{\f5  }{\i\f5 sLevel}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 RCVBUF}{\f5 \tab pBuffer;}{\f5\fs24 \tab 
+\par }{\b\f5 RCVBUFLEN }{\f5  \tab }{\i\f5 cbBuffer}{\f5 ;
+\par }{\b\f5 unsigned short }{\f5  \tab *}{\i\f5 pcbTotalAvail}{\f5 ;
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar sLevel specifies the level of detail returned. The only legal value is 10.
+\par 
+\par pbBuffer points to the buffer to receive the returned data. 
+\par 
+\par cbBuffer specifies the size, in bytes, of the buffer pointed to by the {\i pbBuffer} parameter. 
+\par 
+\par pcbTotalAvail is a pointer to an unsigned short which gets filled with the total number of data bytes available if the function succeeds. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for NetWkstaGetInfo which is 63.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "WrLh"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The data descriptor string for the (returned) data which is "zzzBBzz". 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}
+A 16 bit integer with a value of decimal 10 (corresponding to the "W" in the parameter descriptor string. This represents the level of detail the server is expected to return)
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A 16 bit integer that contains the size of the receive buffer
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }There is no data or auxiliary data to send as part of the request.
+\par \pard \sb240\sa240\keepn\widctlpar{\*\pn \pnlvlcont\pndec }{\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard 
+\keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_ACCESS_DENIED\cell 5\cell User has insufficient privilege\cell \pard 
+\widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }ERROR_MORE_DATA\cell 234\cell additional data is available\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_BufTooSmall\cell 2123\cell 
+The supplied buffer is too small\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl{\*\pn \pnlvlcont\pndec }NERR_UserNotFound\cell 2221\cell The user name was not found\cell \pard 
+\widctlpar\intbl \row {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit "converter" word. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}
+A 16 bit number representing the total number of available bytes. This has meaning only if the return status is NERR_Success or  ERROR_MORE_DATA. Upon success, this number indicates the number of useful bytes available. Upon failure, this indicates how bi
+g the receive buffer needs to be. 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Data section
+\par }\pard \keepn\widctlpar The Transaction response data section contains a data structure user_logon_info_1 which is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct user_info_11 \{
+\par \tab char\tab \tab \tab \tab *wki10_computername; \tab \tab \tab  
+\par \tab char\tab \tab \tab \tab *wki10_username;
+\par \tab char            \tab *wki10_langroup;
+\par \tab unsigned char  \tab wki10_ver_major; 
+\par \tab unsigned char\tab \tab wki10_ver_minor;
+\par \tab char            \tab *wki10_logon_domain;
+\par \tab char  \tab \tab \tab *wki10_oth_domains;
+\par \};      
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par where:
+\par 
+\par \pard \fi-720\li1008\keepn\widctlpar wki10_computername is a pointer to a NULL terminated ASCII string that specifies the name of the workstation. 
+\par 
+\par wki10_username is a pointer to a NULL terminated ASCII string that specifies the user who is logged on at the workstation.
+\par 
+\par wki10_langroup is a pointer to a NULL terminated ASCII string that specifies the domain to which the workstation belongs.
+\par 
+\par wki10_ver_major specifies the major version number of the networking software the workstation is running.
+\par 
+\par wki10_ver_minor specifies the minor version number of the networking software the workstation is running.
+\par 
+\par wki10_logon domain is a pointer to a NULL terminated ASCII string that specifies the domain for which a user is logged on. 
+\par 
+\par wki10_oth domain is a pointer to a NULL terminated ASCII string that specifies all domains in which the computer is enlisted.
+\par 
+\par \pard \ri240\sl1\slmult0\keepn\widctlpar All of the
+ pointers in this data structure need to be treated specially. The  pointer is a 32 bit pointer. The higher 16 bits need to be ignored. The converter word returned in the parameters section needs to be subtracted from the lower 16 bits to calculate an off
+set into the return buffer where this ASCII string resides. 
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar 
+\par \pard \keepn\widctlpar There is no auxiliary data in the response. 
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598165}13.\tab SamOemChangePassword{\*\bkmkend _Toc381598165}
+\par \pard\plain \keepn\widctlpar \f4\fs20 This is a function executed on a remote CIFS server to change a user\rquote s password.
+\par 
+\par The definition is:
+\par 
+\par \pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 unsigned}{\f5  }{\b\f5 short}{\f5  }{\b\f5 SamOemChangePassword}{\f5 (
+\par }\pard \li432\ri245\sl1\slmult0\keepn\widctlpar {\b\f5 uchar \tab \tab *}{\i\f5 UserName}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 uchar \tab \tab *}{\i\f5 OldPassword}{\f5 ;}{\f5\fs24 
+\par }{\b\f5 uchar \tab \tab *}{\i\f5 NewPassword}{\f5 ;}{\f5\fs24 
+\par }\pard \li187\ri245\sl1\slmult0\keepn\widctlpar {\f5 );}{\f5\fs24 \tab \tab \tab \tab \tab 
+\par }\pard \li180\ri240\sb120\sa120\sl1\slmult0\keepn\widctlpar where:
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar UserName is a pointer to a NULL terminated ASCII string representing the name of the user for which the password should be changed.
+\par 
+\par OldPassword is a pointer to a NULL terminated ASCII string representing the current password of the user 
+\par 
+\par NewPassword is a pointer to a NULL terminated ASCII string representing the new password of the 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Parameters section
+\par }\pard \ri245\sa120\sl1\slmult0\keepn\widctlpar {\f5 The Transaction request parameters section in this instance contains:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}The 16 bit function number for SamOEMChangePassword which is 214.
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The parameter descriptor string which is "zsT"
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}The actual parameters as described by the parameter descriptor string. 
+\par \pard \keepn\widctlpar{\*\pn \pnlvlcont\pndec }
+\par The parameters are:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A null terminated ASCII string that represents the name of the user for whom the password is being changed. 
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}A word with a value of 532 representing the size of the data buffer. 
+\par \pard \keepn\widctlpar 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Request Data section
+\par }\pard \keepn\widctlpar The data buffer to be sent consists of 532 bytes of data. The first 516 bytes represent the new password in an encrypted form. The last 16 bytes represent the old password in an encrypted form.
+\par 
+\par The new password is represented by the structure
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 struct\tab \{
+\par \tab char\tab NewPasswordBuffer[512];
+\par \tab long\tab LengthofNewPasswordInBytes;
+\par \}
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par The new password is stored in plain text form at the end of the buffer and the length of the new password is stored in the second member of the structure. The whole structure is encrypted using RC4. The RC4 key used is the One Way Transformation (describe
+d below) of the old password. 
+\par 
+\par The RC4 encryption of the One Way Transformation of the old password constitutes the last 16 bytes of the data buffer. The RC4 key used is the One Way Transformation of the new password 
+\par 
+\par There is no auxiliary data to send as part of the request.
+\par 
+\par \pard\plain \s21\sb240\sa240\keepn\widctlpar \b\f5\fs28 {\fs24 One Way Transformation
+\par }\pard\plain \keepn\widctlpar \f4\fs20 This section describes the algorithm used by CIFS to apply a one way transformation on data.
+\par 
+\par Let
+\par \pard\plain \s34\fi-360\li360\sa240\nowidctlpar \f4\fs20 E(K, D)\line denote the DES block mode encryption function [5] , which accepts a seven byte key (K) and an eight byte data block (D) and produces an eight byte encrypted data block as its value.
+
+\par {\f11 concat(A, B)\line is the result of concatenating A and B
+\par }Ex(K,D)\line denote the extension of DES to longer keys and data blocks. If the data to be encrypted is longer than eight bytes, th
+e encryption function is applied to each block of eight bytes in sequence and the results are concatenated together.  If the key is longer than seven bytes, each 8 byte block of data is first completely encrypted using the first seven bytes of the key, th
+en the second seven bytes, etc., appending the results each time.  For example, to encrypt the 16 byte quantity D0D1 with the 14 byte key K0K1, 
+\par \pard\plain \s33\li360\nowidctlpar \f11\fs20\cf1 \tab Ex(K0K1,D0D1) = concat(E(K0,D0),E(K0,D1),E(K1,D0),E(K1,D1))
+\par 
+\par \pard\plain \s34\fi-360\li360\sa240\nowidctlpar \f4\fs20 {\f11 head(S, B)}\line denote the first B bytes of the byte string S.
+\par {\f11 swab(S)}\line denote the byte string obtained by reversing the order of the bits in each byte of S, i.e., if S is byte string of length one, with the value 0x37 then swab(S) is 0xEC.
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par 
+\par The One Way Transformation function is defined as:
+\par 
+\par \pard\plain \s15\li576\sl-240\slmult0\keepn\widctlpar\tx1152\tx1728\tx2304\tx2880\tx3456\tx4032\tx4608\tx5184\tx5760\tx6336\tx6912 \f11\fs20 OWF = Ex(swab(P14), N8)
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+\par \pard\plain \s16\keepn\widctlpar \f11\fs20 {\f4 Where
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}}\pard\plain \fi-360\li360\keepn\widctlpar\tx360{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs20 P14 is the data to encrypted. If P14 is the user\rquote 
+s password, it is a clear, upper-cased text string, padded with blanks
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}N8 is an 8 byte string whose value is available from Microsoft upon request
+\par \pard \keepn\widctlpar 
+\par 
+\par \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 Transaction Response Parameters section
+\par }\pard \keepn\widctlpar The transaction response parameters section consists of:
+\par {\pntext\pard\plain\f1\fs20 \'b7\tab}\pard \fi-360\li360\keepn\widctlpar{\*\pn \pnlvlblt\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}A 16 bit word indicating the return status. The possible values are:
+\par \pard \keepn\widctlpar 
+\par \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl Code\cell Value \cell Description\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl 
+NERR_Success\cell 0\cell No errors encountered\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl ERROR_ACCESS_DENIED\cell 5\cell User has insufficient privilege\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl 
+ERROR-INVALID-PASSWORD\cell 86\cell The specified password is invalid\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar\intbl NERR_PasswordCantChange\cell 2243\cell The password cannot be changed\cell \pard \widctlpar\intbl \row \trowd 
+\trgaph108\trleft-108 \cellx3420\cellx4352\cellx9630 \pard \keepn\widctlpar\intbl NERR_PasswordTooShort\cell 2246\cell The password is too short\cell \pard \widctlpar\intbl \row \pard \sb240\sa240\keepn\widctlpar {\b\f5\fs24 
+Transaction Response Data section
+\par }\pard \keepn\widctlpar There is no Transaction Response Data to receive
+\par \pard \li540\ri240\sl1\slmult0\keepn\widctlpar    
+\par \pard \keepn\widctlpar There is no auxiliary data in the response. 
+\par 
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\fs24 {\*\bkmkstart _Toc359307241}{\*\bkmkstart _Toc376936213}{\*\bkmkstart _Toc376936300}{\*\bkmkstart _Toc376936505}{\*\bkmkstart _Toc381598166}14.\tab Author's Addresses
+{\*\bkmkend _Toc359307241}{\*\bkmkend _Toc376936213}{\*\bkmkend _Toc376936300}{\*\bkmkend _Toc376936505}{\*\bkmkend _Toc381598166}
+\par }\pard\plain \keepn\widctlpar \f4\fs20 Paul Leach\line Dilip Naik\line Microsoft\line 1 Microsoft Way\line Redmond, WA  98052\line paulle@microsoft.com\line v-dilipn@microsoft.com
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\fs24 {\*\bkmkstart _Toc381598167}15.\tab Appendix A{\*\bkmkend _Toc381598167}
+\par }\pard\plain \sa240\keepn\widctlpar \f4\fs20 {\b\fs24 Transaction SMBs
+\par }\pard \keepn\widctlpar 
+These SMBs are used both to retrieve bulk data from the server (e.g.: enumerate shares, etc.) and to change the server's state (EG: add a new share, change file permissions, etc.)  Transaction requests are also unusual because they can have a multiple par
+t request and/or a multiple part response.  For this reason, transactions are handled as a set of sequenced commands to the server.  Each part of a request is sent as a sequenced command using the same {\i Mid} value and an increasing {\i Seq}
+ value.  The server resp
+onds to each request piece except the last one with a response indicating that the server is ready for the next piece.  The last piece is responded to with the first piece of the result data.  The client then sends a transaction secondary SMB with {\i 
+ParameterDisplacement} set to the number of parameter bytes received so far and {\i DataDisplacement} set to the number of data bytes received so far and {\i ParameterCount}, {\i ParameterOffset},{\b\i\ul  }{\i DataCount}, and {\i DataOffset}
+ set to zero (0).  The server responds with the next piece of the transaction result.  The process is repeated until all of the response information has been received.  When the transaction has been completed, the redirector must send another sequenced co
+mmand (an echo SMB will do fine) to the server to allow the server to know that the final piece was received and that resources allocated to the transaction command may be released.
+\par The flow is as follows, where (S) is the {\i SequenceNumber},  (N) is the number of request packets to be sent from the client to the server, and (M) is the number of response packets to be sent by the server to the client:
+\par 
+\par \trowd \trgaph108\trleft270 \clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx3936\clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw15\brdrcf1 
+\clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx4590\clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 
+\clcfpat7\clcbpat8\clshdng3000 \cellx8820 \pard \keep\keepn\widctlpar\intbl Client\line =======================\cell <->\line ===\cell Server\line ===========================\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft270 \clbrdrl
+\brdrs\brdrw30\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx3936\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx4590\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx8820 \pard \keep\keepn\widctlpar\intbl 
+SMB(S)  Transact\cell {\f11 ->\cell }\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell {\f11 <-\cell }OK (S) send more data\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl  [ repeat N-1 times:\cell {\f11 \cell }
+\cell \pard \widctlpar\intbl \row \pard \li360\keep\keepn\widctlpar\intbl SMB(S+1) Transact secondary\cell \pard \keep\keepn\widctlpar\intbl {\f11 ->\cell }\cell \pard \widctlpar\intbl \row \pard \li360\keep\keepn\widctlpar\intbl \cell \pard 
+\keep\keepn\widctlpar\intbl {\f11 <-\cell }OK (S+1) send more data\cell \pard \widctlpar\intbl \row \pard \li360\keep\keepn\widctlpar\intbl SMB(S+N-1)\cell \pard \keep\keepn\widctlpar\intbl {\f11 \cell }\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl  ]\cell {\f11 \cell }\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell {\f11 <-\cell }OK (S+N-1) transaction response (1)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl 
+ [ repeat M-1 times:\cell {\f11 \cell }\cell \pard \widctlpar\intbl \row \pard \li360\keep\keepn\widctlpar\intbl SMB(S+N) Transact secondary\cell \pard \keep\keepn\widctlpar\intbl {\f11 ->\cell }\cell \pard \widctlpar\intbl \row \pard 
+\li360\keep\keepn\widctlpar\intbl \cell \pard \keep\keepn\widctlpar\intbl {\f11 <-\cell }OK (S+N) transaction response (2)\cell \pard \widctlpar\intbl \row \pard \li360\keep\keepn\widctlpar\intbl SMB(S+N+M-2) Transact secondary\cell \pard 
+\keep\keepn\widctlpar\intbl {\f11 ->\cell }\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell {\f11 <-\cell }OK (S+N+M-2] transaction response (M)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl   ]\cell {\f11 
+\cell }\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl SMB(S+N+M-1) Echo\cell {\f11 ->\cell }\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft270 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr
+\brdrs\brdrw15\brdrcf1 \cellx3936\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx4590\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx8820 \pard 
+\keep\keepn\widctlpar\intbl \cell {\f11 <-\cell }OK (S+N+M-1) echoed\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par In order to allow the server to detect clients which have been powered off, have crashed, etc., the client must send commands to the server {\cf1 periodically if it has resources open on the server.}
+  If nothing has been received from a client for awhile, the server will assume that the client is no longer running and disconnect the client.  This includes closing any files that th
+e client had open at the time and releasing any resources being used on behalf of the client.  Clients should at least send an echo SMB to the server every four (4) minutes if there is nothing else to send.  The server will disconnect clients after a conf
+igurable amount of time which cannot be less than five (5) minutes.  (Note: the NT server has a default timevalue of 15 minutes.)
+\par \pard\plain \s3\sb240\sa240\keepn\widctlpar \b\f4 {\*\bkmkstart _Toc381598168}15.1.1\tab TRANSACTIONS{\*\bkmkend _Toc381598168}
+\par \pard\plain \keepn\widctlpar \f4\fs20 {\f11\fs18 SMB_COM_TRANSACTION} performs a symbolically named transaction.  This transaction is known only by a name (no file handle used).  {\f11\fs18 SMB_COM_TRANSACTION2}
+ likewise performs a transaction, but a word parameter is used to identify the transaction instead of a name{\f11\fs18 .  SMB_COM_NT_TRANSACTION} is used for commands that potentially need to transfer a large amount of data (greater than 64K bytes).
+
+\par \pard\plain \s4\sb240\sa120\keepn\widctlpar \b\i\f4 {\caps 15.1.1.1\tab SMB_COM_TRANSACTION and SMB_COM_TRANSACTION2 Formats
+\par }\trowd \trgaph108\trleft90 \clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx5130\clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw15\brdrcf1 
+\clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx10260 \pard\plain \keep\keepn\widctlpar\intbl \f4\fs20 Primary Client Request\line ===============================\cell Description\line 
+==================================\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx10260 \pard 
+\keep\keepn\widctlpar\intbl Command\cell {\f11\fs18 SMB_COM_TRANSACTION or SMB_COM_TRANSACTION2}\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR WordCount;
+\cell Count of parameter words;   value = (14 + SetupCount)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT TotalParameterCount;\cell Total parameter bytes being sent\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT TotalDataCount;\cell Total data bytes being sent\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT MaxParameterCount;\cell Max parameter bytes to return\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT MaxDataCount;\cell Max data bytes to return\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR MaxSetupCount;\cell Max setup words to return\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl UCHAR Reserved;\cell \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT Flags;\cell Additional information:\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell \pard 
+\li288\keep\keepn\widctlpar\intbl bit 0 - also disconnect TID in {\i\caps Tid}\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell \pard \li288\keep\keepn\widctlpar\intbl bit 1 - one-way transaction (no resp)\cell \pard 
+\widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl ULONG Timeout;\cell \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT Reserved2;\cell \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl 
+USHORT ParameterCount;\cell Parameter bytes sent this buffer\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ParameterOffset;\cell Offset (from header start) to Parameters\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT DataCount;\cell Data bytes sent this buffer\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT DataOffset;\cell Offset (from header start) to data\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl UCHAR SetupCount;\cell Count of setup words\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Reserved3;\cell Reserved (pad above to word)\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT Setup[SetupCount];\cell Setup words (# = SetupWordCount)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ByteCount;\cell Count of data bytes\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl STRING Name[];\cell Name of transaction ({\f11\fs18 NULL} if {\f11\fs18 SMB_COM_TRANSACTION2})\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Pad[];\cell Pad to SHORT or LONG\cell \pard 
+\widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Parameters[ParameterCount];\cell Parameter bytes (# = ParameterCount)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Pad1[];\cell Pad to SHORT or LONG\cell \pard 
+\widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 
+\cellx10260 \pard \keep\keepn\widctlpar\intbl UCHAR Data[ DataCount ];\cell Data bytes (# = DataCount)\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \trowd \trgaph108\trleft90 \clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx5130\clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw15\brdrcf1 
+\clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx10260 \pard \keep\keepn\widctlpar\intbl Interim Server Response\line ===============================\cell Description\line =================================
+\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx10260 \pard \keep\keepn\widctlpar\intbl 
+UCHAR WordCount;\cell Count of parameter words = 0\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrb
+\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx10260 \pard \keep\keepn\widctlpar\intbl USHORT ByteCount;\cell Count of data bytes = 0\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \trowd \trgaph108\trleft90 \clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx5130\clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw15\brdrcf1 
+\clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx10260 \pard \keep\keepn\widctlpar\intbl Secondary Client Request\line ===============================\cell Description\line 
+==================================\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx10260 \pard 
+\keep\keepn\widctlpar\intbl Command\cell {\f11\fs18 SMB_COM_TRANSACTION_SECONDARY\cell }\pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl \cell \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR WordCount;\cell 
+Count of parameter words = 8\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT TotalParameterCount;\cell Total parameter bytes being sent\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT TotalDataCount;
+\cell Total data bytes being sent\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ParameterCount;\cell Parameter bytes sent this buffer\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ParameterOffset;
+\cell Offset (from header start) to Parameters\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ParameterDisplacement;\cell Displacement of these Parameter bytes\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl 
+USHORT DataCount;\cell Data bytes sent this buffer\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT DataOffset;\cell Offset (from header start) to data\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl 
+USHORT DataDisplacement;\cell Displacement of these data bytes\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT Fid;\cell {\i\caps Fid} for handle based requests, else {\f11\fs18 0xFFFF}.  This field is present only if this is an 
+{\f11\fs18 SMB_COM_TRANSACTION2} request.\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ByteCount;\cell Count of data bytes\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Pad[];\cell 
+Pad to SHORT or LONG\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Parameters[ParameterCount];\cell Parameter bytes (# = ParameterCount)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Pad1[];\cell 
+Pad to SHORT or LONG\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr
+\brdrs\brdrw30\brdrcf1 \cellx10260 \pard \keep\keepn\widctlpar\intbl UCHAR Data[DataCount];\cell Data bytes (# = DataCount)\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar 
+\par \trowd \trgaph108\trleft90 \clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx5130\clbrdrt\brdrs\brdrw15\brdrcf1 \clbrdrl\brdrs\brdrw15\brdrcf1 
+\clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \clcfpat7\clcbpat8\clshdng3000 \cellx10260 \pard \keep\keepn\widctlpar\intbl Server Response\line ===============================\cell Description\line ==================================\cell 
+\pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx10260 \pard \keep\keepn\widctlpar\intbl UCHAR WordCount;
+\cell Count of data bytes; value = 10 + {\i\caps SetupCount}\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT TotalParameterCount;\cell Total parameter bytes being sent\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT TotalDataCount;\cell Total data bytes being sent\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT Reserved;\cell \cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl 
+USHORT ParameterCount;\cell Parameter bytes sent this buffer\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ParameterOffset;\cell Offset (from header start) to Parameters\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT ParameterDisplacement;\cell Displacement of these Parameter bytes\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT DataCount;\cell Data bytes sent this buffer\cell \pard \widctlpar\intbl \row 
+\pard \keep\keepn\widctlpar\intbl USHORT DataOffset;\cell Offset (from header start) to data\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT DataDisplacement;\cell Displacement of these data bytes\cell \pard \widctlpar\intbl 
+\row \pard \keep\keepn\widctlpar\intbl UCHAR SetupCount;\cell Count of setup words\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Reserved2;\cell Reserved (pad above to word)\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl USHORT Setup[SetupWordCount];\cell Setup words (# = SetupWordCount)\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl USHORT ByteCount;\cell Count of data bytes\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl UCHAR Pad[];\cell Pad to SHORT or LONG\cell \pard \widctlpar\intbl \row \pard \keep\keepn\widctlpar\intbl UCHAR Parameters[ParameterCount];\cell Parameter bytes (# = ParameterCount)\cell \pard \widctlpar\intbl \row \pard 
+\keep\keepn\widctlpar\intbl UCHAR Pad1[];\cell Pad to SHORT or LONG\cell \pard \widctlpar\intbl \row \trowd \trgaph108\trleft90 \clbrdrl\brdrs\brdrw30\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw15\brdrcf1 \cellx5130\clbrdrl
+\brdrs\brdrw15\brdrcf1 \clbrdrb\brdrs\brdrw15\brdrcf1 \clbrdrr\brdrs\brdrw30\brdrcf1 \cellx10260 \pard \keep\keepn\widctlpar\intbl UCHAR Data[DataCount];\cell Data bytes (# = DataCount)\cell \pard \widctlpar\intbl \row \pard \keepn\widctlpar    
+\par 
+\par \pard\plain \s1\sb240\sa240\keepn\widctlpar \b\f5\fs28\kerning28 {\*\bkmkstart _Toc381598169}16.\tab Appendix B{\*\bkmkend _Toc381598169} 
+\par \pard\plain \s2\sb240\sa240\keepn\widctlpar \b\i\f5 {\*\bkmkstart _Toc381598170}16.1\tab Marshaling and unmarshaling using descriptor strings{\*\bkmkend _Toc381598170}
+\par \pard\plain \keepn\widctlpar \f4\fs20 
+TBD. This will be a note to explain how the descriptor strings can be used to drive a marshaling engine that can automatically marshal and unmarshal RAP messages and call local APIs whose calling sequences closely match the format of the RAP services.
+
+\par }
