@@ -70,16 +70,29 @@ localip 192.168.2.1
 remoteip 192.168.2.10-100
 END
 
-#Get the default route interface name.
-ROUTER_ETH_NAME=`route | grep default | awk '{print $NF}'`
-#Setup 'FIREWALLD' for Port '1723'
+
+#Enable 'FIREWALLD'
 systemctl restart firewalld.service
 systemctl enable firewalld.service
+#
 firewall-cmd --set-default-zone=public
-firewall-cmd --add-interface=$ROUTER_ETH_NAME
+#Setup 'FIREWALLD' for Port '1723'
 firewall-cmd --add-port=1723/tcp --permanent
 firewall-cmd --add-masquerade --permanent
-firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -i $ROUTER_ETH_NAME -p gre -j ACCEPT
+
+#Only the default route interface name.
+#
+#ROUTER_ETH_NAME=`route | grep default | awk '{print $NF}'`
+#firewall-cmd --add-interface=$ROUTER_ETH_NAME
+#firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -i $ROUTER_ETH_NAME -p gre -j ACCEPT
+#
+#All interface name.
+ifconfig -s | grep -v "Iface" | awk '{print $1}' | grep -v "lo" |  while read STRLINE
+do
+	firewall-cmd --add-interface=$STRLINE
+	firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -i $STRLINE -p gre -j ACCEPT
+done
+#
 firewall-cmd --reload
 
 #Setup 'ip-up.local'
