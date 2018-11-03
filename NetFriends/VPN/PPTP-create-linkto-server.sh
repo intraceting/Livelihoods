@@ -23,7 +23,7 @@ pptpsetup --create Txxxxxx --server VPN-IP --username USER --password PASSWD --e
 #
 modprobe ppp_mppe 
 #
-pppd call Txxxxxx
+#pppd call Txxxxxx
 #
 ip route replace default dev ppp0
 #
