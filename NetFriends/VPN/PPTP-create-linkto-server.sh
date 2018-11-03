@@ -14,13 +14,18 @@
 #    GNU General Public License for more details.
 
 
-yum install -y NetworkManager-pptp*
+
+#
+yum install -y ppp pptp pptp-setup NetworkManager-pptp*
 #
 pptpsetup --create Txxxxxx --server VPN-IP --username USER --password PASSWD --encrypt --start
 
 #
+modprobe ppp_mppe 
+#
+pppd call Txxxxxx
+#
 ip route replace default dev ppp0
-
 #
 cat >> /etc/resolv.conf <<EOF
 nameserver  8.8.8.8
