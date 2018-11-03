@@ -29,7 +29,7 @@ nameserver  4.4.4.4
 EOF
 
 #test VPN line
-raceroute 8.8.8.8 
+traceroute 8.8.8.8 
 
 
 
