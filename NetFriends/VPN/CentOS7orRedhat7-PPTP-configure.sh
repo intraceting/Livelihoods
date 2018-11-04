@@ -97,7 +97,7 @@ firewall-cmd --reload
 
 #Setup 'ip-up.local'
 cat > /etc/ppp/ip-up.local << END
-/sbin/ifconfig ${ROUTER_ETH_NAME} mtu 1400
+/sbin/ifconfig \$1 mtu 1400
 END
 #Additional execution permission for 'ip-up.local'
 chmod +x /etc/ppp/ip-up.local
