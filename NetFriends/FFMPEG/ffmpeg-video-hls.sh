@@ -36,5 +36,5 @@ then
 fi
 
 #生成hls分片(直播):
-${TSCMD} -i "${SRC}"  -s 480*320 -c:v libx264 -c:a aac -f hls -hls_list_size 10 -hls_wrap 15 "${DST}"
+${TSCMD} -v quiet -i "${SRC}"  -s 480*320 -c:v libx264 -c:a aac -f hls -hls_list_size 10 -hls_wrap 15 "${DST}"
 

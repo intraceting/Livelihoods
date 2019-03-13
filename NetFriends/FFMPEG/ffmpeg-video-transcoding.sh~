@@ -36,5 +36,5 @@ then
 fi
 
 #
-${TSCMD} -v quiet -i "${SRC}" -vcodec h264 -s 1080*720 -f mp4 "${DST}"
+${TSCMD} -i "${SRC}" -vcodec h264 -s 1080*720 -f mp4 "${DST}"
 
