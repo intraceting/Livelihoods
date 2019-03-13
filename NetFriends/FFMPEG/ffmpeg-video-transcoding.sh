@@ -5,7 +5,7 @@
 # zpcoding<intraceting@outlook.com>
 
 #
-TSCMD=`which vlc`
+TSCMD=`which ffmpeg`
 
 #
 SRC="$1"
@@ -36,5 +36,5 @@ then
 fi
 
 #
-$TSCMD -I dummy "${SRC}" --sout "#transcode{width=1080,height=720,vcodec=h264}:standard{mux=mp4,dst=\"${DST}\",access=file}" vlc://quit
+${TSCMD} -i "${SRC}" -vcodec h264 -s 1080*720 -f mp4 "${DST}"
 
