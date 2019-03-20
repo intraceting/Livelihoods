@@ -9,8 +9,8 @@ UUID=$2
 HWORK=$3
 #
 POTO=$(echo ${URL} | awk -F '([/:]+)' '{ print $1 }')
-DOMAIN=$(echo ${URL} | awk -F '([/:]+)' '{ print $2 }')
-PORT=$(echo ${URL} | awk -F '([/:]+)' '{ print $3 }')
+DOMAIN=$(echo ${URL} | awk -F '([/:?]+)' '{ print $2 }')
+PORT=$(echo ${URL} | awk -F '([/:?]+)' '{ print $3 }')
 #
 HEAD="/tmp/${UUID}.tmpheader"
 FILE="/tmp/${UUID}.htmlparser"
