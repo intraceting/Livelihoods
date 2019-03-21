@@ -22,10 +22,10 @@ function onesearch()
 	#
 	URL=$1
 	UUID=$2
-	SAVEAS=$3
+	BBBB=$3
 	#
 	#
-	searchone ${URL} "${SAVEAS}/${UUID}" "${SAVEAS}/${UUID}.url" "${SAVEAS}/${UUID}.txt"
+	searchone ${URL} "${BBBB}/${UUID}" "${BBBB}/${UUID}.url" "${BBBB}/${UUID}.txt"
 	
 }
 
@@ -45,30 +45,44 @@ function uppgbar()
 	PGBAR=$2
 	#
 	ltrcli -m 210 -o "${TID}&${PGBAR}"
-}	
+}
+
+
+function eeee()
+{
+#
+URI_FILE=$1
+HOME_PATH=$2
+TID=$3
 #
 for URL in $(<${URI_FILE})
 do
 	#
-	UUID=$(uuidgen)
 	#
-	SAVEAS=$(echo ${URL} | awk -F '://' '{print $2}' | awk -F '?' '{print $1}')
+	AAAA=$(echo ${URL} | awk -F '://' '{print $2}' | awk -F '?' '{print $1}')
 	SAVENM=$(echo ${URL} | md5sum |awk -F '[ -]' '{print $1}')
 	#
-	mkdir -p "${HOME_PATH}/${SAVEAS}/"
+	mkdir -p "${HOME_PATH}/${AAAA}/"
 	#
-	if [ ! -r "${HOME_PATH}/${SAVEAS}/${SAVENM}.url" ]
+	if [ ! -r "${HOME_PATH}/${AAAA}/${SAVENM}.url" ]
 	then
 	{
 		#
-		onesearch "${URL}" "${SAVENM}" "${HOME_PATH}/${SAVEAS}/"
+		onesearch "${URL}" "${SAVENM}" "${HOME_PATH}/${AAAA}/"
 		#
-		if [ -r "${HOME_PATH}/${SAVEAS}/${SAVENM}.url" ]
+		if [ -r "${HOME_PATH}/${AAAA}/${SAVENM}.url" ]
 		then 
-			addtask "${SAVEAS}/${SAVENM}.url"
+			addtask "${AAAA}/${SAVENM}.url"
+		else
+			echo "${AAAA}"
+			echo "${HOME_PATH}"
 		fi
 	} 
 	fi
 	#
 	uppgbar "${TID}" "${SAVENM}"
 done
+
+}
+#
+eeee ${URI_FILE} ${HOME_PATH}  ${TID}
