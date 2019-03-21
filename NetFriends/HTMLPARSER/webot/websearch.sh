@@ -5,19 +5,12 @@
 SHELL_PATH=$(cd `dirname $0`; pwd)
 #
 URL=$1
-UUID=$2
-HWORK=$3
-#
-POTO=$(echo ${URL} | awk -F '([/:]+)' '{ print $1 }')
-DOMAIN=$(echo ${URL} | awk -F '([/:?]+)' '{ print $2 }')
-PORT=$(echo ${URL} | awk -F '([/:?]+)' '{ print $3 }')
-#
-HEAD="/tmp/${UUID}.tmpheader"
-FILE="/tmp/${UUID}.htmlparser"
-DUMPURL="${HWORK}/${UUID}.url"
-DUMPTXT="${HWORK}/${UUID}.txt"
-#
-SAVE_PATH="${HWORK}/${DOMAIN}/"
+FILE=$2
+DUMPURL=$3
+DUMPTXT=$4
+HEAD="/tmp/$(uuidgen)"
+
+
 
 function download()
 {
@@ -120,16 +113,7 @@ then
 	parse_url "${FILE}"  "${CHARSET}" "${DUMPURL}" "${URL}"
 	#
 	parse_txt "${FILE}" "${CHARSET}" "${DUMPTXT}"
-	#
-	rm -f ${FILE}
-	rm -f ${HEAD}
-	#
-	mkdir -p "${SAVE_PATH}/"
-	mv "${DUMPTXT}" "${SAVE_PATH}/"
-
-else
-	#Move file
-	mkdir -p "${SAVE_PATH}/"
-	mv "${FILE}" "${SAVE_PATH}/"
 fi
+#
+rm -f ${HEAD}
 
