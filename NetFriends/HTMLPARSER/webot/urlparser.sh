@@ -6,6 +6,7 @@ SHELL_PATH=$(cd `dirname $0`; pwd)
 #
 URI_FILE=$1
 HOME_PATH=$2
+TID=$3
 
 function searchone()
 {
@@ -36,22 +37,38 @@ function addtask()
 	#
 	ltrcli -m 212 -o  "${TID}&1234&${ARGV}&0&1&1"
 }
+
+function uppgbar()
+{
+	#
+	TID=$1
+	PGBAR=$2
+	#
+	ltrcli -m 210 -o "${TID}&${PGBAR}"
+}	
 #
 for URL in $(<${URI_FILE})
 do
 	#
 	UUID=$(uuidgen)
 	#
-	POTO=$(echo ${URL} | awk -F '([/:]+)' '{ print $1 }')
-	DOMAIN=$(echo ${URL} | awk -F '([/:?]+)' '{ print $2 }')
-	PORT=$(echo ${URL} | awk -F '([/:?]+)' '{ print $3 }')
+	SAVEAS=$(echo ${URL} | awk -F '://' '{print $2}' | awk -F '?' '{print $1}')
+	SAVENM=$(echo ${URL} | md5sum |awk -F '[ -]' '{print $1}')
 	#
-	mkdir -p "${HOME_PATH}/${DOMAIN}/${UUID}/"
+	mkdir -p "${HOME_PATH}/${SAVEAS}/"
 	#
-	onesearch "${URL}" "${UUID}" "${HOME_PATH}/${DOMAIN}/${UUID}/"
+	if [ ! -r "${HOME_PATH}/${SAVEAS}/${SAVENM}.url" ]
+	then
+	{
+		#
+		onesearch "${URL}" "${SAVENM}" "${HOME_PATH}/${SAVEAS}/"
+		#
+		if [ -r "${HOME_PATH}/${SAVEAS}/${SAVENM}.url" ]
+		then 
+			addtask "${SAVEAS}/${SAVENM}.url"
+		fi
+	} 
+	fi
 	#
-	if [ -r "${HOME_PATH}/${DOMAIN}/${UUID}/${UUID}.url" ]
-	then 
-		addtask "${DOMAIN}/${UUID}/${UUID}.url"
-	fi 
+	uppgbar "${TID}" "${SAVENM}"
 done
