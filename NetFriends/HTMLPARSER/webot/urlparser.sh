@@ -46,12 +46,12 @@ do
 	DOMAIN=$(echo ${URL} | awk -F '([/:?]+)' '{ print $2 }')
 	PORT=$(echo ${URL} | awk -F '([/:?]+)' '{ print $3 }')
 	#
-	mkdir -p "${HOME_PATH}/${DOMAIN}/"
+	mkdir -p "${HOME_PATH}/${DOMAIN}/${UUID}/"
 	#
-	onesearch "${URL}" "${UUID}" "${HOME_PATH}/${DOMAIN}/"
+	onesearch "${URL}" "${UUID}" "${HOME_PATH}/${DOMAIN}/${UUID}/"
 	#
-	if [ -r "${HOME_PATH}/${DOMAIN}/${UUID}.url" ]
+	if [ -r "${HOME_PATH}/${DOMAIN}/${UUID}/${UUID}.url" ]
 	then 
-		addtask "${DOMAIN}/${UUID}.url"
+		addtask "${DOMAIN}/${UUID}/${UUID}.url"
 	fi 
 done
