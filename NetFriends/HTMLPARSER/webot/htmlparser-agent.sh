@@ -9,4 +9,4 @@ TID=$1
 ARGV=$2
 PGBAR=$3
 #
-"${SHELL_PATH}/urlparser.sh" "${WORKPWD}/${PGBAR}" "${WORKPWD}/" 
+"${SHELL_PATH}/urlparser.sh" "${WORKPWD}/${ARGV}" "${WORKPWD}/" 
