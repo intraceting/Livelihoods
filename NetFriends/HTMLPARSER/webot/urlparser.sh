@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 #Author: zpcoding<intraceting@outlook.com>
 #
@@ -32,19 +32,19 @@ function onesearch()
 function addtask()
 {
 	#
-	TID=$(uuidgen)
+	TID2=$(uuidgen)
 	ARGV=$1
 	#
-	ltrcli -m 212 -o  "${TID}&1234&${ARGV}&0&1&1"
+	ltrcli -m 114 -o  "${TID2}&1234&${ARGV}&0&1&1"
 }
 
 function uppgbar()
 {
 	#
-	TID=$1
+	TID3=$1
 	PGBAR=$2
 	#
-	ltrcli -m 210 -o "${TID}&${PGBAR}"
+	ltrcli -m 112 -o "${TID3}&${PGBAR}"
 }
 
 

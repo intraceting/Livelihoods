@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 #Author: zpcoding<intraceting@outlook.com>
 #

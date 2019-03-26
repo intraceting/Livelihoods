@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 #
 SHELL_PATH=$(cd `dirname $0`; pwd)
