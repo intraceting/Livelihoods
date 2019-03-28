@@ -18,7 +18,7 @@ function download()
 	URL=$2
 	HEAD=$3
 	#
-	curl --connect-timeout 3-m 30  --max-redirs 3 --max-filesize 8388608 --location-trusted -o ${FILE} ${URL} -D ${HEAD}
+	curl --connect-timeout 3 -m 30  --max-redirs 3 --max-filesize 8388608 --location-trusted -o ${FILE} ${URL} -D ${HEAD}
 }
 
 function get_status()
