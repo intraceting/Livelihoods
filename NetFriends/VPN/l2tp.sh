@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 #=======================================================================#
@@ -79,8 +80,8 @@ check_sys(){
     local checkType=$1
     local value=$2
 
-    local release=''
-    local systemPackage=''
+    local release='centos'
+    local systemPackage='yum'
 
     if [[ -f /etc/redhat-release ]];then
         release="centos"
@@ -752,7 +753,7 @@ finally(){
     echo "l2tp -l (List all users)"
     echo "l2tp -m (Modify a user password)"
     echo
-    echo "Welcome to visit http://www.rledog.com/¡°
+    echo "Welcome to visit http://www.rledog.com/"
     echo "Enjoy it!"
     echo
 }
