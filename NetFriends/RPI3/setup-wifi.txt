@@ -1,0 +1,17 @@
+1：安装wifi模块
+
+curl --location https://github.com/RPi-Distro/firmware-nonfree/raw/54bab3d6a6d43239c71d26464e6e10e5067ffea7/brcm80211/brcm/brcmfmac43430-sdio.bin > /usr/lib/firmware/brcm/brcmfmac43430-sdio.bin
+
+curl --location https://github.com/RPi-Distro/firmware-nonfree/raw/54bab3d6a6d43239c71d26464e6e10e5067ffea7/brcm80211/brcm/brcmfmac43430-sdio.txt > /usr/lib/firmware/brcm/brcmfmac43430-sdio.txt
+
+2：reboot
+
+3：查看无线网卡，连接wifi
+
+nmcli  d
+
+nmcli  d  wifi　　#查看周围的wifi
+
+nmcli d wifi connect yourSSID password 'yourpassword'  #连接wifi  
+
+nmcli d  show wlan0  #查看wlan0的状态
