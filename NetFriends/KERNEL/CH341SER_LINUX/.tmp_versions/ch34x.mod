@@ -1,0 +1,3 @@
+/home/nx/zhangpengcheng/job/private/coding/doc/KERNEL/CH341SER_LINUX/ch34x.ko
+/home/nx/zhangpengcheng/job/private/coding/doc/KERNEL/CH341SER_LINUX/ch34x.o
+

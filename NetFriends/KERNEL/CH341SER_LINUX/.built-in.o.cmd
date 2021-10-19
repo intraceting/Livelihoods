@@ -1,0 +1,1 @@
+cmd_/home/nx/zhangpengcheng/job/private/coding/doc/KERNEL/CH341SER_LINUX/built-in.o :=  rm -f /home/nx/zhangpengcheng/job/private/coding/doc/KERNEL/CH341SER_LINUX/built-in.o; ar rcsD /home/nx/zhangpengcheng/job/private/coding/doc/KERNEL/CH341SER_LINUX/built-in.o
