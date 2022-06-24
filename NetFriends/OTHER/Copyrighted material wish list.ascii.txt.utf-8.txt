@@ -1,0 +1,30 @@
+﻿
+Hackipedia.org wishlist to post copyrighted material
+
+   The following is a list of files in the collection
+I would like to list on this site with the consent of
+the copyright holder, if they would allow it.
+
+   To answer questions ahead of time, yes, these items
+were legitimately obtained, legally.
+
+   If you own the copyright of any of these items
+please contact me at jon@nerdgrounds.com to explicitly
+state whether these items should appear.
+
+   These items will not appear on Hackipedia without
+the copyright owner's explicit consent.
+
+
+Microsoft Corporation
+  Microsoft Visual Studio 6.0/MSDN library
+    MSDN 6.0a CHM library (*.chm)
+      Subjects: PE file format specification, platform SDK API, ...
+
+
+  Microsoft Visual C++ 1.51
+    SDK documentation (WinHelp *.hlp)
+      Subjects: Win16 SDK system calls, ...
+                Being old and obsolete documentation that is widely unavailable
+                this would be good material for Hackipedia
+

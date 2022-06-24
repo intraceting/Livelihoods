@@ -1,0 +1,68 @@
+﻿Why Hackipedia.org?
+
+Motivations for building and maintaining Hackipedia.org
+by Jonathan Campbell
+March 1st, 2010
+
+   If there is one frustrating element of the Internet and print media
+regarding computers, it's the lack of useful information on what you
+can do with your computer at the low level. By that I mean the low
+level hardware interfaces. What I/O ports or memory mapped registers
+do you work with, and what do you write? How do I talk to this
+controllor or chipset? How do I take a file format of this or that
+type and work with it?
+
+   For an experienced programmer like myself, it takes a lot of work
+to wade through all the crap on the internet just to even find the
+documentation to answer these questions. Often, the documentation
+is incomplete, or obscure, or badly written to the point that it
+becomes a frustrating endeavor to even TRY to program the hardware.
+
+   Now think of how detrimental that is to the industry overall:
+If it's that hard for someone of my experience to learn programming
+90% of the hardware out there, imagine what frustration it is for
+a young bright programmer just starting out? Besides the lack of
+any low level programming overall and apparent mistique of hardware
+is it any wonder most programmers today are afraid of hardware level
+programming? Most people I know are used to a cushy GUI environment
+with complicated APIs that somehow take care of the magic below.
+And yet if these people were to lose their fear, pick up some key
+concepts, and dig into the lower levels, they would actually find
+that the concepts involved are actually quite understandable, an
+arrangement of many simple concepts put together.
+
+   Being able to work at a low level, with hardware, file formats,
+protocols, connectors and virtually any part of your computer is
+absolutely vital if innovation is to continue in the computer
+industry. The only thing killing innovation, it seems, is the
+unwillingness to look into low level details. Without low level
+details, effective hacking is impossible. You are enslaved to the
+implementation you depend on.
+
+   The situation is worse with regard to file formats. If you are
+unwilling to look at the low level details of a file format, then
+you are dependent on tools to read it for you. If that software
+becomes unmaintained and obsolete, then too bad. Consider the
+ironic result: binary data can be infinitely copied from medium to
+medium without loss, yet "rot" happens because the newer
+program is unwilling to interpret the data for you! But you will
+never lose your data if you know how to meaningfully interpret
+those bytes yourself.
+
+   I built Hackipedia.org to solve what I saw as a problem of
+both lack of documentation, difficulty in finding the information
+you need, and lack of a useful common reference that both new and
+experienced and programmers could use in times when they need to
+dig down into the low levels. These files are a subset of many
+useful bits of documentation that I have been collecting since
+1996 and they are carefully arranged for reference by type,
+platform, operating system, and subject. The on-site files are not
+the entire collection, many files I would otherwise like to share
+are not included because they are still under copyright,
+and there are thousands of additional files that are still being
+sorted and arranged and yet to appear in this collection.
+
+Hopefully, my collection will help save you and other programmers
+hours of fruitless and unproductive searching on the internet so
+that you have more time available for constructive things to do
+with your computer.
