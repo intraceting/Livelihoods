@@ -1,0 +1,8 @@
+sudo -i  (切换到root)
+configure --enable-generic --enable-cycles --enable-hrtimer --enable-8139too=no
+make  
+make install
+make modules
+make modules_install
+vim /etc/ethercat.conf   (修改网卡地址)
+systemctl start ethercat
